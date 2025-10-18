@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTP Presentation</title>
+    <link rel="icon" type="image/png" href="./zfavicon-TTP.png" />
+    <link rel="stylesheet" href="./css/slide.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- tailwind css-->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a class="prev-arrow disabled" data-up="0">&uarr;</a>
+      <a class="next-arrow" data-down="2">&darr;</a>
+    </div>
+
+    <span class="counter-display">
+      <input
+        type="number"
+        class="current-panel-input"
+        min="1"
+        max="4"
+        value="1"
+      />
+      /
+      <span class="panel-count">4</span>
+    </span>
+
+    <div class="page-dropdown">
+      <button class="dropdown-btn" id="dropdownToggle">
+        <span>Go to Page</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#" data-slide="1">Page 1</a>
+        <a href="#" data-slide="2">Page 2</a>
+        <a href="#" data-slide="3">Page 3</a>
+        <a href="#" data-slide="4">Page 4</a>
+      </div>
+    </div>
+
+<!-- -------------------------------------------Slide 1 Start----------------------------------------- -->
+
+   <!-- =========================== FRONT PAGE / HERO SECTION =========================== -->
+<div class="relative w-full h-[100vh] overflow-hidden hidden lg:block">
+  <!-- Background -->
+  <img src="./assests/Images/Home_Slide/Background_img.png" 
+       alt="Background" 
+       class="absolute top-0 left-0 w-full h-full object-cover" />
+
+  <!-- Header: Logo + Table of Contents + Social Icons -->
+  <header class="absolute top-5 left-0 w-full flex justify-between items-center px-8 z-20">
+    <!-- Social Media Icons -->
+    <div class="flex gap-4 ">
+      <!-- <i class="fa-brands fa-facebook-f hover:text-[#ffae00]"></i>
+      <i class="fa-brands fa-instagram hover:text-[#ffae00]"></i>
+      <i class="fa-brands fa-linkedin-in hover:text-[#ffae00]"></i>
+      <i class="fa-brands fa-youtube hover:text-[#ffae00]"></i> -->
+
+<img src="./assests/Images/Home_Slide/youtube_icon.svg" alt="youtube_icon" class="" style="padding-left: 20%;"/>
+<img src="./assests/Images/Home_Slide/linkedin_icon.svg" alt="youtube_icon" class=""/>
+<img src="./assests/Images/Home_Slide/website_icon.svg" alt="youtube_icon" class=""/>
+<img src="./assests/Images/Home_Slide/instagram_icon.svg" alt="youtube_icon" class=""/>
+
+
+    </div>
+
+    <!-- Table of Contents Button -->
+    <button class="flex items-center gap-2 border border-[#ffae00] text-[#ffae00] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#ffae00] hover:text-white transition">
+      TABLE OF CONTENTS <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+    <!-- Logo -->
+    <img src="./assests/Images/terra_logo.png" alt="Logo" class="h-10" />
+  </header>
+
+  <!-- Main Text Content -->
+  <div class="absolute top-[30%] left-[30%] z-10 text-black max-w-[600px] text-right">
+    <h1 class="text-[3vw] font-bold leading-tight">
+      WELCOME TO<br />
+      <span class="text-[#111]">TERRA TECH <br/> PACKS</span>
+    </h1>
+  </div>
+
+  <div class="absolute top-[30%] left-[55%] z-10 max-w-[500px] text-left ">
+    <h1 class="text-[3vw] font-bold leading-tight">
+      GREAT<br />
+      <span class="bg-[#ffae00] text-white px-2 ">PACKING</span><br />
+      IS AN INVESTMENT
+    </h1>
+    <p class="mt-3 text-sm font-medium">
+      Coimbatore’s<br />
+      <span class="text-[#ffae00] font-semibold">IML FOOD CONTAINERS </span><br/> MANUFACTURERS
+    </p>
+
+    <!-- Location & Clock -->
+    <div class="mt-12 flex flex-col    gap-2 text-[.8vw] text-left">
+      <div class="flex  gap-2">
+        <img src="./assests/Images/Home_Slide/clock_icon.svg" class=""></img> <span>24 Hours</span>
+      </div>
+      <div class="flex  gap-2 max-w-[300px] text-left">
+        <img src="./assests/Images/Home_Slide/location_icon.svg" class=" "></img>
+        <span>125, Kuruman St, Edayarpalayam, PN Pudur, Kuniyamuthur, Tamil Nadu 641008</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container Images -->
+  <div class="absolute bottom-0 left-[3vw] w-full  items-end gap-6 pb-6 z-10">
+    <img src="./assests/Images/Home_Slide/Container_img.png" alt="container" class="h-[20vw] drop-shadow-lg" />
+    <!-- <img src="./assests/Images/Home_Slide/container1.png" alt="container" class="h-[120px] drop-shadow-lg" />
+    <img src="./assests/Images/Home_Slide/container2.png" alt="container" class="h-[150px] drop-shadow-lg" />
+    <img src="./assests/Images/Home_Slide/container3.png" alt="container" class="h-[130px] drop-shadow-lg" />
+    <img src="./assests/Images/Home_Slide/container4.png" alt="container" class="h-[100px] drop-shadow-lg" /> -->
+  </div>
+
+  <!-- Orange Bottom Bar -->
+   <div class="absolute bottom-[4vw] left-0 w-full h-[2vw] bg-[#FEAE00]"></div>
+   <div class="absolute bottom-[2vw] left-0 w-full h-[2vw] bg-[#F36408]"></div>
+  <div class="absolute bottom-0 left-0 w-full h-[2vw] bg-[#ffffff]"></div>
+</div>
+
+
+
+<!-- -------------------------------------------Slide 1 Start----------------------------------------- -->
+
+
+
+    <div class="viewport-container" id="mainScroller">
+      <!-- SLIDE 1: Products 1-4 -->
+      <div class="slide-item alpha" id="slide_1">
+        <div class="content-wrapper">
+          <div class="products-grid">
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=1" alt="" />
+              <div class="c-product-title">120ml Round Container</div>
+              <div class="c-product-description">
+                Height : 37mm<br />
+                Lid Weight : 2.3 gms<br />
+                Tub weight : 4.3 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=2" alt="" />
+              <div class="c-product-title">250ml Round Container</div>
+              <div class="c-product-description">
+                Height : 45mm<br />
+                Lid Weight : 3.1 gms<br />
+                Tub weight : 5.2 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=3" alt="" />
+              <div class="c-product-title">250ml Glass Round</div>
+              <div class="c-product-description">
+                Height : 50mm<br />
+                Lid Weight : 3.5 gms<br />
+                Tub weight : 6.0 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=4" alt="" />
+              <div class="c-product-title">300ml Round Container</div>
+              <div class="c-product-description">
+                Height : 52mm<br />
+                Lid Weight : 3.8 gms<br />
+                Tub weight : 6.5 gms
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Products 5-8 -->
+      <div class="slide-item beta" id="slide_2">
+        <div class="content-wrapper">
+          <div class="products-grid">
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=5" alt="" />
+              <div class="c-product-title">500ml Round Container</div>
+              <div class="c-product-description">
+                Height : 60mm<br />
+                Lid Weight : 4.5 gms<br />
+                Tub weight : 7.8 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=6" alt="" />
+              <div class="c-product-title">500gms / 450ml Container</div>
+              <div class="c-product-description">
+                Height : 58mm<br />
+                Lid Weight : 4.2 gms<br />
+                Tub weight : 7.5 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=7" alt="" />
+              <div class="c-product-title">500ml Container</div>
+              <div class="c-product-description">
+                Height : 62mm<br />
+                Lid Weight : 4.6 gms<br />
+                Tub weight : 8.0 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=8" alt="" />
+              <div class="c-product-title">500ml Rectangular</div>
+              <div class="c-product-description">
+                Height : 55mm<br />
+                Lid Weight : 4.0 gms<br />
+                Tub weight : 7.2 gms
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: Products 9-12 -->
+      <div class="slide-item gamma" id="slide_3">
+        <div class="content-wrapper">
+          <div class="products-grid">
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=9" alt="" />
+              <div class="c-product-title">750ml Round Container</div>
+              <div class="c-product-description">
+                Height : 70mm<br />
+                Lid Weight : 5.2 gms<br />
+                Tub weight : 9.5 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=10" alt="" />
+              <div class="c-product-title">750ml Rectangular</div>
+              <div class="c-product-description">
+                Height : 68mm<br />
+                Lid Weight : 5.0 gms<br />
+                Tub weight : 9.2 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=11" alt="" />
+              <div class="c-product-title">250gms Sweet Box</div>
+              <div class="c-product-description">
+                Height : 40mm<br />
+                Lid Weight : 3.0 gms<br />
+                Tub weight : 5.5 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=12" alt="" />
+              <div class="c-product-title">TE 250 G Sweet Box</div>
+              <div class="c-product-description">
+                Height : 42mm<br />
+                Lid Weight : 3.2 gms<br />
+                Tub weight : 5.8 gms
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: Products 13-16 -->
+      <div class="slide-item delta" id="slide_4">
+        <div class="content-wrapper">
+          <div class="products-grid">
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=13" alt="" />
+              <div class="c-product-title">500gms Sweet Box</div>
+              <div class="c-product-description">
+                Height : 65mm<br />
+                Lid Weight : 4.8 gms<br />
+                Tub weight : 8.5 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=14" alt="" />
+              <div class="c-product-title">TE 500 G Sweet Box</div>
+              <div class="c-product-description">
+                Height : 67mm<br />
+                Lid Weight : 5.0 gms<br />
+                Tub weight : 8.8 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=15" alt="" />
+              <div class="c-product-title">1Kg Sweet Box</div>
+              <div class="c-product-description">
+                Height : 80mm<br />
+                Lid Weight : 6.5 gms<br />
+                Tub weight : 11.0 gms
+              </div>
+            </div>
+
+            <div class="container-products">
+              <img src="https://picsum.photos/300/300?random=16" alt="" />
+              <div class="c-product-title">1000ml Round</div>
+              <div class="c-product-description">
+                Height : 85mm<br />
+                Lid Weight : 7.0 gms<br />
+                Tub weight : 12.5 gms
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
