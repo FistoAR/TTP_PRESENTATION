@@ -241,3 +241,60 @@ function updateSlideCounter(slideNumber) {
 
 // Initialize first state
 updateSlideCounter(1);
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to open the modal and populate data
+function openProductModal(title, imageSrc, height, width, lidWeight, tubWeight, packQuantity) {
+    const modal = document.getElementById('product-modal');
+    
+    // Set the data into the modal elements
+    document.getElementById('modal-product-title').textContent = title;
+    document.getElementById('modal-product-image').src = imageSrc;
+    // document.getElementById('modal-dimension-height').textContent = height;
+    // document.getElementById('modal-dimension-width').textContent = width;
+    document.getElementById('modal-lid-weight').textContent = `Lid Weight - ${lidWeight}`;
+    document.getElementById('modal-tub-weight').textContent = `Tub Weight - ${tubWeight}`;
+    document.getElementById('modal-pack-quantity').textContent = `No of pack in box - ${packQuantity}`;
+
+    // Show the modal by replacing 'hidden' with 'flex'
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+// Function to close the modal
+function closeProductModal() {
+    const modal = document.getElementById('product-modal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+}
+
+// Attach the close function to the close button
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('close-modal-btn').addEventListener('click', closeProductModal);
+
+    // Optional: Close modal when clicking outside of it
+    const modal = document.getElementById('product-modal');
+    modal.addEventListener('click', (event) => {
+        // Check if the click occurred directly on the modal background (not the inner content)
+        if (event.target === modal) {
+            closeProductModal();
+        }
+    });
+
+    // Optional: Close modal on Escape key press
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeProductModal();
+        }
+    });
+});
