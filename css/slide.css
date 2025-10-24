@@ -55,14 +55,15 @@
   background: rgba(255, 255, 255, 0.2);
   border: .1vw solid #FBB24A;
   border-radius: 5vw;
-  padding: 12px 20px;
+  padding: .5vw 1vw;
   font-size: 1vw;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #000000;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: .5vw;
+  font-family: 'Poppins';
   /* transition: all 0.3s ease; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   outline: none;
@@ -79,7 +80,7 @@
 }
 
 .dropdown-btn .arrow {
-  font-size: .9vw;
+  font-size: .6vw;
   transition: transform 0.3s ease;
 }
 
@@ -219,10 +220,10 @@
 .media-player {
   display: none;
 }
-
+/* 
 iframe {
   display: none;
-}
+} */
 
 a {
   color: #333;
@@ -256,11 +257,11 @@ a {
   height: 4vw;
   border-radius: 50%;
   text-align: center;
-  background: rgba(245, 197, 66, 0.2);
-  border: .2vw solid #f5c542;
+  background: #FBBB62;
+  border: .2vw solid #FBBB62;
   cursor: pointer;
   user-select: none;
-  color: #333;
+  color: #eeeeee;
 }
 
 .nav-wrapper a:hover:not(.disabled) {
@@ -277,15 +278,15 @@ a {
 span.counter-display {
   position: fixed;
   bottom: 2vw;
-  right: 8vw;
+  right: 12vw;
   z-index: 9999;
   font-size: 2vw;
   font-weight: 600;
   font-family: courier, mono;
-  background: rgba(245, 197, 66, 0.2);
+  background: #F8E587;
   padding: .5vw 1vw;
-  border-radius: 20px;
-  border: 2px solid #f5c542;
+  border-radius: 10vw;
+  border: .1vw solid #FBBB62;
   color: #000000;
   display: flex;
   align-items: center;
@@ -293,11 +294,11 @@ span.counter-display {
 }
 
 .current-panel-input {
-  width: 15px;
+  /* width: .4vw; */
   background: transparent;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: 600;
   font-family: courier, mono;
   color: #000000;
@@ -316,13 +317,13 @@ span.counter-display {
 
 .current-panel-input:focus {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border-radius: .5vw;
   cursor: text;
 }
 
 .current-panel-input:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border-radius: .5vw;
 }
 
 
@@ -519,14 +520,14 @@ span.counter-display {
   .nav-wrapper a {
     width: 4vw;
     height: 4vw;
-    font-size: 24px;
+    font-size: 2vw;
   }
 
   span.counter-display {
-    bottom: 24px;
-    right: 120px;
-    font-size: 16px;
-    padding: 6px 14px;
+    bottom: 2vw;
+    right: 12vw;
+    font-size: 1vw;
+    padding: .5vw 1vw;
   }
 }
 
@@ -569,3 +570,74 @@ span.counter-display {
 
 
 
+section {
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.sec-1 h2 {
+    /* position: absolute; */
+    font-size: 3vw;
+    text-align: center;
+    width: 100%;
+    font-family: 'montserrat', sans-serif;
+}
+
+.grid-container {
+    width: 90%;
+    /* position: absolute; */
+    top: 25%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 68%;
+}
+
+.grid-container .grid_item {
+    background: linear-gradient(0deg, rgba(251, 178, 74, 0.1), rgba(251, 178, 74, 0.1)), #FFFFFF;
+    border: 2px solid #FBB24A;
+    box-shadow: inset 0px 0px 20px #FBB24A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-container .grid_item:nth-child(even) {
+
+    background: #FBB24A;
+    border: 2px solid #FBB24A;
+}
+
+.grid-container .grid_item:nth-child(n + 7):nth-child(-n + 12):nth-child(odd),
+.grid-container .grid_item:nth-child(n + 19):nth-child(-n + 24):nth-child(odd),
+.grid-container .grid_item:nth-child(n + 31):nth-child(-n + 36):nth-child(odd),
+.grid-container .grid_item:nth-child(n + 43):nth-child(-n + 48):nth-child(odd) {
+    background: #FBB24A;
+    border: 2px solid #FBB24A;
+}
+
+.grid-container .grid_item:nth-child(n + 7):nth-child(-n + 12):nth-child(even),
+.grid-container .grid_item:nth-child(n + 19):nth-child(-n + 24):nth-child(even),
+.grid-container .grid_item:nth-child(n + 31):nth-child(-n + 36):nth-child(even),
+.grid-container .grid_item:nth-child(n + 43):nth-child(-n + 48):nth-child(even) {
+    background: linear-gradient(0deg, rgba(251, 178, 74, 0.1), rgba(251, 178, 74, 0.1)), #FFFFFF;
+}
+
+.grid_item p {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FBB24A;
+}
+
+.grid_item img {
+    height: auto;
+    width: 80%;
+    object-fit: cover;
+}
