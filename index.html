@@ -45,7 +45,7 @@
   </div>
 
   <span class="counter-display text-[1vw]" style="font-size: 1vw;">
-    <input type="number" class="current-panel-input" style="font-family: 'Montserrat';" min="1" max="4" value="1" />
+    <input type="number" class="current-panel-input" style="font-family: 'Montserrat';" min="1" max="8" value="1" />
     /
     <span class="panel-count text-[1vw]" >4</span>
   </span>
@@ -105,6 +105,8 @@
           <a href="#" data-slide="4">Page 4</a>
           <a href="#" data-slide="5">Page 5</a>
           <a href="#" data-slide="6">Page 6</a>
+          <a href="#" data-slide="7">Page 7</a>
+          <a href="#" data-slide="8">Page 8</a>
         </div>
       </div>
     </div>
@@ -118,9 +120,299 @@
 
 
   <div class="viewport-container" id="mainScroller">
-<!-- =============================================slide 7 want to replace====================================================== -->
+<!-- =============================================slide 2 want to replace====================================================== -->
 
+   <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" id="slide_2">
+      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
+        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
+      <!-- Main Heading -->
+      <h2 class="text-black font-bold text-center   "
+        style="font-size: 2vw; margin-bottom: 2vw; font-family: montserrat;">
+        WHAT ARE THE PRODUCTS WE ARE PRODUCING
+      </h2>
 
+      <div class=" w-full  flex flex-col justify-center ml-[2vw]" style="gap: 3vw; margin-left: 10vw;  font-family: montserrat;  ;">
+        <!-- <h2 class="text-black font-bold text-center mb-[1vw]  z-[111]" style="font-size: 2.5vw; border: 3px solid black;">
+                WHAT ARE THE PRODUCTS WE ARE PRODUCING
+            </h2> -->
+        <!-- Left Section: FOOD CONTAINERS -->
+        <div class="flex " style="gap: 2vw;">
+          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
+            style="font-size: 1.6vw; margin-top: 5vw; font-family: montserrat;">
+            FOOD<br />CONTAINERS
+          </h3>
+
+          <div class="grid grid-cols-7" style="gap: 1.5vw; margin-left: 5vw; ">
+            <!-- Row 1 -->
+            <!-- <div class="bg-white rounded-[1vw] border-[0.2vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow" style="padding: 1vw; width: 7vw; height: 7vw;">
+                            <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]" style="width: 4vw; height: 4vw;">
+                            <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1;">120ml Round</p>
+                        </div> -->
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '120ml <br/> Round Container',
+        './assests/Images/slide_2/120_ml_round.webp',
+        '2.3 GSM', 
+        '4.3 GSM', 
+        '2500 Nos'
+    )">
+              <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]"
+                >
+              <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1; font-weight: 600;">120ml Round</p>
+            </div>
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/250_ml_round.webp" alt="250ml Round" class="object-contain mb-[0.5vw]"
+                >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml Round
+              </p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/250_ml_glass_round.webp" alt="250ml Glass Round"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml
+                Glass<br />Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/300_ml_round.webp" alt="300ml Round" class="object-contain mb-[0.5vw]"
+                >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">300ml Round</p>
+            </div>
+
+          
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/500_ml_round.webp" alt="450ml Square Bottom"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                500ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/750_ml_round.webp" alt="500ml Square Bottom"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">750ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/1000_ml_round.webp" alt="500ml Rectangle"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.76vw; line-height: 1.1; font-weight: 600;">
+                1000ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/450_ml_square.webp" alt="750ml Rectangle"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.72vw; line-height: 1.1; font-weight: 600;">
+                450ml  <span class="text-[.5vw] font-medium " style="font-weight: 600;" >(500 GSM)</span> Square Bottom</p>
+            </div>
+
+            <!-- Row 3 -->
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/500_ml_square.webp" alt="500ml Round" class="object-contain mb-[0.5vw]"
+                >
+              <p class="text-black text-center font-medium" style="font-size: 0.75vw; line-height: 1.1; font-weight: 600;">500ml Square Bottom</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/500_ml_rectangle.webp" alt="750ml Round"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">500ml Rectangle</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/750_ml_rectangle.webp" alt="250-gsm Sweet box"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                750ml Rectangle</p>
+            </div>
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/250_gms_sweetbox.webp" alt="500-gsm Sweet box"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                250-gsm<br />Sweet box</p>
+            </div>
+
+          
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assests/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assests/Images/slide_2/500_gms_sweet_box.webp" alt="1000ml Round"
+                class="object-contain mb-[0.5vw]" >
+              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                500-gsm<br />Sweet box</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: BIO-DEGRADABLE BAGS -->
+        <div class="flex" style="gap: 2.5vw;">
+          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
+            style="font-size: 1.6vw; margin-bottom: 1vw; font-family: montserrat;">
+            BIO-DEGRADABLE<br />BAGS
+          </h3>
+
+          <div class="flex flex-col" style="gap: 1.6vw;">
+            <!-- Row 1 -->
+            <div class="flex" style="gap: 1.5vw;">
+              <div
+                class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/w-cut-bags.webp" alt="W CUT BAGS" class="object-contain mb-[0.5vw]"
+                  style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">W CUT BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/d_cut_bags.webp" alt="D CUT BAGS" class="object-contain mb-[0.5vw]"
+                  style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">D CUT BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/grocessory_bags.webp" alt="GROCESSORY BAGS"
+                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium " style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: 1vw;">
+                  GROCESSORY<br />BAGS</p>
+              </div>
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/prasadham_bags.webp" alt="PRASADHAM BAGS"
+                  class="object-contain mb-[0.5vw]" style="width: 5vw; height: 5vw;">
+                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                  PRASADHAM<br />BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: .5vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/Garbage_bag.webp" alt="PRASADHAM POUCHES"
+                  class="object-contain mb-[0.5vw]" style="width: 8vw; height: 8vw; margin-bottom: vw;">
+                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: vw;">
+                  GARBAGE<br />BAGS</p>
+              </div>
+
+               <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assests/Images/slide_2/bio_hazard_bags.webp" alt="PRASADHAM POUCHES"
+                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: .5vw; ">
+                  BIO HAZARD<br />BAGS</p>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+
+          </div>
+        </div>
+      </div>
+
+    </div>
 
 
 
@@ -232,7 +524,7 @@
         <div class="flex items-center " style="margin-left: 5vw;">
 
           <img src="./assests/Images/Welcome_slide/clock_img.svg" alt="clock_icon"
-            class="absolute left-[4vw] w-[4vw]" />
+            class="absolute left-[-1vw] w-[4vw]" />
 
           <p class="text-white font-bold h-[3.5vw] "
             style="font-size: 1.1vw; padding: .6vw 1vw; margin-left: 1vw; padding-left: 3.5vw; padding-right: 5vw; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(255,255,255,0)); font-family: 'montserrat';">Open 24 hours</p>
@@ -301,7 +593,7 @@
     <!-- =================================Slide_2 end=============================================  -->
     <!-- ===================================== SLIDE 2 start=============================================-->
 
-    <div class="slide-item beta relative w-full h-100vw flex flex-col" id="slide_2">
+    <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" id="slide_2">
       <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
       <!-- Main Heading -->
@@ -523,7 +815,7 @@
 
     <!-- ===================================== SLIDE 2 end=============================================-->
     <!-- ====================================SLIDE 3 start==============================================-->
-    <div class="slide-item  w-full h-100vw" id="slide_3">
+    <div class="slide-item overflow-hidden  w-full h-100vw " id="slide_3">
       <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
       <div class=" flex flex-col" style="padding: 4vw 6vw;">
@@ -619,7 +911,7 @@
     </div>
     <!-- ====================================SLIDE 3 end==============================================-->
     <!-- ====================================SLIDE 4 start============================================-->
-<div class="slide-item " id="slide_4">
+<div class="slide-item w-full h-100vw overflow-hidden" id="slide_4">
         <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
   <div class="content-wrapper flex flex-col">
@@ -696,7 +988,7 @@ Preparation​</span>
    <!-- ====================================SLIDE 5 start============================================-->
 
 
-<div class="slide-item" id="slide_5">
+<div class="slide-item w-full h-100vw overflow-hidden" id="slide_5">
           <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
 <div class="text-center gap-[1.8vw] flex flex-col " style="font-family: 'Montserrat', sans-serif; margin-top: 3vw;">
@@ -718,7 +1010,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
   </div>
 
    <!-- ====================================SLIDE 6 start============================================-->
-<div class="slide-item  relative w-full h-[100vh] flex flex-col" id="slide_6">
+<div class="slide-item  relative w-full h-[100vh] flex flex-col overflow-hidden" id="slide_6">
   <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
     class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
 
@@ -819,7 +1111,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
     <!-- ====================================SLIDE 6 end============================================-->
 
 
-<div class="slide-item" id="slide_7">
+<div class="slide-item relative w-full h-[100vh] overflow-hidden" id="slide_7">
           <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
     <section class="sec-1">
@@ -834,7 +1126,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
             </div>
             <div class="grid_item"><img src="./assests/Images/slide_7/img_4.webp" alt=""></div>
             <div class="grid_item">
-                <p>INJUCTION <br/> MOULDING PP <br/> CONTAINER</p>
+                <p>INJUCTION <br/> MOULDING <br/>PP CONTAINER</p>
             </div>
             <div class="grid_item"><img src="./assests/Images/slide_7/img_6.webp" alt=""></div>
             <div class="grid_item"><img src="./assests/Images/slide_7/img_1.webp" alt=""></div>
@@ -883,7 +1175,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
             style="margin-top: auto; margin-bottom: auto; margin-left: 1vw; border: solid  .2vw #FEAE00;"></div>
 
           <div class="pl-[3vw]" style="padding: 4vw; font-family: 'Montserrat';">
-            <h3 id="modal-product-title" class="text-[4vw] font-bold text-black mb-[1.5vw] ">Product Title</h3>
+            <h3 id="modal-product-title" class="text-[3vw] font-bold text-black mb-[1.5vw] ">Product Title</h3>
 
             <div
               class="bg-[rgba(253,191,56,0.3)] bg-opacity-70 rounded-lg p-[4vw] mb-[vw] flex flex-col gap-[.5vw] "
@@ -945,7 +1237,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
     });
   </script> -->
 
-  <script>
+  <!-- <script>
     gsap.registerPlugin(ScrollTrigger);
 
     // Animate the heading first (Kept from original)
@@ -1022,7 +1314,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
       stagger: 0.2,
       ease: "power2.out"
     });
-  </script>
+  </script> -->
 
 
 
