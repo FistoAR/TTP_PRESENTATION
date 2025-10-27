@@ -1138,30 +1138,30 @@ document.addEventListener('keydown', function(e) {
 let menuDropdown = document.getElementById('dropdownMenu');
 let menuNavLinks = document.querySelectorAll('.dropdown-menu a');
 
-menuToggleButton.addEventListener('click', function(e) {
-  e.stopPropagation();
-  menuDropdown.classList.toggle('show');
-  menuToggleButton.classList.toggle('active');
-});
+// menuToggleButton.addEventListener('click', function(e) {
+//   e.stopPropagation();
+//   menuDropdown.classList.toggle('show');
+//   menuToggleButton.classList.toggle('active');
+// });
 
-menuNavLinks.forEach(function(navLink) {
-  navLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    let selectedSlide = parseInt(this.getAttribute('data-slide'));
+// menuNavLinks.forEach(function(navLink) {
+//   navLink.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     let selectedSlide = parseInt(this.getAttribute('data-slide'));
     
-    menuDropdown.classList.remove('show');
-    menuToggleButton.classList.remove('active');
+//     menuDropdown.classList.remove('show');
+//     menuToggleButton.classList.remove('active');
     
-    navigateToSlide(selectedSlide);
-  });
-});
+//     navigateToSlide(selectedSlide);
+//   });
+// });
 
-document.addEventListener('click', function(e) {
-  if (!menuToggleButton.contains(e.target) && !menuDropdown.contains(e.target)) {
-    menuDropdown.classList.remove('show');
-    menuToggleButton.classList.remove('active');
-  }
-});
+// document.addEventListener('click', function(e) {
+//   if (!menuToggleButton.contains(e.target) && !menuDropdown.contains(e.target)) {
+//     menuDropdown.classList.remove('show');
+//     menuToggleButton.classList.remove('active');
+//   }
+// });
 
 function refreshDropdownActivePage(activePage) {
   menuNavLinks.forEach(function(navLink) {

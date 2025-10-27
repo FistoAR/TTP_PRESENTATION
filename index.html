@@ -17,7 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 
-<!-- Montserrat font -->
+  <!-- Montserrat font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -26,16 +26,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<!-- poppins font  -->
+  <!-- poppins font  -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-<!-- Raleway font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -47,25 +53,13 @@
   <span class="counter-display text-[1vw]" style="font-size: 1vw;">
     <input type="number" class="current-panel-input" style="font-family: 'Montserrat';" min="1" max="8" value="1" />
     /
-    <span class="panel-count text-[1vw]" >4</span>
+    <span class="panel-count text-[1vw]">4</span>
   </span>
 
-  <!-- <div class="page-dropdown">
-      <button class="dropdown-btn" id="dropdownToggle">
-        <span>Go to Page</span>
-        <span class="arrow">▼</span>
-      </button>
-      <div class="dropdown-menu" id="dropdownMenu">
-        <a href="#" data-slide="1">Page 1</a>
-        <a href="#" data-slide="2">Page 2</a>
-        <a href="#" data-slide="3">Page 3</a>
-        <a href="#" data-slide="4">Page 4</a>
-      </div>
-    </div> -->
 
   <!-- -------------------------------------------Slide 1 Start----------------------------------------- -->
   <!-- Background -->
-  <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
+  <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background"
     class="absolute top-0 left-0 w-full h-full object-cover fixed" />
 
   <!-- Header: Logo + Table of Contents + Social Icons -->
@@ -74,357 +68,53 @@
     <div class="flex gap-[2.5vw]">
       <div class="flex gap-[1vw] ">
 
-        <img src="./assests/Images/Home_Slide/youtube_icon.svg" alt="youtube_icon" class="cursor-pointer w-[1.5vw]"
+        <img src="./assets/Images/Home_Slide/youtube_icon.svg" alt="youtube_icon" class="cursor-pointer w-[1.5vw]"
           style="margin-left: 60%;" />
-        <img src="./assests/Images/Home_Slide/linkedin_icon.svg" alt="linkedin_icon" class="cursor-pointer w-[1.5vw]" />
-        <img src="./assests/Images/Home_Slide/website_icon.svg" alt="website_icon" class="cursor-pointer w-[1.5vw]" />
-        <img src="./assests/Images/Home_Slide/instagram_icon.svg" alt="instagram_icon" class="cursor-pointer w-[1.5vw]" />
+        <img src="./assets/Images/Home_Slide/linkedin_icon.svg" alt="linkedin_icon" class="cursor-pointer w-[1.5vw]" />
+        <img src="./assets/Images/Home_Slide/website_icon.svg" alt="website_icon" class="cursor-pointer w-[1.5vw]" />
+        <img src="./assets/Images/Home_Slide/instagram_icon.svg" alt="instagram_icon"
+          class="cursor-pointer w-[1.5vw]" />
 
 
       </div>
 
-      <!-- Table of Contents Button -->
-      <!-- <button class="flex items-center gap-[1vw] border border-[#ffae00] text-black text-[1vw]  rounded-full text-sm font-semibold hover:bg-[#ffae00] hover:text-white transition " style="padding: .5vw 1vw;">
-      TABLE OF CONTENTS <i class="fa-solid fa-chevron-down"></i>
-    </button> -->
+
       <div class="page-dropdown">
-        <!-- <button class="dropdown-btn" id="dropdownToggle">
-        <span>Go to Page</span>
-        <span class="arrow">▼</span>
-      </button> -->
-        <button class="dropdown-btn" id="dropdownToggle"
-          class="flex items-center gap-[1vw] border border-[#FBB24A] text-[1vw]  rounded-full text-sm  hover:bg-[#ffae00] hover:text-white transition "
-          style="padding: .5vw 1vw; ">
-          TABLE OF CONTENTS <i class="fa-solid fa-chevron-down"></i>
-          <span class="arrow">▼</span>
+
+        <button
+          class="dropdown-btn flex items-center gap-[1vw] border border-[#FBB24A] text-[1vw] rounded-full text-sm hover:bg-[#ffae00] hover:text-white transition"
+          id="dropdownToggle" style="padding: .5vw 1vw;">
+          <span class="dropdown-selected-title">Page 1</span>
+          <i class="fa-solid fa-chevron-down ml-2"></i>
         </button>
+
         <div class="dropdown-menu" id="dropdownMenu">
-          <a href="#" data-slide="1">Page 1</a>
-          <a href="#" data-slide="2">Page 2</a>
-          <a href="#" data-slide="3">Page 3</a>
-          <a href="#" data-slide="4">Page 4</a>
-          <a href="#" data-slide="5">Page 5</a>
-          <a href="#" data-slide="6">Page 6</a>
-          <a href="#" data-slide="7">Page 7</a>
-          <a href="#" data-slide="8">Page 8</a>
+          <!-- Links will be injected here by JS -->
         </div>
       </div>
     </div>
 
 
     <!-- Logo -->
-    <img src="./assests/TTP_Logo.png" alt="Logo" class="h-[2vw]" style="padding-right: 2vw;" />
+    <img src="./assets/TTP_Logo.png" alt="Logo" class="h-[2vw]" style="padding-right: 2vw;" />
   </header>
 
 
 
 
   <div class="viewport-container" id="mainScroller">
-<!-- =============================================slide 2 want to replace====================================================== -->
+    <!-- =============================================slide 2 want to replace====================================================== -->
 
-   <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" id="slide_2">
-      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
-      <!-- Main Heading -->
-      <h2 class="text-black font-bold text-center   "
-        style="font-size: 2vw; margin-bottom: 2vw; font-family: montserrat;">
-        WHAT ARE THE PRODUCTS WE ARE PRODUCING
-      </h2>
+    <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background" class="background-image-gradient" />
 
-      <div class=" w-full  flex flex-col justify-center ml-[2vw]" style="gap: 3vw; margin-left: 10vw;  font-family: montserrat;  ;">
-        <!-- <h2 class="text-black font-bold text-center mb-[1vw]  z-[111]" style="font-size: 2.5vw; border: 3px solid black;">
-                WHAT ARE THE PRODUCTS WE ARE PRODUCING
-            </h2> -->
-        <!-- Left Section: FOOD CONTAINERS -->
-        <div class="flex " style="gap: 2vw;">
-          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
-            style="font-size: 1.6vw; margin-top: 5vw; font-family: montserrat;">
-            FOOD<br />CONTAINERS
-          </h3>
 
-          <div class="grid grid-cols-7" style="gap: 1.5vw; margin-left: 5vw; ">
-            <!-- Row 1 -->
-            <!-- <div class="bg-white rounded-[1vw] border-[0.2vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow" style="padding: 1vw; width: 7vw; height: 7vw;">
-                            <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]" style="width: 4vw; height: 4vw;">
-                            <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1;">120ml Round</p>
-                        </div> -->
-
-            <div
-              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '120ml <br/> Round Container',
-        './assests/Images/slide_2/120_ml_round.webp',
-        '2.3 GSM', 
-        '4.3 GSM', 
-        '2500 Nos'
-    )">
-              <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1; font-weight: 600;">120ml Round</p>
-            </div>
-
-            <div
-              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/250_ml_round.webp" alt="250ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml Round
-              </p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/250_ml_glass_round.webp" alt="250ml Glass Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml
-                Glass<br />Round</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/300_ml_round.webp" alt="300ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">300ml Round</p>
-            </div>
-
-          
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/500_ml_round.webp" alt="450ml Square Bottom"
-                class="object-contain mb-[0.5vw]">
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
-                500ml Round</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/750_ml_round.webp" alt="500ml Square Bottom"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">750ml Round</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/1000_ml_round.webp" alt="500ml Rectangle"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.76vw; line-height: 1.1; font-weight: 600;">
-                1000ml Round</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/450_ml_square.webp" alt="750ml Rectangle"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.72vw; line-height: 1.1; font-weight: 600;">
-                450ml  <span class="text-[.5vw] font-medium " style="font-weight: 600;" >(500 GSM)</span> Square Bottom</p>
-            </div>
-
-            <!-- Row 3 -->
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/500_ml_square.webp" alt="500ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.75vw; line-height: 1.1; font-weight: 600;">500ml Square Bottom</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/500_ml_rectangle.webp" alt="750ml Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">500ml Rectangle</p>
-            </div>
-
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/750_ml_rectangle.webp" alt="250-gsm Sweet box"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
-                750ml Rectangle</p>
-            </div>
-
-            <div
-              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/250_gms_sweetbox.webp" alt="500-gsm Sweet box"
-                class="object-contain mb-[0.5vw]">
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
-                250-gsm<br />Sweet box</p>
-            </div>
-
-          
-            <div
-              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '250ml <br/> Round Container',
-        './assests/Images/slide_2/250_ml_round.webp',
-        '5.7 GSM', 
-        '5.8 GSM', 
-        '1000 Nos'
-    )">
-              <img src="./assests/Images/slide_2/500_gms_sweet_box.webp" alt="1000ml Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
-                500-gsm<br />Sweet box</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Section: BIO-DEGRADABLE BAGS -->
-        <div class="flex" style="gap: 2.5vw;">
-          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
-            style="font-size: 1.6vw; margin-bottom: 1vw; font-family: montserrat;">
-            BIO-DEGRADABLE<br />BAGS
-          </h3>
-
-          <div class="flex flex-col" style="gap: 1.6vw;">
-            <!-- Row 1 -->
-            <div class="flex" style="gap: 1.5vw;">
-              <div
-                class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/w-cut-bags.webp" alt="W CUT BAGS" class="object-contain mb-[0.5vw]"
-                  style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">W CUT BAGS</p>
-              </div>
-
-              <div
-                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/d_cut_bags.webp" alt="D CUT BAGS" class="object-contain mb-[0.5vw]"
-                  style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">D CUT BAGS</p>
-              </div>
-
-              <div
-                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/grocessory_bags.webp" alt="GROCESSORY BAGS"
-                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium " style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: 1vw;">
-                  GROCESSORY<br />BAGS</p>
-              </div>
-              <div
-                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/prasadham_bags.webp" alt="PRASADHAM BAGS"
-                  class="object-contain mb-[0.5vw]" style="width: 5vw; height: 5vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
-                  PRASADHAM<br />BAGS</p>
-              </div>
-
-              <div
-                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: .5vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/Garbage_bag.webp" alt="PRASADHAM POUCHES"
-                  class="object-contain mb-[0.5vw]" style="width: 8vw; height: 8vw; margin-bottom: vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: vw;">
-                  GARBAGE<br />BAGS</p>
-              </div>
-
-               <div
-                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-                style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/bio_hazard_bags.webp" alt="PRASADHAM POUCHES"
-                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: .5vw; ">
-                  BIO HAZARD<br />BAGS</p>
-              </div>
-            </div>
-
-            <!-- Row 2 -->
-
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <!-- ==============================================end rough page============================================================= -->
+    <!-- ==================================== FRONT PAGE / HERO SECTION start================================== -->
 
 
 
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden hidden lg:block" data-navigation="Home">
 
-<!-- ==============================================end rough page============================================================= -->
-  <!-- ==================================== FRONT PAGE / HERO SECTION start================================== -->
-
-
-
-    <div class="slide-item relative w-full h-[100vh] overflow-hidden hidden lg:block">
-      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
       <!-- Main Text Content -->
       <div class="absolute top-[20%] left-[25%] z-10 text-black  text-right">
         <h1 class="text-[3.5vw] font-bold leading-tight" style="font-family: 'Raleway', sans-serif;">
@@ -440,7 +130,7 @@
           IS AN INVESTMENT
         </h1>
         <div class="flex gap-[.6vw] " style="margin-top: 1vw;">
-          <img src="./assests/Images/Home_Slide/1st_img.svg" alt="1st_img" class="w-[5vw]" />
+          <img src="./assets/Images/Home_Slide/1st_img.svg" alt="1st_img" class="w-[5vw]" />
           <p class="mt-3 text-[1.8vw] font-semibold" style="font-family: 'Montserrat', sans-serif;">
             Coimbatore’s<br />
             <span class="text-[#ffae00] font-semibold">IML FOOD </span> CONTAINERS<br /> MANUFACTURERS
@@ -451,23 +141,25 @@
         <!-- Location & Clock -->
         <div class=" flex flex-col   gap-[.5vw] text-[.8vw] text-left w-[50vw]   " style="margin-top: 4vw;">
           <div class="flex  gap-[.5vw] font-medium">
-            <img src="./assests/Images/Home_Slide/clock_icon.svg" class=" w-[1.2vw]" ></img> <span style="font-family: 'Montserrat', sans-serif;" class="">24
+            <img src="./assets/Images/Home_Slide/clock_icon.svg" class=" w-[1.2vw]"></img> <span
+              style="font-family: 'Montserrat', sans-serif;" class="">24
               Hours</span>
           </div>
           <div class="flex  gap-[.5vw]  text-left font-medium">
-            <img src="./assests/Images/Home_Slide/location_icon.svg" class="w-[1.2vw] "></img>
-            <span style="font-family: 'Montserrat', sans-serif; ">125, Kuruman St, Edayarpalayam, PirivuPirrivu, Kuniyamuthur, Tamil Nadu 641008</span>
+            <img src="./assets/Images/Home_Slide/location_icon.svg" class="w-[1.2vw] "></img>
+            <span style="font-family: 'Montserrat', sans-serif; ">125, Kuruman St, Edayarpalayam, PirivuPirrivu,
+              Kuniyamuthur, Tamil Nadu 641008</span>
           </div>
         </div>
       </div>
 
       <!-- Container Images   -->
       <div class="absolute bottom-0 left-[3vw]   items-end gap-6 pb-6 z-10">
-        <img src="./assests/Images/Home_Slide/Container_img.png" alt="container" class="h-[20vw] drop-shadow-lg" />
-        <!-- <img src="./assests/Images/Home_Slide/container1.png" alt="container" class="h-[120px] drop-shadow-lg" />
-    <img src="./assests/Images/Home_Slide/container2.png" alt="container" class="h-[150px] drop-shadow-lg" />
-    <img src="./assests/Images/Home_Slide/container3.png" alt="container" class="h-[130px] drop-shadow-lg" />
-    <img src="./assests/Images/Home_Slide/container4.png" alt="container" class="h-[100px] drop-shadow-lg" /> -->
+        <img src="./assets/Images/Home_Slide/Container_img.png" alt="container" class="h-[20vw] drop-shadow-lg" />
+        <!-- <img src="./assets/Images/Home_Slide/container1.png" alt="container" class="h-[120px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container2.png" alt="container" class="h-[150px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container3.png" alt="container" class="h-[130px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container4.png" alt="container" class="h-[100px] drop-shadow-lg" /> -->
       </div>
 
       <!-- Orange Bottom Bar -->
@@ -475,13 +167,12 @@
       <div class="absolute bottom-[2vw] left-0 w-full h-[2vw] bg-[#F36408]"></div>
       <div class="absolute bottom-0 left-0 w-full h-[2vw] bg-[#ffffff]"></div>
     </div>
-  <!-- ==================================== FRONT PAGE / HERO SECTION end================================== -->
+    <!-- ==================================== FRONT PAGE / HERO SECTION end================================== -->
     <!-- =================================slide_1 start=============================================  -->
 
-   <div class="slide-item relative w-full h-[100vh] overflow-hidden  relative" id="slide_1">
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden  relative" data-navigation="Welcome" id="slide_1">
       <!-- Background Image -->
-      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
+
       <!-- Content Wrapper -->
       <div class="relative z-[2] w-full h-full flex flex-col items-center pt-[28vw]">
         <!-- Main Heading -->
@@ -496,22 +187,19 @@
           style="padding-top: 1vw; padding-bottom: 2.5vw; font-size: 1.2vw; margin-top: vw; font-family: 'Montserrat', sans-serif;">
           <strong class="  font-extrabold">Welcome to Terra Tech Packs</strong>, we are trusted partner in IML (In-Mold
           Labeling) food <br /> containers, is a <strong class="font-extrabold">Coimbatore</strong> based leading
-          manufacturers of <strong class="font-extrabold">Reusable Food Containers</strong> <br /> utilizing the finest raw
+          manufacturers of <strong class="font-extrabold">Reusable Food Containers</strong> <br /> utilizing the finest
+          raw
           materials and modern machines. With a passion for <strong class="font-extrabold">innovation and a <br />
             commitment</strong> to food safety, we specialize in producing <strong
             class="font-extrabold">high-quality</strong> food packaging <br /> containers coupled with state-of-the-art
           technology.
         </div>
         <div class="">
-  <iframe
-    class="w-[23vw] h-[10vw]"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1573986371!2d76.95185237377746!3d10.951480455942978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b6841a218f7%3A0x825be0e2a0d59933!2sTerra%20Tech%20Packs!5e0!3m2!1sen!2sin!4v1761284646035!5m2!1sen!2sin"
-    style="border:0;"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+          <iframe class="w-[23vw] h-[10vw]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1573986371!2d76.95185237377746!3d10.951480455942978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b6841a218f7%3A0x825be0e2a0d59933!2sTerra%20Tech%20Packs!5e0!3m2!1sen!2sin!4v1761284646035!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
 
 
       </div>
@@ -523,14 +211,15 @@
 
         <div class="flex items-center " style="margin-left: 5vw;">
 
-          <img src="./assests/Images/Welcome_slide/clock_img.svg" alt="clock_icon"
+          <img src="./assets/Images/Welcome_slide/clock_img.svg" alt="clock_icon"
             class="absolute left-[-1vw] w-[4vw]" />
 
           <p class="text-white font-bold h-[3.5vw] "
-            style="font-size: 1.1vw; padding: .6vw 1vw; margin-left: 1vw; padding-left: 3.5vw; padding-right: 5vw; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(255,255,255,0)); font-family: 'montserrat';">Open 24 hours</p>
+            style="font-size: 1.1vw; padding: .6vw 1vw; margin-left: 1vw; padding-left: 3.5vw; padding-right: 5vw; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(255,255,255,0)); font-family: 'montserrat';">
+            Open 24 hours</p>
         </div>
 
- 
+
 
         <!-- Center: Social icons and address -->
         <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center" style="bottom: vw; gap: 1vw;">
@@ -538,52 +227,53 @@
           <div class="text-black text-center   px-[2vw] rounded-[2vw] flex items-center font-medium"
             style="font-size: 0.8vw; padding: 0.vw 2vw; gap: 0.5vw; font-family: 'Montserrat', sans-serif;">
             <!-- <span style="width: 1.2vw; height: 1.2vw;"></span> -->
-            <img src="./assests/Images/Welcome_slide/location_icon.svg" alt="location" class="w-[1.5vw]" />
+            <img src="./assets/Images/Welcome_slide/location_icon.svg" alt="location" class="w-[1.5vw]" />
             125, Kumaran St, Edayarpalayam, PirivuPirrivu, Kuniyamuthur, Tamil Nadu 641008
           </div>
 
 
           <!-- Social Icons -->
-          <div class="flex items-center font-medium " style="gap: 2vw; margin-top: 1vw; font-family: 'Montserrat', sans-serif; ">
+          <div class="flex items-center font-medium "
+            style="gap: 2vw; margin-top: 1vw; font-family: 'Montserrat', sans-serif; ">
             <div
               class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
               style="width: 2vw; height: 2vw;">
-              <img src="./assests/Images/Welcome_slide/food_icon.svg" alt="Facebook" class="object-contain"
+              <img src="./assets/Images/Welcome_slide/food_icon.svg" alt="Facebook" class="object-contain"
                 style="width: 2.5vw; height: 2.5vw; ">
               <p class="text-[.5vw] ">FOOD</p>
             </div>
             <div
               class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
               style="width: 2vw; height: 2vw;">
-              <img src="./assests/Images/Welcome_slide/freeze_icon.svg" alt="Twitter" class="object-contain"
+              <img src="./assets/Images/Welcome_slide/freeze_icon.svg" alt="Twitter" class="object-contain"
                 style="width: 2.5vw; height: 2.5vw;">
               <p class="text-[.5vw] ">FREEZER</p>
             </div>
             <div
               class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
               style="width: 2vw; height: 2vw;">
-              <img src="./assests/Images/Welcome_slide/microwave_icon.svg" alt="LinkedIn" class="object-contain"
+              <img src="./assets/Images/Welcome_slide/microwave_icon.svg" alt="LinkedIn" class="object-contain"
                 style="width: 2.5vw; height: 2.5vw;">
               <p class="text-[.5vw]">MICROWAVE</p>
             </div>
             <div
               class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
               style="width: 2vw; height: 2vw;">
-              <img src="./assests/Images/Welcome_slide/stackable_icon'.svg" alt="YouTube" class="object-contain"
+              <img src="./assets/Images/Welcome_slide/stackable_icon'.svg" alt="YouTube" class="object-contain"
                 style="width: 2.5vw; height: 2.5vw;">
               <p class="text-[.5vw]">STACKABLE</p>
             </div>
             <div
               class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
               style="width: 2vw; height: 2vw;">
-              <img src="./assests/Images/Welcome_slide/hygenic_icon.svg" alt="WhatsApp" class="object-contain"
+              <img src="./assets/Images/Welcome_slide/hygenic_icon.svg" alt="WhatsApp" class="object-contain"
                 style="width: 2.5vw; height: 2.5vw;">
               <p class="text-[.5vw]">HYGIENIC</p>
             </div>
           </div>
 
           <!-- Address -->
-          
+
         </div>
 
 
@@ -593,20 +283,18 @@
     <!-- =================================Slide_2 end=============================================  -->
     <!-- ===================================== SLIDE 2 start=============================================-->
 
-    <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" id="slide_2">
-      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
+
+    <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" data-navigation="About" id="slide_2">
+
       <!-- Main Heading -->
       <h2 class="text-black font-bold text-center   "
         style="font-size: 2vw; margin-bottom: 2vw; font-family: montserrat;">
         WHAT ARE THE PRODUCTS WE ARE PRODUCING
       </h2>
 
-      <div class=" w-full  flex flex-col justify-center ml-[2vw]" style="gap: 3vw; margin-left: 10vw;  font-family: montserrat;  ;">
-        <!-- <h2 class="text-black font-bold text-center mb-[1vw]  z-[111]" style="font-size: 2.5vw; border: 3px solid black;">
-                WHAT ARE THE PRODUCTS WE ARE PRODUCING
-            </h2> -->
-        <!-- Left Section: FOOD CONTAINERS -->
+      <div class=" w-full  flex flex-col justify-center ml-[2vw]"
+        style="gap: 3vw; margin-left: 10vw;  font-family: montserrat;  ;">
+
         <div class="flex " style="gap: 2vw;">
           <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
             style="font-size: 1.6vw; margin-top: 5vw; font-family: montserrat;">
@@ -614,130 +302,207 @@
           </h3>
 
           <div class="grid grid-cols-7" style="gap: 1.5vw; margin-left: 5vw; ">
-            <!-- Row 1 -->
-            <!-- <div class="bg-white rounded-[1vw] border-[0.2vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow" style="padding: 1vw; width: 7vw; height: 7vw;">
-                            <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]" style="width: 4vw; height: 4vw;">
-                            <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1;">120ml Round</p>
-                        </div> -->
 
             <div
               class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
               style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
-        '120ml Round Container',
-        './assests/Images/slide_2/120_ml_round.webp',
+        '120ml <br/> Round Container',
+        './assets/Images/slide_2/120_ml_round.webp',
         '2.3 GSM', 
         '4.3 GSM', 
         '2500 Nos'
     )">
-              <img src="./assests/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.7vw; line-height: 1.1; font-weight: 600;">120ml Round</p>
+              <img src="./assets/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.7vw; line-height: 1.1; font-weight: 600;">120ml Round</p>
             </div>
 
             <div
               class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/250_ml_round.webp" alt="250ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml Round
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_ml_round.webp" alt="250ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml Round
               </p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/250_ml_glass_round.webp" alt="250ml Glass Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_ml_glass_round.webp" alt="250ml Glass Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml
                 Glass<br />Round</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/300_ml_round.webp" alt="300ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">300ml Round</p>
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/300_ml_round.webp" alt="300ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">300ml Round</p>
             </div>
 
-          
+
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/500_ml_round.webp" alt="450ml Square Bottom"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_round.webp" alt="450ml Square Bottom"
                 class="object-contain mb-[0.5vw]">
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
                 500ml Round</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/750_ml_round.webp" alt="500ml Square Bottom"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">750ml Round</p>
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/750_ml_round.webp" alt="500ml Square Bottom"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">750ml Round</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/1000_ml_round.webp" alt="500ml Rectangle"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.76vw; line-height: 1.1; font-weight: 600;">
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/1000_ml_round.webp" alt="500ml Rectangle"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.76vw; line-height: 1.1; font-weight: 600;">
                 1000ml Round</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/450_ml_square.webp" alt="750ml Rectangle"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.72vw; line-height: 1.1; font-weight: 600;">
-                450ml  <span class="text-[.5vw] font-medium " style="font-weight: 600;" >(500 GSM)</span> Square Bottom</p>
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/450_ml_square.webp" alt="750ml Rectangle"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.72vw; line-height: 1.1; font-weight: 600;">
+                450ml <span class="text-[.5vw] font-medium " style="font-weight: 600;">(500 GSM)</span> Square Bottom
+              </p>
             </div>
 
             <!-- Row 3 -->
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/500_ml_square.webp" alt="500ml Round" class="object-contain mb-[0.5vw]"
-                >
-              <p class="text-black text-center font-medium" style="font-size: 0.75vw; line-height: 1.1; font-weight: 600;">500ml Square Bottom</p>
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_square.webp" alt="500ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.75vw; line-height: 1.1; font-weight: 600;">500ml Square Bottom</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/500_ml_rectangle.webp" alt="750ml Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">500ml Rectangle</p>
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_rectangle.webp" alt="750ml Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">500ml Rectangle</p>
             </div>
 
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/750_ml_rectangle.webp" alt="250-gsm Sweet box"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/750_ml_rectangle.webp" alt="250-gsm Sweet box"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
                 750ml Rectangle</p>
             </div>
 
             <div
               class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/250_gms_sweetbox.webp" alt="500-gsm Sweet box"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_gms_sweetbox.webp" alt="500-gsm Sweet box"
                 class="object-contain mb-[0.5vw]">
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
                 250-gsm<br />Sweet box</p>
             </div>
 
-          
+
             <div
               class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
-              style="padding: 1vw; width: 8vw; height: 8vw;">
-              <img src="./assests/Images/slide_2/500_gms_sweet_box.webp" alt="1000ml Round"
-                class="object-contain mb-[0.5vw]" >
-              <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_gms_sweet_box.webp" alt="1000ml Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
                 500-gsm<br />Sweet box</p>
             </div>
           </div>
@@ -756,51 +521,57 @@
               <div
                 class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/w-cut-bags.webp" alt="W CUT BAGS" class="object-contain mb-[0.5vw]"
+                <img src="./assets/Images/slide_2/w-cut-bags.webp" alt="W CUT BAGS" class="object-contain mb-[0.5vw]"
                   style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">W CUT BAGS</p>
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">W CUT BAGS</p>
               </div>
 
               <div
                 class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/d_cut_bags.webp" alt="D CUT BAGS" class="object-contain mb-[0.5vw]"
+                <img src="./assets/Images/slide_2/d_cut_bags.webp" alt="D CUT BAGS" class="object-contain mb-[0.5vw]"
                   style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">D CUT BAGS</p>
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">D CUT BAGS</p>
               </div>
 
               <div
                 class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/grocessory_bags.webp" alt="GROCESSORY BAGS"
+                <img src="./assets/Images/slide_2/grocessory_bags.webp" alt="GROCESSORY BAGS"
                   class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium " style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: 1vw;">
+                <p class="text-black text-center font-medium "
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: 1vw;">
                   GROCESSORY<br />BAGS</p>
               </div>
               <div
                 class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/prasadham_bags.webp" alt="PRASADHAM BAGS"
+                <img src="./assets/Images/slide_2/prasadham_bags.webp" alt="PRASADHAM BAGS"
                   class="object-contain mb-[0.5vw]" style="width: 5vw; height: 5vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
                   PRASADHAM<br />BAGS</p>
               </div>
 
               <div
                 class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: .5vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/Garbage_bag.webp" alt="PRASADHAM POUCHES"
+                <img src="./assets/Images/slide_2/Garbage_bag.webp" alt="PRASADHAM POUCHES"
                   class="object-contain mb-[0.5vw]" style="width: 8vw; height: 8vw; margin-bottom: vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: vw;">
                   GARBAGE<br />BAGS</p>
               </div>
 
-               <div
+              <div
                 class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
                 style="padding: 1vw; width: 8vw; height: 8vw;">
-                <img src="./assests/Images/slide_2/bio_hazard_bags.webp" alt="PRASADHAM POUCHES"
+                <img src="./assets/Images/slide_2/bio_hazard_bags.webp" alt="PRASADHAM POUCHES"
                   class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
-                <p class="text-black text-center font-medium" style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: .5vw; ">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: .5vw; ">
                   BIO HAZARD<br />BAGS</p>
               </div>
             </div>
@@ -813,11 +584,13 @@
 
     </div>
 
+
+
+
     <!-- ===================================== SLIDE 2 end=============================================-->
     <!-- ====================================SLIDE 3 start==============================================-->
     <div class="slide-item overflow-hidden  w-full h-100vw " id="slide_3">
-      <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
+
       <div class=" flex flex-col" style="padding: 4vw 6vw;">
 
         <!-- Title Section -->
@@ -834,16 +607,17 @@
         </div>
 
         <!-- Steps Grid -->
-        <div class="" style="display: grid; grid-template-columns: repeat(4, .3fr); gap: .1vw; margin-bottom: 2vw; margin-left: 10vw;"
-         >
+        <div class=""
+          style="display: grid; grid-template-columns: repeat(4, .3fr); gap: .1vw; margin-bottom: 2vw; margin-left: 10vw;">
 
           <!-- Step 1 -->
           <div class=" w-[13vw] h-[13vw]"
             style="background: white; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span style="font-size: 2vw; font-weight: 700;" >S</span>tep : 1</h3>
+            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span
+                style="font-size: 2vw; font-weight: 700;">S</span>tep : 1</h3>
             <div
               style="width: 13vw; height: 7vw; border-radius: 0.8vw; margin-bottom: vw; display: flex; align-items: center; justify-content: center;">
-              <img src="./assests/Images/slide_3/step_1_img.webp" alt="Film Inserted" style=" object-fit: contain;">
+              <img src="./assets/Images/slide_3/step_1_img.webp" alt="Film Inserted" style=" object-fit: contain;">
             </div>
             <p style="font-size: .9vw; font-weight: 600; color: #333;" class="font-semibold">Film Inserted</p>
           </div>
@@ -851,10 +625,11 @@
           <!-- Step 2 -->
           <div class="w-[13vw] h-[13vw]"
             style="background-color: #FBB24A; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span style="font-size: 2vw; font-weight: 700;" >S</span>tep : 2</h3>
+            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span
+                style="font-size: 2vw; font-weight: 700;">S</span>tep : 2</h3>
             <div
               style="width: 13vw; height: 7vw;  border-radius: 0.8vw; margin-bottom: vw; display: flex; align-items: center; justify-content: center;">
-              <img src="./assests/Images/slide_3/step_2_img.webp" alt="Plastic Injected" style=" object-fit: contain;">
+              <img src="./assets/Images/slide_3/step_2_img.webp" alt="Plastic Injected" style=" object-fit: contain;">
             </div>
             <p style="font-size: .9vw; font-weight: 600; color: white;">Plastic Injected</p>
           </div>
@@ -862,22 +637,25 @@
           <!-- Step 3 -->
           <div class=" w-[13vw] h-[13vw]"
             style="background: white; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span style="font-size: 2vw; font-weight: 700;" >S</span>tep : 3</h3>
+            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span
+                style="font-size: 2vw; font-weight: 700;">S</span>tep : 3</h3>
             <div
               style="width: 13vw; height: 7vw;  border-radius: 0.8vw; margin-bottom: vw; margin-top: -1vw;  display: flex; align-items: center; justify-content: center;">
-              <img src="./assests/Images/slide_3/step_3_img.webp" alt="Plastic & Label Fused Together"
+              <img src="./assets/Images/slide_3/step_3_img.webp" alt="Plastic & Label Fused Together"
                 style=" object-fit: contain;">
             </div>
-            <p style="font-size: .9vw; font-weight: 600; color: #333;" class="font-semibold">Plastic & Label<br>Fused Together</p>
+            <p style="font-size: .9vw; font-weight: 600; color: #333;" class="font-semibold">Plastic & Label<br>Fused
+              Together</p>
           </div>
 
           <!-- Step 4 -->
           <div class=" w-[13vw] h-[13vw]"
             style="background-color: #FBB24A; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat'; ">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span style="font-size: 2vw; font-weight: 700;" >S</span>tep : 4</h3>
+            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span
+                style="font-size: 2vw; font-weight: 700;">S</span>tep : 4</h3>
             <div class=""
               style="width: 10vw; height: 6.5vw;  border-radius: 0.8vw; margin-bottom: .5vw;  display: flex; align-items: center; justify-content: center; margin-left: 1.8vw;">
-              <img src="./assests/Images/slide_3/step_4_img.webp" alt="IML Product" style=" object-fit: contain;">
+              <img src="./assets/Images/slide_3/step_4_img.webp" alt="IML Product" style=" object-fit: contain;">
             </div>
             <p style="font-size: .9vw; font-weight: 600; color: white; margin-top: 1vw;">IML Product</p>
           </div>
@@ -889,7 +667,7 @@
 
           <!-- Left: Product Image -->
           <div style="flex: 0 0 35vw;">
-            <img src="./assests/Images/slide_3/container_img.webp" alt="IML Products"
+            <img src="./assets/Images/slide_3/container_img.webp" alt="IML Products"
               style="width: 30vw; height: auto; border-radius: 1vw;">
           </div>
 
@@ -911,242 +689,404 @@
     </div>
     <!-- ====================================SLIDE 3 end==============================================-->
     <!-- ====================================SLIDE 4 start============================================-->
-<div class="slide-item w-full h-100vw overflow-hidden" id="slide_4">
-        <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
-  <div class="content-wrapper flex flex-col">
-    <!-- Top Section -->
-    <div class="flex items-center justify-between px-[6vw] py-[4vw] gap-[10vw]">
-      <!-- Left Content -->
-      <div class="w-[32vw] " style="font-family: 'Montserrat', sans-serif;">
-        <h2 class="font-bold  text-[1.5vw] leading-[1.2] w-[44vw]" style="text-align: center; margin-bottom: 2.5vw;">
-          SCREEN PRINTING CONTAINERS
-        </h2>
-        <p class="text-justify leading-[2] text-[1.2vw] w-[44vw] font-medium text-[#000000]" style="text-align: justify; font-family: 'Montserrat', sans-serif;">
-          Screen printing is one the most common print technology in plastic  container decoration. It's a technique used to apply information such as  size, weight & volume, brand details, durability & legibility, nutritional  details, expiration and production dates, symbols and storage  instructions onto the surface of plastic packaging such as bottles, jars,  jerrycans and buckets.
-        </p>
-        <!-- <p class="text-justify leading-[1.8] text-[1vw]  border" style="text-align: justify;">
+    <div class="slide-item w-full h-100vw overflow-hidden" id="slide_4">
+
+      <div class="content-wrapper flex flex-col">
+        <!-- Top Section -->
+        <div class="flex items-center justify-between px-[6vw] py-[4vw] gap-[10vw]">
+          <!-- Left Content -->
+          <div class="w-[32vw] " style="font-family: 'Montserrat', sans-serif;">
+            <h2 class="font-bold  text-[1.5vw] leading-[1.2] w-[44vw]"
+              style="text-align: center; margin-bottom: 2.5vw;">
+              SCREEN PRINTING CONTAINERS
+            </h2>
+            <p class="text-justify leading-[2] text-[1.2vw] w-[44vw] font-medium text-[#000000]"
+              style="text-align: justify; font-family: 'Montserrat', sans-serif;">
+              Screen printing is one the most common print technology in plastic container decoration. It's a technique
+              used to apply information such as size, weight & volume, brand details, durability & legibility,
+              nutritional details, expiration and production dates, symbols and storage instructions onto the surface of
+              plastic packaging such as bottles, jars, jerrycans and buckets.
+            </p>
+            <!-- <p class="text-justify leading-[1.8] text-[1vw]  border" style="text-align: justify;">
           Screen printing is one the most common print technology in plastic <br/> container decoration. It's a technique used to apply information such as <br/> size, weight & volume, brand details, durability & legibility, nutritional <br/> details, expiration and production dates, symbols and storage <br/> instructions onto the surface of plastic packaging such as bottles, jars, <br/> jerrycans and buckets.
         </p> -->
-      </div>
+          </div>
 
-      <!-- Right Image -->
-      <div class="w-[45vw] flex justify-center" >
-        <img 
-          src="./assests/Images/slide_4/container_box_img.webp" 
-          alt="Screen printing container"
-          class="w-[35vw] h-auto"
-        />
-      </div>
-    </div>
-
-    <!-- Process Steps -->
-    <div class="grid items-center justify-start gap-[3vw] mt-[3vw] w-[90vw] " style="margin-left: 4vw;">
-        <div class="grid grid-cols-3 gap-[4vw] ">
-          <div class=" flex  py-[1vw] px-[2vw] ">
-            <img src="./assests/Images/slide_4/preparatio_and_positioning_of_the_container.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Preparation and Positioning <br/>
-of the container​</span>
-              </div>
-
-                <div class=" flex  py-[1vw] px-[2vw] text-center">
-            <img src="./assests/Images/slide_4/screen_coating.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen coating</span>
-              </div>
-            
-                 <div class=" flex  py-[1vw] px-[2vw] text-center">
-            <img src="./assests/Images/slide_4/printing.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Printing</span>
-              </div>
+          <!-- Right Image -->
+          <div class="w-[45vw] flex justify-center">
+            <img src="./assets/Images/slide_4/container_box_img.webp" alt="Screen printing container"
+              class="w-[35vw] h-auto" />
+          </div>
         </div>
 
-<div class="grid grid-cols-3 gap-[4vw]">
-         <div class=" flex  py-[1vw] px-[2vw] text-center">
-            <img src="./assests/Images/slide_4/mesh_preparation.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Mesh preparation​</span>
-              </div>
+        <!-- Process Steps -->
+        <div class="grid items-center justify-start gap-[3vw] mt-[3vw] w-[90vw] " style="margin-left: 4vw;">
+          <div class="grid grid-cols-3 gap-[4vw] ">
+            <div class=" flex  py-[1vw] px-[2vw] ">
+              <img src="./assets/Images/slide_4/preparatio_and_positioning_of_the_container.svg" alt="icon"
+                class="w-[2vw]" />
+              <span class="font-medium text-[.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Preparation and Positioning <br />
+                of the container​</span>
+            </div>
+
+            <div class=" flex  py-[1vw] px-[2vw] text-center">
+              <img src="./assets/Images/slide_4/screen_coating.svg" alt="icon" class="w-[2vw]" />
+              <span class="font-medium text-[.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen coating</span>
+            </div>
+
+            <div class=" flex  py-[1vw] px-[2vw] text-center">
+              <img src="./assets/Images/slide_4/printing.svg" alt="icon" class="w-[2vw]" />
+              <span class="font-medium text-[.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Printing</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-[4vw]">
+            <div class=" flex  py-[1vw] px-[2vw] text-center">
+              <img src="./assets/Images/slide_4/mesh_preparation.svg" alt="icon" class="w-[2vw]" />
+              <span class="font-medium text-[.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Mesh preparation​</span>
+            </div>
 
 
-         <div class=" flex  py-[1vw] px-[2vw] ">
-            <img src="./assests/Images/slide_4/screen_preparation.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen <br/>
-Preparation​</span>
-              </div>
+            <div class=" flex  py-[1vw] px-[2vw] ">
+              <img src="./assets/Images/slide_4/screen_preparation.svg" alt="icon" class="w-[2vw]" />
+              <span class="font-medium text-[.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen <br />
+                Preparation​</span>
+            </div>
 
-         <div class=" flex  py-[1vw] px-[2vw] text-center">
-            <img src="./assests/Images/slide_4/drying.svg" alt="icon" class="w-[2vw]"/>
-                <span class="font-medium text-[0.8vw] " style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Drying​</span>
-              </div>
+            <div class=" flex  py-[1vw] px-[2vw] text-center">
+              <img src="./assets/Images/slide_4/drying.svg" alt="icon" class="w-[2vw]" />
+              <span class="font-medium text-[0.8vw] "
+                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Drying​</span>
+            </div>
 
-   
-</div>
-      
+
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
     <!-- ====================================SLIDE 4 end============================================-->
-   <!-- ====================================SLIDE 5 start============================================-->
+    <!-- ====================================SLIDE 5 start============================================-->
 
 
-<div class="slide-item w-full h-100vw overflow-hidden" id="slide_5">
-          <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
-<div class="text-center gap-[1.8vw] flex flex-col " style="font-family: 'Montserrat', sans-serif; margin-top: 3vw;">
-  <h2 class="font-bold text-[1.8vw] "> BIO DEGRADABLE BAGS​ </h2>
-  <p class="w-[88vw] text-[1.2vw] text-left font-medium">
-Biodegradable plastic is an eco-friendly alternative to traditional plastic. It is made from organic materials that can be easily decomposed by bacteria and other natural processes. This type of plastic reduces waste in landfills and oceans, minimizing the impact on the environment.​
-  </p>
-  <div class=" items-center">
- <img src="./assests/Images/slide_5/Image.webp" alt="image" class="w-[50vw] h-[20vw]   " style="margin-left: auto; margin-right: auto; margin-top: 2vw;"/>
-  </div>
- 
-</div>
-</div>
+    <div class="slide-item w-full h-100vw overflow-hidden" id="slide_5">
 
-    <!-- ====================================SLIDE 5 end============================================-->
-   <!-- ====================================SLIDE 5 start============================================-->
-
-    <!-- ====================================SLIDE 5 end============================================-->
-  </div>
-
-   <!-- ====================================SLIDE 6 start============================================-->
-<div class="slide-item  relative w-full h-[100vh] flex flex-col overflow-hidden" id="slide_6">
-  <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-    class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
-
-  <!-- Main Heading -->
-  <h2 class="text-black font-bold text-center pt-[8vw] mb-[5vw]" 
-      style="font-size: 2vw; font-family: 'Montserrat', sans-serif; margin-bottom: 5vw;" >
-    WHAT ARE THE TYPES OF BAGS WE ARE HAVING
-  </h2>
-
-  <!-- Bags Grid Container -->
-  <div class="flex justify-center items-center px-[8vw]">
-    <div class="grid grid-cols-6  gap-[vw]  w-[90vw] border border-[#FBB24A]">
-      
-      <!-- Row 1 -->
-      <!-- W CUT BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.8vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-         W CUT BAG​
+      <div class="text-center gap-[1.8vw] flex flex-col "
+        style="font-family: 'Montserrat', sans-serif; margin-top: 3vw;">
+        <h2 class="font-bold text-[1.8vw] "> BIO DEGRADABLE BAGS​ </h2>
+        <p class="w-[88vw] text-[1.2vw] text-left font-medium">
+          Biodegradable plastic is an eco-friendly alternative to traditional plastic. It is made from organic materials
+          that can be easily decomposed by bacteria and other natural processes. This type of plastic reduces waste in
+          landfills and oceans, minimizing the impact on the environment.​
+        </p>
+        <div class=" items-center">
+          <img src="./assets/Images/slide_5/Image.webp" alt="image" class="w-[50vw] h-[20vw]   "
+            style="margin-left: auto; margin-right: auto; margin-top: 2vw;" />
         </div>
-        <div class="bg-white  border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_1.webp" alt="W Cut Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
+
       </div>
-
-      <!-- GROCERY BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-          D CUT BAG​
-        </div>
-        <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_2.webp" alt="Grocery Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
-      </div>
-
-      <!-- GARBAGE BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10; width: 100%; height: 4vw; ">
-          GROCERY <br/> BAG​
-        </div>
-        <div class="bg-white border-[0.015vw]  border-[#FBB24A]  flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_3.webp" alt="Garbage Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
-      </div>
-
-      <!-- Row 2 -->
-      <!-- D CUT BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-          PRASADAM <br/> BAG​
-        </div>
-        <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_4.webp" alt="D Cut Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
-      </div>
-
-      <!-- PRASADAM BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-          GARBAGE <br/>BAG​
-        </div>
-        <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_5.webp" alt="Prasadam Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
-      </div>
-
-      <!-- BIO HAZARD BAG -->
-      <div class="relative flex flex-col items-center">
-        <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center " 
-             style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-          BIO HAZARD <br/> BAG
-        </div>
-        <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden" 
-             style="width: 100%; height: 18vw; padding: 2vw;">
-          <img src="./assests/Images/slide_6/img_6.webp" alt="Bio Hazard Bag" 
-               class="object-contain" style="max-width: 90%; max-height: 90%;">
-        </div>
-      </div>
-
     </div>
-  </div>
-</div>
+
+    <!-- ====================================SLIDE 5 end============================================-->
+    <!-- ====================================SLIDE 5 start============================================-->
+
+    <!-- ====================================SLIDE 5 end============================================-->
+
+    <!-- ====================================SLIDE 6 start============================================-->
+    <div class="slide-item  relative w-full h-[100vh] flex flex-col overflow-hidden" id="slide_6">
+      <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background"
+        class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
+
+      <!-- Main Heading -->
+      <h2 class="text-black font-bold text-center pt-[8vw] mb-[5vw]"
+        style="font-size: 2vw; font-family: 'Montserrat', sans-serif; margin-bottom: 5vw;">
+        WHAT ARE THE TYPES OF BAGS WE ARE HAVING
+      </h2>
+
+      <!-- Bags Grid Container -->
+      <div class="flex justify-center items-center px-[8vw]">
+        <div class="grid grid-cols-6  gap-[vw]  w-[90vw] border border-[#FBB24A]">
+
+          <!-- Row 1 -->
+          <!-- W CUT BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.8vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
+              W CUT BAG​
+            </div>
+            <div class="bg-white  border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_1.webp" alt="W Cut Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+          <!-- GROCERY BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
+              D CUT BAG​
+            </div>
+            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_2.webp" alt="Grocery Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+          <!-- GARBAGE BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10; width: 100%; height: 4vw; ">
+              GROCERY <br /> BAG​
+            </div>
+            <div class="bg-white border-[0.015vw]  border-[#FBB24A]  flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_3.webp" alt="Garbage Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <!-- D CUT BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
+              PRASADAM <br /> BAG​
+            </div>
+            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_4.webp" alt="D Cut Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+          <!-- PRASADAM BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
+              GARBAGE <br />BAG​
+            </div>
+            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_5.webp" alt="Prasadam Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+          <!-- BIO HAZARD BAG -->
+          <div class="relative flex flex-col items-center">
+            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
+              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
+              BIO HAZARD <br /> BAG
+            </div>
+            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
+              style="width: 100%; height: 18vw; padding: 2vw;">
+              <img src="./assets/Images/slide_6/img_6.webp" alt="Bio Hazard Bag" class="object-contain"
+                style="max-width: 90%; max-height: 90%;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- ====================================SLIDE 6 end============================================-->
 
+    <!-- ====================================SLIDE 7 start ============================================-->
 
-<div class="slide-item relative w-full h-[100vh] overflow-hidden" id="slide_7">
-          <img src="./assests/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover  z-[-1]" />
-    <section class="sec-1">
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="slide_7">
+
+      <section class="sec-1">
         <h2>TYPES OF FOOD CONTAINERS</h2>
         <div class="grid-container">
-            <div class="grid_item">
-                <p>Bagasse <br> Containers</p>
-            </div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_2.webp" alt=""></div>
-            <div class="grid_item">
-                <p>Paper <br/>Container </p>
-            </div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_4.webp" alt=""></div>
-            <div class="grid_item">
-                <p>INJUCTION <br/> MOULDING <br/>PP CONTAINER</p>
-            </div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_6.webp" alt=""></div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_1.webp" alt=""></div>
-            <div class="grid_item">
-                <p>Aluminum Foil <br/> Container</p>
-            </div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_3.webp" alt=""></div>
-            <div class="grid_item">
-                <p>Thermoforming<br> Container</p>
-            </div>
-            <div class="grid_item"><img src="./assests/Images/slide_7/img_5.webp" alt=""></div>
-            <div class="grid_item">
-                <p>Blow Moulded <br> Containers</p>
-            </div>
+          <div class="grid_item">
+            <p>Bagasse <br> Containers</p>
+          </div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_2.webp" alt=""></div>
+          <div class="grid_item">
+            <p>Paper <br />Container </p>
+          </div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_4.webp" alt=""></div>
+          <div class="grid_item">
+            <p>INJUCTION <br /> MOULDING <br />PP CONTAINER</p>
+          </div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_6.webp" alt=""></div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_1.webp" alt=""></div>
+          <div class="grid_item">
+            <p>Aluminum Foil <br /> Container</p>
+          </div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_3.webp" alt=""></div>
+          <div class="grid_item">
+            <p>Thermoforming<br> Container</p>
+          </div>
+          <div class="grid_item"><img src="./assets/Images/slide_7/img_5.webp" alt=""></div>
+          <div class="grid_item">
+            <p>Blow Moulded <br> Containers</p>
+          </div>
         </div>
-    </section>
-</div>
+      </section>
+    </div>
+
+    <!-- ====================================SLIDE 7 end ============================================-->
+
+
+    <!-- ====================================SLIDE 8 start ============================================-->
+
+
+    <div class="sec-8 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_8">
+      <h3>PP FOOD CONTAINERS TYPE</h3>
+      <div class="sec-8-grid">
+        <div class="sec-8-grid-item">
+          <p>ROUND <br> CONTAINER</p>
+          <img src="assets/Images/slide_8/round_container.png" alt="">
+        </div>
+        <div class="sec-8-grid-item">
+          <p>RECTANGLE CONTAINER</p>
+          <img src="assets/Images/slide_8/rectangle_container.png" alt="">
+        </div>
+        <div class="sec-8-grid-item">
+          <p>ROUND TOP SQUARE <br> BUTTOM CONTAINER/ <br> RS CONTAINER</p>
+          <img src="assets/Images/slide_8/rount_square_container.png" alt="">
+        </div>
+        <div class="sec-8-grid-item">
+          <p>SWEET BOX</p>
+          <img src="assets/Images/slide_8/sweet_box_container.png" alt="">
+        </div>
+
+      </div>
+    </div>
+    <!-- ====================================SLIDE 8 end ============================================-->
+
+    <!-- ====================================SLIDE 9 start ============================================-->
+
+
+    <div class="sec-9 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_9">
+      <h3>AVAILABLE MARKET SIZE</h3>
+      <div class="sec-9-grid">
+        <div class="sec-9-grid-item">
+          <p class="sec-9-grid-item-title">Round Container</p>
+          <img src="assets/Images/slide_9/round_info.svg" alt="round container" class="sec-9-item">
+        </div>
+        <div class="sec-9-grid-item">
+          <p class="sec-9-grid-item-title">Rectangle Container</p>
+          <img src="assets/Images/slide_9/rectangle_info.svg" alt="rectangle container" class="sec-9-item">
+        </div>
+        <div class="sec-9-vertical-container">
+          <div class="sec-9-grid-item">
+            <p class="sec-9-grid-item-title">Rs Container</p>
+            <img src="assets/Images/slide_9/round_square_info.svg" alt="round square container" class="sec-9-item">
+          </div>
+          <div class="sec-9-grid-item">
+            <p class="sec-9-grid-item-title">Sweet Box</p>
+            <img src="assets/Images/slide_9/sweetbox_info.svg" alt="sweet box" class="sec-9-item">
+          </div>
+          <div class="sec-9-grid-item"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================SLIDE 9 end ============================================-->
+
+    <!-- ====================================SLIDE 10 start ============================================-->
 
 
 
+    <div class="sec-10 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_10">
+      <h3>WHY USE THESE SIZE ONLY</h3>
+      <p>These sizes are the market standard sizes, fast-moving sizes, and most required sizes. That is why we are
+        manufacturing these sizes.</p>
+      <div class="sec-10-grid">
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/120_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">120ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_ml_glass_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250ml Glass Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/300_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">300ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/750_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">750ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/1000_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">1000ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/450_ml_square.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">450ml <span>(500 GSM)</span> Square Bottom</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_square.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Square Bottom</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_rectangle.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Rectangle</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/750_ml_rectangle.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">750ml Rectangle</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_gms_sweetbox.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250-gsm Sweet box</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_gms_sweet_box.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500-gsm Sweet box</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- ====================================SLIDE 10 end ============================================-->
+
+
+  </div>
 
 
 
@@ -1164,7 +1104,8 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
             style="padding: 1vw ; padding-bottom: 1.5vw;">
             &times;
           </button>
-          <img id="modal-product-image" src="" alt="Product" class="w-[30.5vw] object-contain mb-[1vw] " style="padding:2vw">
+          <img id="modal-product-image" src="" alt="Product" class="w-[30.5vw] object-contain mb-[1vw] "
+            style="padding:2vw">
 
 
         </div>
@@ -1177,8 +1118,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
           <div class="pl-[3vw]" style="padding: 4vw; font-family: 'Montserrat';">
             <h3 id="modal-product-title" class="text-[3vw] font-bold text-black mb-[1.5vw] ">Product Title</h3>
 
-            <div
-              class="bg-[rgba(253,191,56,0.3)] bg-opacity-70 rounded-lg p-[4vw] mb-[vw] flex flex-col gap-[.5vw] "
+            <div class="bg-[rgba(253,191,56,0.3)] bg-opacity-70 rounded-lg p-[4vw] mb-[vw] flex flex-col gap-[.5vw] "
               style="padding: 1vw 3vw; width: 30.5vw; text-align: center;">
               <p id="modal-lid-weight" class="text-[1.5vw] font-bold text-gray-800 mb-[0.5vw]">Lid Weight: N/A</p>
               <p id="modal-tub-weight" class="text-[1.5vw] font-bold text-gray-800">Tub Weight: N/A</p>
@@ -1188,7 +1128,7 @@ Biodegradable plastic is an eco-friendly alternative to traditional plastic. It 
       </div>
 
       <div class="bg-[#FEAE00]  text-white text-center mb-[2vw] py-[2vw] px-[2vw] text-[1.5vw]">
-        <p id="modal-pack-quantity" class=" " style="padding: 1vw 0;" >No of pack in box - N/A</p>
+        <p id="modal-pack-quantity" class=" " style="padding: 1vw 0;">No of pack in box - N/A</p>
       </div>
     </div>
   </div>
