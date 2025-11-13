@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="./css/slide.css" />
   <link rel="stylesheet" href="./style.css" />
 
+
+  <!-- Font Awesome CDN  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
   <!-- tailwind css-->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -46,8 +51,12 @@
 
 <body>
   <div class="nav-wrapper">
-    <a class="prev-arrow disabled" data-up="0">&uarr;</a>
-    <a class="next-arrow" data-down="2">&darr;</a>
+ <a class="prev-arrow disabled text-gray-400 hover:text-black " data-up="0">
+  <i class="fa-solid fa-arrow-up fa-utility "></i>
+</a>
+<a class="next-arrow text-black hover:text-blue-500 " data-down="2">
+  <i class="fa-solid fa-arrow-down fa-utility "></i>
+</a>
   </div>
 
   <span class="counter-display text-[1vw]" style="font-size: 1vw;">
@@ -57,7 +66,7 @@
   </span>
 
 
-  <!-- -------------------------------------------Slide 1 Start----------------------------------------- -->
+  <!-- ------------------------------------------- Header start ----------------------------------------- -->
   <!-- Background -->
   <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background"
     class="absolute top-0 left-0 w-full h-full object-cover fixed" />
@@ -69,7 +78,7 @@
       <div class="flex gap-[1vw] ">
 
         <img src="./assets/Images/Home_Slide/youtube_icon.svg" alt="youtube_icon" class="cursor-pointer w-[1.5vw]"
-          style="margin-left: 60%;" />
+          style="margin-left: 5vw;" />
         <img src="./assets/Images/Home_Slide/linkedin_icon.svg" alt="linkedin_icon" class="cursor-pointer w-[1.5vw]" />
         <img src="./assets/Images/Home_Slide/website_icon.svg" alt="website_icon" class="cursor-pointer w-[1.5vw]" />
         <img src="./assets/Images/Home_Slide/instagram_icon.svg" alt="instagram_icon"
@@ -99,19 +108,35 @@
     <img src="./assets/TTP_Logo.png" alt="Logo" class="h-[2vw]" style="padding-right: 2vw;" />
   </header>
 
-
+  <!-- ------------------------------------------- Header end----------------------------------------- -->
 
 
   <div class="viewport-container" id="mainScroller">
-    <!-- =============================================slide 2 want to replace====================================================== -->
-
-    <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background" class="background-image-gradient" />
+    <!-- <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background" class="background-image-gradient" /> -->
 
 
+
+
+
+
+
+    <!-- =============================================slide 4 want to replace====================================================== -->
+
+
+
+
+   
+
+
+
+
+ 
     <!-- ==============================================end rough page============================================================= -->
-    <!-- ==================================== FRONT PAGE / HERO SECTION start================================== -->
-
-
+ 
+ 
+ 
+ 
+    <!-- ****************************************Slide 1 start****************************************************************** -->
 
     <div class="slide-item relative w-full h-[100vh] overflow-hidden hidden lg:block" data-navigation="Home">
 
@@ -167,121 +192,360 @@
       <div class="absolute bottom-[2vw] left-0 w-full h-[2vw] bg-[#F36408]"></div>
       <div class="absolute bottom-0 left-0 w-full h-[2vw] bg-[#ffffff]"></div>
     </div>
-    <!-- ==================================== FRONT PAGE / HERO SECTION end================================== -->
-    <!-- =================================slide_1 start=============================================  -->
+    <!-- *************************************Slide 1 end****************************************************************** --> 
+    <!-- *************************************Slide 2 start****************************************************************** -->
 
-    <div class="slide-item relative w-full h-[100vh] overflow-hidden  relative" data-navigation="Welcome" id="slide_1">
-      <!-- Background Image -->
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="TYPES OF FOOD CONTAINERS">
 
-      <!-- Content Wrapper -->
-      <div class="relative z-[2] w-full h-full flex flex-col items-center pt-[28vw]">
-        <!-- Main Heading -->
-        <h1 class="font-bold text-[#FBB24A] text-center mb-[3vw] tracking-[0.1vw] font-montserrat "
-          style="font-size: 3.5vw; margin-top: 5vw; font-family: 'Montserrat', sans-serif;">
-          WELCOME TO TERRA TECH PACKS
-        </h1>
+      <section class="" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-[2vw]">TYPES OF FOOD CONTAINERS</h2>
+        <div class="flex gap-[4vw] font-semibold text-[1.5vw] items-start text-center">
 
-        <!-- Description Box -->
-        <div
-          class="content px-[4vw] w-[62vw] text-center font-semibold leading-relaxed text-gray-800 mb-[5vw] rounded-[0.5vw] font-semibold"
-          style="padding-top: 1vw; padding-bottom: 2.5vw; font-size: 1.2vw; margin-top: vw; font-family: 'Montserrat', sans-serif;">
-          <strong class="  font-extrabold">Welcome to Terra Tech Packs</strong>, we are trusted partner in IML (In-Mold
-          Labeling) food <br /> containers, is a <strong class="font-extrabold">Coimbatore</strong> based leading
-          manufacturers of <strong class="font-extrabold">Reusable Food Containers</strong> <br /> utilizing the finest
-          raw
-          materials and modern machines. With a passion for <strong class="font-extrabold">innovation and a <br />
-            commitment</strong> to food safety, we specialize in producing <strong
-            class="font-extrabold">high-quality</strong> food packaging <br /> containers coupled with state-of-the-art
-          technology.
+
+          <div class=" flex flex-col items-center">
+            <p>Bagasse <br/> Containers</p>
+            <div class="flex flex-col items-center  " style=" margin: 1vw 0;">
+                  <div class="relative w-[.22vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+            <img src="./assets/Images/slide_7/img_1.webp" alt="" class="w-[10vw] h-[10vw] items-start">
+          </div>
+
+
+         <div class="flex flex-col items-center">
+           <p>Aluminum Foil <br/> Container</p>
+           <div class="flex flex-col items-center " style=" margin: 1vw 0;">
+              <div class="relative w-[.2vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+            <img src="./assets/Images/slide_7/img_2.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+
+         <div class="flex flex-col items-center">
+             <p>Paper <br/> Container</p>
+             <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+              <div class="relative w-[.2vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+             </div>
+              <img src="./assets/Images/slide_7/img_3.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+
+         <div class="flex flex-col items-center">
+            <p>Thermoforming <br/> Container</p>
+            <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+             <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+           </div>
+             <img src="./assets/Images/slide_7/img_4.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+       
+        <div class="flex flex-col items-center">
+            <p>Injuction <br/> Moulding  <br/> PP Container</p>
+            <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+                 <div class="relative w-[.2vw] h-[7.8vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+
+             </div>
+            <img src="./assets/Images/slide_7/img_5.webp" alt="" class="w-[10vw] h-[10vw]">
         </div>
-        <div class="">
-          <iframe class="w-[23vw] h-[10vw]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1573986371!2d76.95185237377746!3d10.951480455942978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b6841a218f7%3A0x825be0e2a0d59933!2sTerra%20Tech%20Packs!5e0!3m2!1sen!2sin!4v1761284646035!5m2!1sen!2sin"
-            style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+
+        <div class="flex flex-col items-center">
+             <p>Blow Moulded <br/> Containers</p>
+             <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+               <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+              </div>
+               <img src="./assets/Images/slide_7/img_6.webp" alt="" class="w-[10vw] h-[10vw]">
         </div>
-
-
       </div>
 
-      <!-- Bottom Section -->
-      <div class="bottom-section absolute left-0 w-full flex justify-between items-end px-[3vw]"
-        style="bottom: 3vw; z-index: 111;">
-        <!-- Left: Open 24 hours badge -->
+      </section>
+    </div>
 
-        <div class="flex items-center " style="margin-left: 5vw;">
 
-          <img src="./assets/Images/Welcome_slide/clock_img.svg" alt="clock_icon"
-            class="absolute left-[-1vw] w-[4vw]" />
+    <!-- **************************************Slide 2 end******************************************************************** -->
+    <!-- **************************************Slide 3 start******************************************************************** -->
 
-          <p class="text-white font-bold h-[3.5vw] "
-            style="font-size: 1.1vw; padding: .6vw 1vw; margin-left: 1vw; padding-left: 3.5vw; padding-right: 5vw; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(255,255,255,0)); font-family: 'montserrat';">
-            Open 24 hours</p>
+     <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; margin-left: 3vw;" id="PP-SUSTAINABLE">
+
+
+        <div class="w-[60vw] flex flex-col gap-[2vw]">
+        <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">Why PP is Sustainable ?</h2>
+       <p class="text-[1.2vw] w-[60vw]  font-semibold leading-[3vw] text-justify">Polypropylene (PP) is more sustainable than most other food-packaging materials such as bagasse, paper, PLA-bioplastics, or aluminium because it is lightweight, reusable, recyclable, and requires far less water and energy during production. In the Indian food ecosystem, most dishes are gravy-based, oily, or liquid in nature, and only PP containers can reliably hold hot curries and gravies without leaking, softening, or breaking down — which is a major drawback for bagasse, paper and PLA. Since PP can be reused multiple times while maintaining hygiene and strength, its carbon footprint per use becomes much lower than single-use “eco” alternatives, and it also fits well into India’s existing recycling network. This makes PP one of the most practical and truly sustainable options for real-world Indian food packaging. </p>
+
         </div>
+        <img src="./assets/Images/pp-sustainable_page/man-image.webp" alt="man-with-question" class="w-[20vw] " />
+        
+      
+    </div>
+
+    
+    <!-- ***************************************Slide 3 end******************************************************************* -->
+    <!-- **************************************Slide 4 start******************************************************************** -->
 
 
+    <div class="slide-item  w-full h-[100vh] overflow-hidden" id="MARKING and ENGRAVING">
 
-        <!-- Center: Social icons and address -->
-        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center" style="bottom: vw; gap: 1vw;">
+      <div class="flex flex-col gap-[3vw]" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-center text-[2vw]">MARKING AND ENGRAVING</h2>
+        <div class="relative "  >
+        <img src="./assets/Images/marking-and-engraving-page/yellow-background.webp" alt="yellow-background" class="w-[80vw] relative"/>
+        <img src="./assets/Images/marking-and-engraving-page/food-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] left-[3.5vw]">
+        <img src="./assets/Images/marking-and-engraving-page/pp-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] left-[25.5vw]">
+        <img src="./assets/Images/marking-and-engraving-page/microwave-oven-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] right-[25.7vw]">
+        <img src="./assets/Images/marking-and-engraving-page/freezer-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] right-[3.7vw]">
+          
+            <p class="absolute text-[.8vw] top-[2vw] left-[-3vw] w-[24vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .9vw; margin-right: 1vw;">1</span>
+              It’s a no-brainer that the container made <br/> for storing food must be safe. If you’re not sure and would <br/> like to check on your containers, do look out for the fork <br/> and the fancy wine cup symbol. That will be your <br/> assurance. Sometimes, the symbol is also replaced with <br/> the words ‘Food Safe’ instead.</p>
+            <p class="absolute text-[.8vw] top-[17vw] left-[14vw] w-[30vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">2</span>
+              Polypropylene is the most durable and <br/> versatile plastic of all. It is commonly chosen as the plastic to produce <br/> reusable containers due to its ability to take on a higher temperature, is <br/> lightweight and tough. PP is also reusable, and multiple pieces of <br/> research have proven that PP does not leach harmful chemicals at all.</p>
+            <p class="absolute text-[.8vw] top-[2vw] left-[37vw] w-[27vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">3</span>
+              For meal-prep buffs, this should be the <br/> symbol to look out for! Often represented in squiggly lines <br/> (perhaps for the actual heat waves), this means that the container  <br/> is microwavable. It can take a few different forms but it is <br/> generally understood that squiggly lines mean it can be used in <br/> microwaves.(re heat purpose only)</p>
+            <p class="absolute text-[.8vw] top-[17vw] left-[59vw] w-[24vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">4</span>
+              Snowflake-looking symbol? <br/> That’ll mean that the container is freezer safe. Look for this  <br/>symbol when you’re thinking of storing some delicious <br/>leftovers in the freezer (18~c)</p>
+          
+        </div>
+      
+      </div>
+     
+    </div>
 
-          <div class="text-black text-center   px-[2vw] rounded-[2vw] flex items-center font-medium"
-            style="font-size: 0.8vw; padding: 0.vw 2vw; gap: 0.5vw; font-family: 'Montserrat', sans-serif;">
-            <!-- <span style="width: 1.2vw; height: 1.2vw;"></span> -->
-            <img src="./assets/Images/Welcome_slide/location_icon.svg" alt="location" class="w-[1.5vw]" />
-            125, Kumaran St, Edayarpalayam, PirivuPirrivu, Kuniyamuthur, Tamil Nadu 641008
+    <!-- ***************************************Slide 4 end******************************************************************* -->
+
+    <!-- **************************************Slide 5 start******************************************************************** -->
+
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; " id="SCREEN PRINTING">
+
+
+    <div class="w-[90vw] flex flex-col gap-[2vw]">
+      <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">SCREEN PRINTING</h2>
+      <p class="text-[1.2vw] w-[90vw]  font-medium leading-[3vw] text-center">Screen printing is one the most common print technology in plastic container decoration. It’s a technique used to apply information such as size, weight & volume, brand details, durability & legibility, nutritional details, expiration and production dates, symbols and storage instructions onto the surface of plastic packaging such as bottles, jars, jerrycans and buckets.​ </p>
+
+      <div class="flex gap-[2vw] justify-center h-[20vw] text-[1vw]">
+        <!-- left icons  -->
+         <div class="flex flex-col gap-[1vw] justify-start" >
+             <div class="flex items-center gap-[1vw] " style="margin-top: 3vw;">
+                 <img src="./assets/Images/screen-printing/cheaper-icon.webp" alt="cheaper-icon" class="w-[3vw]"/>
+                 <p class="font-semibold ">Cheaper</p>
+             </div>
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/lesser-lead-time.webp" alt="lesser-lead-time" class="w-[3vw]"/>
+                 <p class="font-semibold">Lesser lead time</p>
+             </div>
+                
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/moq-icon.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Min MOQ </p>
+             </div>
+         </div>
+
+         <!-- center circle  -->
+         <div class="w-[25vw] relative">
+            <img src="./assets/Images/screen-printing/pros.webp" alt="pros" class="w-[15vw]"/>
+             <img src="./assets/Images/screen-printing/cons.webp" alt="pros" class="w-[15vw] absolute top-[5vw] right-[0vw]"/>
+         </div>
+
+         <!-- right icons  -->
+         
+             <div class="flex flex-col gap-[1vw] justify-end">
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/not-scratch-resistance.webp" alt="cheaper-icon" class="w-[3vw]"/>
+                 <p class="font-semibold">Not scratch resistance</p>
+             </div>
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/limited-color-options.webp" alt="lesser-lead-time" class="w-[3vw]"/>
+                 <p class="font-semibold">Limited color options</p>
+             </div>
+                
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/traditional-old-process.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Traditional old process</p>
+             </div>
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/less-design-ability.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Less design ability</p>
+             </div>
+         
+         </div>
+      </div>
+    </div>
+      
+        
+      
+ </div>
+
+
+    <!-- ***************************************Slide 5 end******************************************************************* -->
+  
+    <!-- **************************************Slide 6 start******************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; " id="CERTIFICATIONS">
+
+
+    <div class="w-[90vw] flex flex-col gap-[3vw]">
+      <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">WHAT ARE THE CERTIFICATIONS WE ARE HAVING</h2>
+      <div class="flex gap-[2vw] justify-end " style="margin-right: 6vw;">
+        <img src="./assets/Images/certification-page/certificate-1.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+         <img src="./assets/Images/certification-page/certificate-2.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+          <img src="./assets/Images/certification-page/certificate-3.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+      </div>
+      <img src="./assets/Images/certification-page/women-img.webp" alt="women" class="absolute bottom-0 left-[0] w-[30vw]"/>
+      
+    </div>
+ </div>
+
+    <!-- ***************************************Slide 6 end******************************************************************* -->
+    <!-- **************************************Slide 7 start******************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Our Sales Process">
+
+      <div class="w-[90vw] h-[full]" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-[2vw]">Our Sales Process</h2>
+        <p class="font-semibold  text-[1.4vw]">Basic Etiquettes </p>
+
+        <div class="flex gap-[4vw] font-semibold text-[1.5vw] justify-center items-center text-center " style="margin-top: 2vw;">
+
+
+          <div class=" flex flex-col items-center gap-[2vw]">
+            
+            <img src="./assets/Images/our-sales-process/phone-icon.svg" alt="" class="w-[3vw] " >
+            <img src="./assets/Images/our-sales-process/step-1.webp" alt="" class="w-[15vw]" style="margin-left: 2vw;">
+            <p class="font-medium">Greeting </br> customer </br> on call</p>
           </div>
 
 
-          <!-- Social Icons -->
-          <div class="flex items-center font-medium "
-            style="gap: 2vw; margin-top: 1vw; font-family: 'Montserrat', sans-serif; ">
-            <div
-              class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
-              style="width: 2vw; height: 2vw;">
-              <img src="./assets/Images/Welcome_slide/food_icon.svg" alt="Facebook" class="object-contain"
-                style="width: 2.5vw; height: 2.5vw; ">
-              <p class="text-[.5vw] ">FOOD</p>
-            </div>
-            <div
-              class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
-              style="width: 2vw; height: 2vw;">
-              <img src="./assets/Images/Welcome_slide/freeze_icon.svg" alt="Twitter" class="object-contain"
-                style="width: 2.5vw; height: 2.5vw;">
-              <p class="text-[.5vw] ">FREEZER</p>
-            </div>
-            <div
-              class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
-              style="width: 2vw; height: 2vw;">
-              <img src="./assets/Images/Welcome_slide/microwave_icon.svg" alt="LinkedIn" class="object-contain"
-                style="width: 2.5vw; height: 2.5vw;">
-              <p class="text-[.5vw]">MICROWAVE</p>
-            </div>
-            <div
-              class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
-              style="width: 2vw; height: 2vw;">
-              <img src="./assets/Images/Welcome_slide/stackable_icon'.svg" alt="YouTube" class="object-contain"
-                style="width: 2.5vw; height: 2.5vw;">
-              <p class="text-[.5vw]">STACKABLE</p>
-            </div>
-            <div
-              class=" gap-[.3vw] flex-col rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"
-              style="width: 2vw; height: 2vw;">
-              <img src="./assets/Images/Welcome_slide/hygenic_icon.svg" alt="WhatsApp" class="object-contain"
-                style="width: 2.5vw; height: 2.5vw;">
-              <p class="text-[.5vw]">HYGIENIC</p>
-            </div>
-          </div>
+         <div class="flex flex-col items-center gap-[2vw]">
+           
+            <img src="./assets/Images/our-sales-process/light-bulb-icon.svg" alt="" class="w-[3.5vw]">
+            <img src="./assets/Images/our-sales-process/step-2.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
+            <p class="font-medium">Understanding </br> their  </br> requirement</p>
+         </div>
 
-          <!-- Address -->
+         <div class="flex flex-col items-center gap-[2vw]">
+             
+             <img src="./assets/Images/our-sales-process/package-icon.svg" alt="" class="w-[3.2vw]">
+             <img src="./assets/Images/our-sales-process/step-3.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
+             <p class="font-medium">Analysis their </br> purchase quantity </br> and brand</p>
+         </div>
 
+         
+       
+        
+      </div>
+
+        <div class="flex flex-col  items-center absolute bottom-[-3vw] left-[50%] " style="margin-top: vw; transform: translate(-50%);">
+         <img src="./assets/Images/our-sales-process/flight-icon.svg" alt="flight-icon" class="w-[2vw]"/>
+          <div class="flex flex-col items-center  " style=" margin: 1vw 0;">
+                  <div class="relative w-[.1vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
         </div>
-
+     
 
       </div>
     </div>
+   
+       <!-- ***************************************Slide 7 end******************************************************************* -->
 
-    <!-- =================================Slide_2 end=============================================  -->
-    <!-- ===================================== SLIDE 2 start=============================================-->
+
+          <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="">
+
+      <div class="w-[90vw] h-[full] " >
+      
+
+    
+
+        <div class="flex flex-col  items-center absolute bottom-[8vw] left-[50%] " style="margin-top: vw; transform: translate(-50%);">
+         <img src="./assets/Images/our-sales-process/flight-icon.svg" alt="flight-icon" class="w-[30vw]"/>
+          <div class="flex flex-col items-center absolute bottom-[-10vw] " >
+                  <div class="relative w-[.06vw] h-[15vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+        </div>
+     
+
+      </div>
+    </div>
+   
+   
+   
+       <!-- **************************************Slide 8 start******************************************************************** -->
+
+  <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Our Sales Process">
+
+      <div class="w-[90vw] h-[full] flex gap-[5vw]" style="font-family: 'Montserrat';">
+        <div class="flex flex-col justify-center items-center leading-[3vw] w-[30vw]">
+           <h2 class="font-bold text-[#FF9600] text-[4vw]">IML</h2>
+           <p class="font-semibold  text-[2vw]">Process </p>         
+        </div>
+        <div class="flex gap-[2vw]">
+           <div class="flex flex-col gap-[2vw]">
+          <img src="./assets/Images/our-sales-process/step-1-circle.webp" alt="step-1" class="w-[8vw] absolute top-[5.3vw]">
+          <img src="./assets/Images/our-sales-process/step-2-circle.webp" alt="step-2" class="w-[8vw] absolute top-[14.3vw]">
+          <img src="./assets/Images/our-sales-process/step-3-circle.webp" alt="step-3" class="w-[8vw] absolute top-[23.5vw]">
+          <img src="./assets/Images/our-sales-process/step-4-circle.webp" alt="step-4" class="w-[8vw] absolute top-[32.3vw]">
+        </div>
+        <div class="absolute top-0 left-[50%] " style="transform: translate(-50%);">  
+             <div class=" w-[.1vw] h-[100vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>          
+        </div>
+
+
+      <div class="absolute top-[8vw] left-[50%] flex  items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[17vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[26vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[35vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+
+        <div class="font-medium flex flex-col gap-[8vw] text-[1vw]" style="font-family: 'Montserrat'; ">
+           <p class="absolute top-[7vw] left-[53vw]">ART WORK to be  Adapted in KLD (Key line diagram) from <br/> in CDR, AI File + PDF for our referral</p>
+            <p class="absolute top-[17vw] left-[53vw]">Send to our team for order processing</p>
+            <p class="absolute top-[24vw] left-[53vw]">Once our team send the final file from label maker for approval <br/> get it approved from customer and post in group with quantity <br/> for order confirmation</p>
+            
+              <div class=" absolute top-[32vw] left-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
+                   <!-- Left title -->
+                   <div class="font-semibold text-[1.2vw] leading-[2vw]">
+                     Lead time
+                   </div>
+                 <img src="./assets/Images/our-sales-process/Route-img.svg" alt="route-img" class="w-[4vw]"/>
+                   <!-- Connector and branches --> 
+                   <div class="flex flex-col gap-[3vw] relative absolute left-[-1.5vw]">
+                     <!-- Top branch -->
+                     <div class="flex items-center gap-[1vw] relative">
+                       <div class="bg-[#979797] text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         New
+                       </div>
+                       <span class="text-[1vw] font-medium">
+                         6 Weeks from date of artwork confirmation
+                       </span>
+                     </div>
+                   
+                     <!-- Bottom branch -->
+                     <div class="flex items-center gap-[1vw] relative">
+                       <div class="bg-[#979797] text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         Existing
+                       </div>
+                       <span class="text-[1vw] font-medium">
+                         5 Weeks from date of artwork confirmation
+                       </span>
+                     </div>
+                   </div>
+</div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+       <!-- ***************************************Slide 8 end******************************************************************* -->
+   
+   
+   
+   
+     <!-- ===================================== SLIDE 2 start=============================================-->
 
 
     <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" data-navigation="About" id="slide_2">
@@ -588,381 +852,7 @@
 
 
     <!-- ===================================== SLIDE 2 end=============================================-->
-    <!-- ====================================SLIDE 3 start==============================================-->
-    <div class="slide-item overflow-hidden  w-full h-100vw " id="slide_3">
 
-      <div class=" flex flex-col" style="padding: 4vw 6vw;">
-
-        <!-- Title Section -->
-        <div style="text-align: center; margin-bottom: 2vw; margin-top: 2vw;" class="flex flex-col">
-          <h2 style="font-size: 2vw; font-weight: 700; color: #1a1a1a; margin-bottom: vw; font-family: montserrat;">
-            WHAT IS IML ? (In-Mold Labeling)
-          </h2>
-          <p style="font-size: 1vw; color: #2e2e2e; line-height: 1.6; max-width: 90vw; margin: 1vw auto;  font-family: montserrat;"
-            class="font-semibold">
-            In-mold labeling (IML) is a labeling method in which a pre-printed decorative film is placed into a mold
-            before the plastic container is shaped into <br /> one mold plastic pellets or resin are heated and placed
-            into the mold where it merges with the label to create a single product.
-          </p>
-        </div>
-
-        <!-- Steps Grid -->
-        <div class=""
-          style="display: grid; grid-template-columns: repeat(4, .3fr); gap: .1vw; margin-bottom: 2vw; margin-left: 10vw;">
-
-          <!-- Step 1 -->
-          <div class=" w-[13vw] h-[13vw]"
-            style="background: white; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span
-                style="font-size: 2vw; font-weight: 700;">S</span>tep : 1</h3>
-            <div
-              style="width: 13vw; height: 7vw; border-radius: 0.8vw; margin-bottom: vw; display: flex; align-items: center; justify-content: center;">
-              <img src="./assets/Images/slide_3/step_1_img.webp" alt="Film Inserted" style=" object-fit: contain;">
-            </div>
-            <p style="font-size: .9vw; font-weight: 600; color: #333;" class="font-semibold">Film Inserted</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="w-[13vw] h-[13vw]"
-            style="background-color: #FBB24A; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span
-                style="font-size: 2vw; font-weight: 700;">S</span>tep : 2</h3>
-            <div
-              style="width: 13vw; height: 7vw;  border-radius: 0.8vw; margin-bottom: vw; display: flex; align-items: center; justify-content: center;">
-              <img src="./assets/Images/slide_3/step_2_img.webp" alt="Plastic Injected" style=" object-fit: contain;">
-            </div>
-            <p style="font-size: .9vw; font-weight: 600; color: white;">Plastic Injected</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class=" w-[13vw] h-[13vw]"
-            style="background: white; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat';">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: #1a1a1a; margin-bottom: 1vw;"><span
-                style="font-size: 2vw; font-weight: 700;">S</span>tep : 3</h3>
-            <div
-              style="width: 13vw; height: 7vw;  border-radius: 0.8vw; margin-bottom: vw; margin-top: -1vw;  display: flex; align-items: center; justify-content: center;">
-              <img src="./assets/Images/slide_3/step_3_img.webp" alt="Plastic & Label Fused Together"
-                style=" object-fit: contain;">
-            </div>
-            <p style="font-size: .9vw; font-weight: 600; color: #333;" class="font-semibold">Plastic & Label<br>Fused
-              Together</p>
-          </div>
-
-          <!-- Step 4 -->
-          <div class=" w-[13vw] h-[13vw]"
-            style="background-color: #FBB24A; border-radius: 1.2vw; padding: 0 0vw; text-align: center; box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.25); font-family: 'Montserrat'; ">
-            <h3 style="font-size: 1.5vw; font-weight: 600; color: white; margin-bottom: 1vw;"><span
-                style="font-size: 2vw; font-weight: 700;">S</span>tep : 4</h3>
-            <div class=""
-              style="width: 10vw; height: 6.5vw;  border-radius: 0.8vw; margin-bottom: .5vw;  display: flex; align-items: center; justify-content: center; margin-left: 1.8vw;">
-              <img src="./assets/Images/slide_3/step_4_img.webp" alt="IML Product" style=" object-fit: contain;">
-            </div>
-            <p style="font-size: .9vw; font-weight: 600; color: white; margin-top: 1vw;">IML Product</p>
-          </div>
-
-        </div>
-
-        <!-- Bottom Section -->
-        <div style="display: flex; gap: 3vw; align-items: center;">
-
-          <!-- Left: Product Image -->
-          <div style="flex: 0 0 35vw;">
-            <img src="./assets/Images/slide_3/container_img.webp" alt="IML Products"
-              style="width: 30vw; height: auto; border-radius: 1vw;">
-          </div>
-
-          <!-- Right: Description  -->
-          <div style="flex: 1;">
-            <p style="font-size: 1.1vw; color: #2e2e2e; line-height: 1.8; margin-bottom: 1vw; font-family: montserrat;"
-              class="font-semibold">
-              Injection molding- In injecting molding, the design label is placed <br />into the mold before fusing
-              together with the container. After the <br />plastic pellets are heated, the resin is injected into the
-              mold where it <br /> seamlessly combines with the label.
-            </p>
-
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <!-- ====================================SLIDE 3 end==============================================-->
-    <!-- ====================================SLIDE 4 start============================================-->
-    <div class="slide-item w-full h-100vw overflow-hidden" id="slide_4">
-
-      <div class="content-wrapper flex flex-col">
-        <!-- Top Section -->
-        <div class="flex items-center justify-between px-[6vw] py-[4vw] gap-[10vw]">
-          <!-- Left Content -->
-          <div class="w-[32vw] " style="font-family: 'Montserrat', sans-serif;">
-            <h2 class="font-bold  text-[1.5vw] leading-[1.2] w-[44vw]"
-              style="text-align: center; margin-bottom: 2.5vw;">
-              SCREEN PRINTING CONTAINERS
-            </h2>
-            <p class="text-justify leading-[2] text-[1.2vw] w-[44vw] font-medium text-[#000000]"
-              style="text-align: justify; font-family: 'Montserrat', sans-serif;">
-              Screen printing is one the most common print technology in plastic container decoration. It's a technique
-              used to apply information such as size, weight & volume, brand details, durability & legibility,
-              nutritional details, expiration and production dates, symbols and storage instructions onto the surface of
-              plastic packaging such as bottles, jars, jerrycans and buckets.
-            </p>
-            <!-- <p class="text-justify leading-[1.8] text-[1vw]  border" style="text-align: justify;">
-          Screen printing is one the most common print technology in plastic <br/> container decoration. It's a technique used to apply information such as <br/> size, weight & volume, brand details, durability & legibility, nutritional <br/> details, expiration and production dates, symbols and storage <br/> instructions onto the surface of plastic packaging such as bottles, jars, <br/> jerrycans and buckets.
-        </p> -->
-          </div>
-
-          <!-- Right Image -->
-          <div class="w-[45vw] flex justify-center">
-            <img src="./assets/Images/slide_4/container_box_img.webp" alt="Screen printing container"
-              class="w-[35vw] h-auto" />
-          </div>
-        </div>
-
-        <!-- Process Steps -->
-        <div class="grid items-center justify-start gap-[3vw] mt-[3vw] w-[90vw] " style="margin-left: 4vw;">
-          <div class="grid grid-cols-3 gap-[4vw] ">
-            <div class=" flex  py-[1vw] px-[2vw] ">
-              <img src="./assets/Images/slide_4/preparatio_and_positioning_of_the_container.svg" alt="icon"
-                class="w-[2vw]" />
-              <span class="font-medium text-[.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Preparation and Positioning <br />
-                of the container​</span>
-            </div>
-
-            <div class=" flex  py-[1vw] px-[2vw] text-center">
-              <img src="./assets/Images/slide_4/screen_coating.svg" alt="icon" class="w-[2vw]" />
-              <span class="font-medium text-[.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen coating</span>
-            </div>
-
-            <div class=" flex  py-[1vw] px-[2vw] text-center">
-              <img src="./assets/Images/slide_4/printing.svg" alt="icon" class="w-[2vw]" />
-              <span class="font-medium text-[.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Printing</span>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-[4vw]">
-            <div class=" flex  py-[1vw] px-[2vw] text-center">
-              <img src="./assets/Images/slide_4/mesh_preparation.svg" alt="icon" class="w-[2vw]" />
-              <span class="font-medium text-[.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Mesh preparation​</span>
-            </div>
-
-
-            <div class=" flex  py-[1vw] px-[2vw] ">
-              <img src="./assets/Images/slide_4/screen_preparation.svg" alt="icon" class="w-[2vw]" />
-              <span class="font-medium text-[.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Screen <br />
-                Preparation​</span>
-            </div>
-
-            <div class=" flex  py-[1vw] px-[2vw] text-center">
-              <img src="./assets/Images/slide_4/drying.svg" alt="icon" class="w-[2vw]" />
-              <span class="font-medium text-[0.8vw] "
-                style="font-family: 'Montserrat', sans-serif; margin: auto .5vw;">Drying​</span>
-            </div>
-
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- ====================================SLIDE 4 end============================================-->
-    <!-- ====================================SLIDE 5 start============================================-->
-
-
-    <div class="slide-item w-full h-100vw overflow-hidden" id="slide_5">
-
-      <div class="text-center gap-[1.8vw] flex flex-col "
-        style="font-family: 'Montserrat', sans-serif; margin-top: 3vw;">
-        <h2 class="font-bold text-[1.8vw] "> BIO DEGRADABLE BAGS​ </h2>
-        <p class="w-[88vw] text-[1.2vw] text-left font-medium">
-          Biodegradable plastic is an eco-friendly alternative to traditional plastic. It is made from organic materials
-          that can be easily decomposed by bacteria and other natural processes. This type of plastic reduces waste in
-          landfills and oceans, minimizing the impact on the environment.​
-        </p>
-        <div class=" items-center">
-          <img src="./assets/Images/slide_5/Image.webp" alt="image" class="w-[50vw] h-[20vw]   "
-            style="margin-left: auto; margin-right: auto; margin-top: 2vw;" />
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ====================================SLIDE 5 end============================================-->
-    <!-- ====================================SLIDE 5 start============================================-->
-
-    <!-- ====================================SLIDE 5 end============================================-->
-
-    <!-- ====================================SLIDE 6 start============================================-->
-    <div class="slide-item  relative w-full h-[100vh] flex flex-col overflow-hidden" id="slide_6">
-      <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
-
-      <!-- Main Heading -->
-      <h2 class="text-black font-bold text-center pt-[8vw] mb-[5vw]"
-        style="font-size: 2vw; font-family: 'Montserrat', sans-serif; margin-bottom: 5vw;">
-        WHAT ARE THE TYPES OF BAGS WE ARE HAVING
-      </h2>
-
-      <!-- Bags Grid Container -->
-      <div class="flex justify-center items-center px-[8vw]">
-        <div class="grid grid-cols-6  gap-[vw]  w-[90vw] border border-[#FBB24A]">
-
-          <!-- Row 1 -->
-          <!-- W CUT BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.8vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-              W CUT BAG​
-            </div>
-            <div class="bg-white  border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_1.webp" alt="W Cut Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-          <!-- GROCERY BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-              D CUT BAG​
-            </div>
-            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_2.webp" alt="Grocery Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-          <!-- GARBAGE BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10; width: 100%; height: 4vw; ">
-              GROCERY <br /> BAG​
-            </div>
-            <div class="bg-white border-[0.015vw]  border-[#FBB24A]  flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_3.webp" alt="Garbage Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-          <!-- Row 2 -->
-          <!-- D CUT BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-              PRASADAM <br /> BAG​
-            </div>
-            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_4.webp" alt="D Cut Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-          <!-- PRASADAM BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute top-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-              GARBAGE <br />BAG​
-            </div>
-            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_5.webp" alt="Prasadam Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-          <!-- BIO HAZARD BAG -->
-          <div class="relative flex flex-col items-center">
-            <div class="absolute bottom-0 left-0 bg-[#FBB042] text-white font-bold text-center "
-              style="padding: 0.2vw 2vw; font-size: 1.2vw; z-index: 10;width: 100%; height: 4vw;">
-              BIO HAZARD <br /> BAG
-            </div>
-            <div class="bg-white border-[0.015vw]  border-[#FBB24A] flex items-center justify-center overflow-hidden"
-              style="width: 100%; height: 18vw; padding: 2vw;">
-              <img src="./assets/Images/slide_6/img_6.webp" alt="Bio Hazard Bag" class="object-contain"
-                style="max-width: 90%; max-height: 90%;">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ====================================SLIDE 6 end============================================-->
-
-    <!-- ====================================SLIDE 7 start ============================================-->
-
-
-    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="slide_7">
-
-      <section class="sec-1">
-        <h2>TYPES OF FOOD CONTAINERS</h2>
-        <div class="grid-container">
-          <div class="grid_item">
-            <p>Bagasse <br> Containers</p>
-          </div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_2.webp" alt=""></div>
-          <div class="grid_item">
-            <p>Paper <br />Container </p>
-          </div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_4.webp" alt=""></div>
-          <div class="grid_item">
-            <p>INJUCTION <br /> MOULDING <br />PP CONTAINER</p>
-          </div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_6.webp" alt=""></div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_1.webp" alt=""></div>
-          <div class="grid_item">
-            <p>Aluminum Foil <br /> Container</p>
-          </div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_3.webp" alt=""></div>
-          <div class="grid_item">
-            <p>Thermoforming<br> Container</p>
-          </div>
-          <div class="grid_item"><img src="./assets/Images/slide_7/img_5.webp" alt=""></div>
-          <div class="grid_item">
-            <p>Blow Moulded <br> Containers</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ====================================SLIDE 7 end ============================================-->
-
-
-    <!-- ====================================SLIDE 8 start ============================================-->
-
-
-    <div class="sec-8 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_8">
-      <h3>PP FOOD CONTAINERS TYPE</h3>
-      <div class="sec-8-grid">
-        <div class="sec-8-grid-item">
-          <p>ROUND <br> CONTAINER</p>
-          <img src="assets/Images/slide_8/round_container.png" alt="">
-        </div>
-        <div class="sec-8-grid-item">
-          <p>RECTANGLE CONTAINER</p>
-          <img src="assets/Images/slide_8/rectangle_container.png" alt="">
-        </div>
-        <div class="sec-8-grid-item">
-          <p>ROUND TOP SQUARE <br> BUTTOM CONTAINER/ <br> RS CONTAINER</p>
-          <img src="assets/Images/slide_8/rount_square_container.png" alt="">
-        </div>
-        <div class="sec-8-grid-item">
-          <p>SWEET BOX</p>
-          <img src="assets/Images/slide_8/sweet_box_container.png" alt="">
-        </div>
-
-      </div>
-    </div>
-    <!-- ====================================SLIDE 8 end ============================================-->
 
     <!-- ====================================SLIDE 9 start ============================================-->
 
@@ -1087,6 +977,9 @@
 
 
   </div>
+
+
+
 
 
 
