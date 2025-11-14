@@ -90,47 +90,49 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 3%;
-    gap: 1.5rem;
+    padding: 10vw;
+    gap: 1vw;
 }
 
 .sec-9 h3 {
     font-weight: bold;
-    font-size: 2.75vw;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    color: #000000;
+    font-size: 2vw;
+    /* text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); */
+    color: #FF9600;
+    font-family: 'Montserrat';
 }
 
 .sec-9 .sec-9-grid {
     display: flex;
-    gap: 1.25rem;
+    gap: 1vw;
     width: 90%;
-    margin: 1rem auto;
+    margin: 1vw auto;
     justify-content: center;
 }
 
 .sec-9 .sec-9-grid .sec-9-grid-item {
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 0px .5vw rgba(0, 0, 0, 0.25);
 border-radius: 1vw;
 padding: 1vw;
 display: flex;
 flex-direction: column;
-gap: 1rem;
+gap: 1vw;
 background-color: white;
 }
 
 .sec-9 .sec-9-grid .sec-9-grid-item p {
     text-align: center;
     font-size: 1.5vw;
-    color: #FBB24A;
+    color: #000000;
     font-weight: bold;
+     font-family: 'Montserrat';
 }
 
 .sec-9 .sec-9-grid .sec-9-grid-item img {
     height: auto;
-    width: 100%;
+    /* width: 90vw; */
     object-fit: cover;
-    max-width: 85%;
+    width: 85vw;
     display: block;
     margin: 0 auto;
 }
@@ -143,7 +145,7 @@ background-color: white;
 .sec-9-vertical-container {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1vw;
 }
 
 /* section 10 */

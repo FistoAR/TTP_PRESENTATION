@@ -1,848 +1,1390 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TTP Presentation</title>
-    <link rel="icon" type="image/png" href="./zfavicon-TTP.png" />
-    <style>
-      /* Your existing CSS */
-      * {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TTP Presentation</title>
+  <link rel="icon" type="image/png" href="./zfavicon-TTP.png" />
+  <link rel="stylesheet" href="./css/slide.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+
+  <!-- Font Awesome CDN  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <!-- tailwind css-->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- GSAP + ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+  <!-- Montserrat font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- poppins font  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+<style>
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
+    }
 
-      body {
-        font-family: 'Montserrat', sans-serif;
-      }
+    .carousel-slide {
+        background-size: cover;
+        background-position: center;
+        transition: flex 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                    transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        flex-grow: 0;
+    }
 
-      .viewport-container::-webkit-scrollbar {
-        display: none;
-      }
+    .carousel-slide.active {
+        flex-grow: 50;
+        min-width: 35vw;
+    }
 
-      .viewport-container {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 100vh;
-        width: 100%;
-        scroll-snap-type: y mandatory;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
+    .carousel-slide.active .slide-content {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-      .slide-item {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        width: 100%;
-        height: 100vh;
-        background: #f8f8f8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        position: relative;
-      }
+    .slide-content {
+        transition: opacity 0.3s ease;
+    }
+</style>
 
-      .nav-wrapper {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 9999;
-        font-size: 28px;
-        font-family: courier, mono;
-        display: flex;
-        gap: 6px;
-      }
 
-      .nav-wrapper a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        text-align: center;
-        background: rgba(245, 197, 66, 0.2);
-        border: 2px solid #f5c542;
-        cursor: pointer;
-        user-select: none;
-        color: #333;
-        text-decoration: none;
-      }
 
-      .nav-wrapper a.disabled {
-        opacity: 0.3;
-        pointer-events: none;
-      }
 
-      span.counter-display {
-        position: fixed;
-        bottom: 38px;
-        right: 140px;
-        z-index: 9999;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: courier, mono;
-        background: rgba(245, 197, 66, 0.2);
-        padding: 8px 16px;
-        border-radius: 20px;
-        border: 2px solid #f5c542;
-        color: #000000;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
+</head>
 
-      .current-panel-input {
-        width: 15px;
-        background: transparent;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: courier, mono;
-        color: #000000;
-        text-align: center;
-        padding: 0;
-        cursor: pointer;
-        -moz-appearance: textfield;
-      }
+<body>
+  <div class="nav-wrapper">
+ <a class="prev-arrow disabled text-gray-400 hover:text-black " data-up="0">
+  <i class="fa-solid fa-arrow-up fa-utility "></i>
+</a>
+<a class="next-arrow text-black hover:text-blue-500 " data-down="2">
+  <i class="fa-solid fa-arrow-down fa-utility "></i>
+</a>
+  </div>
 
-      .current-panel-input::-webkit-outer-spin-button,
-      .current-panel-input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
+  <span class="counter-display text-[1vw]" style="font-size: 1vw;">
+    <input type="number" class="current-panel-input" style="font-family: 'Montserrat';" min="1" max="8" value="1" />
+    /
+    <span class="panel-count text-[1vw]">4</span>
+  </span>
 
-      /* Modal Styles */
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-        animation: fadeIn 0.3s ease;
-      }
 
-      .modal-overlay.active {
-        display: flex;
-      }
+  <!-- ------------------------------------------- Header start ----------------------------------------- -->
+  <!-- Background -->
+  <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background"
+    class="absolute top-0 left-0 w-full h-full object-cover fixed" />
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+  <!-- Header: Logo + Table of Contents + Social Icons -->
+  <header class="absolute top-[2vw] left-0 w-full flex justify-between items-center px-[4vw] z-99999 fixed ">
+    <!-- Social Media Icons -->
+    <div class="flex gap-[2.5vw]">
+      <div class="flex gap-[1vw] ">
 
-      .modal-container {
-        background: white;
-        border-radius: 20px;
-        max-width: 800px;
-        width: 90%;
-        max-height: 90vh;
-        overflow: hidden;
-        position: relative;
-        animation: slideUp 0.3s ease;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      }
+        <img src="./assets/Images/Home_Slide/youtube_icon.svg" alt="youtube_icon" class="cursor-pointer w-[1.5vw]"
+          style="margin-left: 5vw;" />
+        <img src="./assets/Images/Home_Slide/linkedin_icon.svg" alt="linkedin_icon" class="cursor-pointer w-[1.5vw]" />
+        <img src="./assets/Images/Home_Slide/website_icon.svg" alt="website_icon" class="cursor-pointer w-[1.5vw]" />
+        <img src="./assets/Images/Home_Slide/instagram_icon.svg" alt="instagram_icon"
+          class="cursor-pointer w-[1.5vw]" />
 
-      @keyframes slideUp {
-        from {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
 
-      .modal-close {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        background: #f5c542;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        color: white;
-        z-index: 10;
-        transition: all 0.3s ease;
-      }
+      </div>
 
-      .modal-close:hover {
-        background: #f5a623;
-        transform: rotate(90deg);
-      }
 
-      .modal-content {
-        padding: 40px;
-        display: flex;
-        gap: 30px;
-        overflow-y: auto;
-        max-height: 90vh;
-      }
+      <div class="page-dropdown">
 
-      .modal-image-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
+        <button
+          class="dropdown-btn flex items-center gap-[1vw] border border-[#FBB24A] text-[1vw] rounded-full text-sm hover:bg-[#ffae00] hover:text-white transition"
+          id="dropdownToggle" style="padding: .5vw 1vw;">
+          <span class="dropdown-selected-title">Page 1</span>
+          <i class="fa-solid fa-chevron-down ml-2"></i>
+        </button>
 
-      .modal-image-wrapper {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .modal-image {
-        width: 250px;
-        height: 250px;
-        object-fit: contain;
-      }
-
-      .modal-dimensions {
-        position: absolute;
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-      }
-
-      .dimension-width {
-        top: -25px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .dimension-height {
-        left: -50px;
-        top: 50%;
-        transform: translateY(-50%);
-        writing-mode: vertical-rl;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .dimension-width-bottom {
-        bottom: -25px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .modal-info-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .modal-title {
-        font-size: 32px;
-        font-weight: 700;
-        color: #000;
-        margin-bottom: 10px;
-      }
-
-      .modal-subtitle {
-        font-size: 24px;
-        font-weight: 600;
-        color: #333;
-      }
-
-      .modal-specs {
-        background: #FFF9E6;
-        padding: 20px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .modal-spec-item {
-        font-size: 16px;
-        font-weight: 500;
-        color: #333;
-      }
-
-      .modal-pack-info {
-        background: #F5A623;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      /* Product Grid Styles */
-      .products-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 3vw;
-        margin-left: 10vw;
-        padding: 20px;
-      }
-
-      .category-section {
-        display: flex;
-        gap: 2vw;
-      }
-
-      .category-title {
-        color: #F5A623;
-        font-weight: 700;
-        text-align: center;
-        text-decoration: underline;
-        font-size: 1.8vw;
-        margin-top: 5vw;
-        min-width: 150px;
-      }
-
-      .products-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 1.2vw;
-        margin-left: 5vw;
-      }
-
-      .product-card {
-        background: white;
-        rounded: 1vw;
-        border: 0.2vw solid #F5A623;
-        border-radius: 1vw;
-        padding: 1vw;
-        width: 7vw;
-        height: 7vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .product-card:hover {
-        box-shadow: 0 4px 12px rgba(245, 197, 66, 0.4);
-        transform: translateY(-5px);
-      }
-
-      .product-card img {
-        width: 4vw;
-        height: 4vw;
-        object-fit: contain;
-        margin-bottom: 0.5vw;
-      }
-
-      .product-card-title {
-        color: #000;
-        text-align: center;
-        font-weight: 500;
-        font-size: 0.7vw;
-        line-height: 1.1;
-      }
-
-      .page-heading {
-        color: #000;
-        font-weight: 700;
-        text-align: center;
-        font-size: 2vw;
-        margin-bottom: 3vw;
-        font-family: montserrat;
-      }
-
-      @media (max-width: 1024px) {
-        .products-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-
-        .modal-content {
-          flex-direction: column;
-        }
-
-        .modal-image {
-          width: 200px;
-          height: 200px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .products-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        .product-card {
-          width: 100px;
-          height: 100px;
-        }
-
-        .modal-title {
-          font-size: 24px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <div class="nav-wrapper">
-      <a class="prev-arrow disabled" data-up="0">&uarr;</a>
-      <a class="next-arrow" data-down="2">&darr;</a>
-    </div>
-
-    <span class="counter-display">
-      <input type="number" class="current-panel-input" min="1" max="2" value="1" />
-      / <span class="panel-count">2</span>
-    </span>
-
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="productModal">
-      <div class="modal-container">
-        <button class="modal-close" id="modalClose">×</button>
-        <div class="modal-content" id="modalContent">
-          <!-- Content will be dynamically inserted here -->
+        <div class="dropdown-menu" id="dropdownMenu">
+          <!-- Links will be injected here by JS -->
         </div>
       </div>
     </div>
 
-    <!-- Slides Container -->
-    <div class="viewport-container" id="mainScroller">
+
+    <!-- Logo -->
+    <img src="./assets/TTP_Logo.png" alt="Logo" class="h-[2vw]" style="padding-right: 2vw;" />
+  </header>
+
+  <!-- ------------------------------------------- Header end----------------------------------------- -->
+
+
+  <div class="viewport-container" id="mainScroller">
+    <!-- <img src="./assets/Images/Home_Slide/Background_img.png" alt="Background" class="background-image-gradient" /> -->
+
+
+
+
+
+
+
+    <!-- =============================================slide 4 want to replace====================================================== -->
+
+
+        <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="">
+
+      <div class="w-[100vw] h-[full] " >
       
-      <!-- SLIDE 1: Welcome Page -->
-      <div class="slide-item" id="slide_1">
-        <div style="text-align: center;">
-          <h1 style="font-size: 3.5vw; color: #F5A623; font-weight: 700; margin-bottom: 2vw;">
-            WELCOME TO TERRA TECH PACKS
-          </h1>
-          <p style="font-size: 1.2vw; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            Welcome to Terra Tech Packs, your trusted partner in IML (In-Mold Labeling) food containers.
-            We are a Coimbatore-based leading manufacturer of Reusable Food Containers utilizing the finest 
-            raw materials and modern machines.
+
+ <div class="w-screen h-screen flex items-center justify-start p-0 m-0">
+    
+    <!-- Carousel Section -->
+    <div class="flex h-[100vh]   w-[50vw]">
+        
+        <!-- Slide 1 - Lightest Beige -->
+        <div class="carousel-slide active  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FFFCF7;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw]">🎨</div>
+                <div class="text-[1.5vw] font-bold text-gray-800 mb-[1.5vw]">Material</div>
+                <div class="text-[0.9vw] text-gray-700 leading-relaxed">High-quality materials selection</div>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Light Beige -->
+        <div class="carousel-slide cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FFEFD7;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw]">📦</div>
+                <div class="text-[1.5vw] font-bold text-gray-800 mb-[1.5vw]">Packaging</div>
+                <div class="text-[0.9vw] text-gray-700 leading-relaxed">Professional packaging design</div>
+            </div>
+        </div>
+
+        <!-- Slide 3 - Medium Beige -->
+        <div class="carousel-slide  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FFE8C7;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw]">✨</div>
+                <div class="text-[1.5vw] font-bold text-gray-800 mb-[1.5vw]">Design</div>
+                <div class="text-[0.9vw] text-gray-700 leading-relaxed">Creative design solutions</div>
+            </div>
+        </div>
+
+        <!-- Slide 4 - Darker Beige -->
+        <div class="carousel-slide  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FFE4B8;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw]">🎯</div>
+                <div class="text-[1.5vw] font-bold text-gray-800 mb-[1.5vw]">Strategy</div>
+                <div class="text-[0.9vw] text-gray-700 leading-relaxed">Brand strategy planning</div>
+            </div>
+        </div>
+
+        <!-- Slide 5 - Light Orange -->
+        <div class="carousel-slide  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FFC971;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw] text-white">✨</div>
+                <div class="text-[1.5vw] font-bold text-white mb-[1.5vw]">Premium Look & Finish</div>
+                <div class="text-[0.9vw] text-white leading-relaxed">Offers high-quality, luxurious decoration with photo-quality graphics. Label becomes part of the aesthetic, giving a gloss or matte finish design.</div>
+            </div>
+        </div>
+
+        <!-- Slide 6 - Medium Orange -->
+        <div class="carousel-slide  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FDC765;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw] text-white">🛡️</div>
+                <div class="text-[1.5vw] font-bold text-white mb-[1.5vw]">Durability & Scratch Resistance</div>
+                <div class="text-[0.9vw] text-white leading-relaxed">Demonstrates resistance with excellent staying power. Label wrapping is durable and lasts long. Not damaged or scratched.</div>
+            </div>
+        </div>
+
+        <!-- Slide 7 - Dark Orange -->
+        <div class="carousel-slide  cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FBBE4E;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw] text-white">♻️</div>
+                <div class="text-[1.5vw] font-bold text-white mb-[1.5vw]">Recyclable & Eco-Friendly</div>
+                <div class="text-[0.9vw] text-white leading-relaxed">Made from recyclable and sustainable materials. 100% biodegradable, making it environment-friendly for conscious consumers.</div>
+            </div>
+        </div>
+
+        <!-- Slide 8 - Darkest Orange -->
+        <div class="carousel-slide   cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] shadow-lg hover:shadow-xl" 
+             style="background-color: #FBB24A;">
+            <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center h-full px-[2vw] text-center pointer-events-none">
+                <div class="text-[3vw] mb-[2vw] text-white">💰</div>
+                <div class="text-[1.5vw] font-bold text-white mb-[1.5vw]">Cost-Efficient in the Long Run</div>
+                <div class="text-[0.9vw] text-white leading-relaxed">Eliminates secondary printing steps and cost. Reduced production time and labor costs saving in bulk orders.</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="w-[30vw] ">
+      <h2>Types of <br/> Branding</h2>
+      <p>IML Pro</p>
+    </div>
+
+</div>  
+
+       
+     
+
+      </div>
+    </div>
+
+
+   
+
+
+
+
+ 
+    <!-- ==============================================end rough page============================================================= -->
+ 
+ 
+ 
+ 
+    <!-- ****************************************Slide 1 start****************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden hidden lg:block" data-navigation="Home">
+
+      <!-- Main Text Content -->
+      <div class="absolute top-[20%] left-[25%] z-10 text-black  text-right">
+        <h1 class="text-[3.5vw] font-bold leading-tight" style="font-family: 'Raleway', sans-serif;">
+          WELCOME TO<br />
+          <span class="text-[#111]">TERRA TECH <br /> PACKS</span>
+        </h1>
+      </div>
+
+      <div class="absolute top-[20%] left-[55%] z-10  text-left w-[50vw]">
+        <h1 class="text-[3.5vw] font-bold leading-tight" style="font-family: 'Raleway', sans-serif;">
+          GREAT<br />
+          <span class="bg-[#ffae00] text-white  " style="padding: 0px .5vw;">PACKING</span><br />
+          IS AN INVESTMENT
+        </h1>
+        <div class="flex gap-[.6vw] " style="margin-top: 1vw;">
+          <img src="./assets/Images/Home_Slide/1st_img.svg" alt="1st_img" class="w-[5vw]" />
+          <p class="mt-3 text-[1.8vw] font-semibold" style="font-family: 'Montserrat', sans-serif;">
+            Coimbatore’s<br />
+            <span class="text-[#ffae00] font-semibold">IML FOOD </span> CONTAINERS<br /> MANUFACTURERS
           </p>
         </div>
+
+
+        <!-- Location & Clock -->
+        <div class=" flex flex-col   gap-[.5vw] text-[.8vw] text-left w-[50vw]   " style="margin-top: 4vw;">
+          <div class="flex  gap-[.5vw] font-medium">
+            <img src="./assets/Images/Home_Slide/clock_icon.svg" class=" w-[1.2vw]"></img> <span
+              style="font-family: 'Montserrat', sans-serif;" class="">24
+              Hours</span>
+          </div>
+          <div class="flex  gap-[.5vw]  text-left font-medium">
+            <img src="./assets/Images/Home_Slide/location_icon.svg" class="w-[1.2vw] "></img>
+            <span style="font-family: 'Montserrat', sans-serif; ">125, Kuruman St, Edayarpalayam, PirivuPirrivu,
+              Kuniyamuthur, Tamil Nadu 641008</span>
+          </div>
+        </div>
       </div>
 
-      <!-- SLIDE 2: Products Page -->
-      <div class="slide-item" id="slide_2">
-        <div style="width: 100%; padding: 40px;">
-          <h2 class="page-heading">WHAT ARE THE PRODUCTS WE ARE PRODUCING</h2>
-          
-          <div class="products-section">
-            <!-- Food Containers Section -->
-            <div class="category-section">
-              <h3 class="category-title">FOOD<br/>CONTAINERS</h3>
-              
-              <div class="products-grid">
-                <div class="product-card" data-product="120ml-round">
-                  <img src="https://picsum.photos/200/200?random=1" alt="120ml Round" />
-                  <p class="product-card-title">120ml Round</p>
-                </div>
-                
-                <div class="product-card" data-product="260ml-round">
-                  <img src="https://picsum.photos/200/200?random=2" alt="260ml Round" />
-                  <p class="product-card-title">260ml<br/>Round</p>
-                </div>
-                
-                <div class="product-card" data-product="250ml-glass">
-                  <img src="https://picsum.photos/200/200?random=3" alt="250ml Glass Round" />
-                  <p class="product-card-title">250ml Glass<br/>Round</p>
-                </div>
-                
-                <div class="product-card" data-product="300ml-round">
-                  <img src="https://picsum.photos/200/200?random=4" alt="300ml Round" />
-                  <p class="product-card-title">300ml Round</p>
-                </div>
-                
-                <div class="product-card" data-product="450ml-square">
-                  <img src="https://picsum.photos/200/200?random=5" alt="450ml Square" />
-                  <p class="product-card-title">450ml<br/>Square Bottom</p>
-                </div>
-                
-                <div class="product-card" data-product="500ml-square">
-                  <img src="https://picsum.photos/200/200?random=6" alt="500ml Square" />
-                  <p class="product-card-title">500ml Square<br/>Bottom</p>
-                </div>
-                
-                <div class="product-card" data-product="500ml-rectangle">
-                  <img src="https://picsum.photos/200/200?random=7" alt="500ml Rectangle" />
-                  <p class="product-card-title">500ml<br/>Rectangle</p>
-                </div>
-              </div>
-            </div>
+      <!-- Container Images   -->
+      <div class="absolute bottom-0 left-[3vw]   items-end gap-6 pb-6 z-10">
+        <img src="./assets/Images/Home_Slide/Container_img.png" alt="container" class="h-[20vw] drop-shadow-lg" />
+        <!-- <img src="./assets/Images/Home_Slide/container1.png" alt="container" class="h-[120px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container2.png" alt="container" class="h-[150px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container3.png" alt="container" class="h-[130px] drop-shadow-lg" />
+    <img src="./assets/Images/Home_Slide/container4.png" alt="container" class="h-[100px] drop-shadow-lg" /> -->
+      </div>
 
-            <!-- Bio-degradable Bags Section -->
-            <div class="category-section">
-              <h3 class="category-title">BIO-DEGRADABLE<br/>BAGS</h3>
-              
-              <div class="products-grid">
-                <div class="product-card" data-product="w-cut-bags">
-                  <img src="https://picsum.photos/200/200?random=8" alt="W Cut Bags" />
-                  <p class="product-card-title">W CUT BAGS</p>
-                </div>
-                
-                <div class="product-card" data-product="d-cut-bags">
-                  <img src="https://picsum.photos/200/200?random=9" alt="D Cut Bags" />
-                  <p class="product-card-title">D CUT BAGS</p>
-                </div>
-                
-                <div class="product-card" data-product="grocery-bags">
-                  <img src="https://picsum.photos/200/200?random=10" alt="Grocery Bags" />
-                  <p class="product-card-title">GROCERY<br/>BAGS</p>
-                </div>
-                
-                <div class="product-card" data-product="prasadham-bags">
-                  <img src="https://picsum.photos/200/200?random=11" alt="Prasadham Bags" />
-                  <p class="product-card-title">PRASADHAM<br/>BAGS</p>
-                </div>
-                
-                <div class="product-card" data-product="prasadham-pouches">
-                  <img src="https://picsum.photos/200/200?random=12" alt="Prasadham Pouches" />
-                  <p class="product-card-title">PRASADHAM<br/>POUCHES</p>
-                </div>
-              </div>
+      <!-- Orange Bottom Bar -->
+      <div class="absolute bottom-[4vw] left-0 w-full h-[2vw] bg-[#FEAE00]"></div>
+      <div class="absolute bottom-[2vw] left-0 w-full h-[2vw] bg-[#F36408]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-[2vw] bg-[#ffffff]"></div>
+    </div>
+    <!-- *************************************Slide 1 end****************************************************************** --> 
+    <!-- *************************************Slide 2 start****************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="TYPES OF FOOD CONTAINERS">
+
+      <section class="" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-[2vw]">TYPES OF FOOD CONTAINERS</h2>
+        <div class="flex gap-[4vw] font-semibold text-[1.5vw] items-start text-center">
+
+
+          <div class=" flex flex-col items-center">
+            <p>Bagasse <br/> Containers</p>
+            <div class="flex flex-col items-center  " style=" margin: 1vw 0;">
+                  <div class="relative w-[.22vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
             </div>
+            <img src="./assets/Images/slide_7/img_1.webp" alt="" class="w-[10vw] h-[10vw] items-start">
           </div>
+
+
+         <div class="flex flex-col items-center">
+           <p>Aluminum Foil <br/> Container</p>
+           <div class="flex flex-col items-center " style=" margin: 1vw 0;">
+              <div class="relative w-[.2vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+            <img src="./assets/Images/slide_7/img_2.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+
+         <div class="flex flex-col items-center">
+             <p>Paper <br/> Container</p>
+             <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+              <div class="relative w-[.2vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+             </div>
+              <img src="./assets/Images/slide_7/img_3.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+
+         <div class="flex flex-col items-center">
+            <p>Thermoforming <br/> Container</p>
+            <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+             <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+           </div>
+             <img src="./assets/Images/slide_7/img_4.webp" alt="" class="w-[10vw] h-[10vw]">
+         </div>
+       
+        <div class="flex flex-col items-center">
+            <p>Injuction <br/> Moulding  <br/> PP Container</p>
+            <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+                 <div class="relative w-[.2vw] h-[7.8vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+
+             </div>
+            <img src="./assets/Images/slide_7/img_5.webp" alt="" class="w-[10vw] h-[10vw]">
+        </div>
+
+        <div class="flex flex-col items-center">
+             <p>Blow Moulded <br/> Containers</p>
+             <div class="flex flex-col items-center" style=" margin: 1vw 0;">
+               <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+              </div>
+               <img src="./assets/Images/slide_7/img_6.webp" alt="" class="w-[10vw] h-[10vw]">
+        </div>
+      </div>
+
+      </section>
+    </div>
+
+
+    <!-- **************************************Slide 2 end******************************************************************** -->
+    <!-- **************************************Slide 3 start******************************************************************** -->
+
+     <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; margin-left: 3vw;" id="PP-SUSTAINABLE">
+
+
+        <div class="w-[60vw] flex flex-col gap-[2vw]">
+        <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">Why PP is Sustainable ?</h2>
+       <p class="text-[1.2vw] w-[60vw]  font-semibold leading-[3vw] text-justify">Polypropylene (PP) is more sustainable than most other food-packaging materials such as bagasse, paper, PLA-bioplastics, or aluminium because it is lightweight, reusable, recyclable, and requires far less water and energy during production. In the Indian food ecosystem, most dishes are gravy-based, oily, or liquid in nature, and only PP containers can reliably hold hot curries and gravies without leaking, softening, or breaking down — which is a major drawback for bagasse, paper and PLA. Since PP can be reused multiple times while maintaining hygiene and strength, its carbon footprint per use becomes much lower than single-use “eco” alternatives, and it also fits well into India’s existing recycling network. This makes PP one of the most practical and truly sustainable options for real-world Indian food packaging. </p>
+
+        </div>
+        <img src="./assets/Images/pp-sustainable_page/man-image.webp" alt="man-with-question" class="w-[20vw] " />
+        
+      
+    </div>
+
+    
+    <!-- ***************************************Slide 3 end******************************************************************* -->
+    <!-- **************************************Slide 4 start******************************************************************** -->
+
+
+    <div class="slide-item  w-full h-[100vh] overflow-hidden" id="MARKING and ENGRAVING">
+
+      <div class="flex flex-col gap-[3vw]" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-center text-[2vw]">MARKING AND ENGRAVING</h2>
+        <div class="relative "  >
+        <img src="./assets/Images/marking-and-engraving-page/yellow-background.webp" alt="yellow-background" class="w-[80vw] relative"/>
+        <img src="./assets/Images/marking-and-engraving-page/food-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] left-[3.5vw]">
+        <img src="./assets/Images/marking-and-engraving-page/pp-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] left-[25.5vw]">
+        <img src="./assets/Images/marking-and-engraving-page/microwave-oven-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] right-[25.7vw]">
+        <img src="./assets/Images/marking-and-engraving-page/freezer-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] right-[3.7vw]">
+          
+            <p class="absolute text-[.8vw] top-[2vw] left-[-3vw] w-[24vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .9vw; margin-right: 1vw;">1</span>
+              It’s a no-brainer that the container made <br/> for storing food must be safe. If you’re not sure and would <br/> like to check on your containers, do look out for the fork <br/> and the fancy wine cup symbol. That will be your <br/> assurance. Sometimes, the symbol is also replaced with <br/> the words ‘Food Safe’ instead.</p>
+            <p class="absolute text-[.8vw] top-[17vw] left-[14vw] w-[30vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">2</span>
+              Polypropylene is the most durable and <br/> versatile plastic of all. It is commonly chosen as the plastic to produce <br/> reusable containers due to its ability to take on a higher temperature, is <br/> lightweight and tough. PP is also reusable, and multiple pieces of <br/> research have proven that PP does not leach harmful chemicals at all.</p>
+            <p class="absolute text-[.8vw] top-[2vw] left-[37vw] w-[27vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">3</span>
+              For meal-prep buffs, this should be the <br/> symbol to look out for! Often represented in squiggly lines <br/> (perhaps for the actual heat waves), this means that the container  <br/> is microwavable. It can take a few different forms but it is <br/> generally understood that squiggly lines mean it can be used in <br/> microwaves.(re heat purpose only)</p>
+            <p class="absolute text-[.8vw] top-[17vw] left-[59vw] w-[24vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
+              <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .8vw; margin-right: 1vw;">4</span>
+              Snowflake-looking symbol? <br/> That’ll mean that the container is freezer safe. Look for this  <br/>symbol when you’re thinking of storing some delicious <br/>leftovers in the freezer (18~c)</p>
+          
+        </div>
+      
+      </div>
+     
+    </div>
+
+    <!-- ***************************************Slide 4 end******************************************************************* -->
+
+    <!-- **************************************Slide 5 start******************************************************************** -->
+
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; " id="SCREEN PRINTING">
+
+
+    <div class="w-[90vw] flex flex-col gap-[2vw]">
+      <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">SCREEN PRINTING</h2>
+      <p class="text-[1.2vw] w-[90vw]  font-medium leading-[3vw] text-center">Screen printing is one the most common print technology in plastic container decoration. It’s a technique used to apply information such as size, weight & volume, brand details, durability & legibility, nutritional details, expiration and production dates, symbols and storage instructions onto the surface of plastic packaging such as bottles, jars, jerrycans and buckets.​ </p>
+
+      <div class="flex gap-[2vw] justify-center h-[20vw] text-[1vw]">
+        <!-- left icons  -->
+         <div class="flex flex-col gap-[1vw] justify-start" >
+             <div class="flex items-center gap-[1vw] " style="margin-top: 3vw;">
+                 <img src="./assets/Images/screen-printing/cheaper-icon.webp" alt="cheaper-icon" class="w-[3vw]"/>
+                 <p class="font-semibold ">Cheaper</p>
+             </div>
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/lesser-lead-time.webp" alt="lesser-lead-time" class="w-[3vw]"/>
+                 <p class="font-semibold">Lesser lead time</p>
+             </div>
+                
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/moq-icon.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Min MOQ </p>
+             </div>
+         </div>
+
+         <!-- center circle  -->
+         <div class="w-[25vw] relative">
+            <img src="./assets/Images/screen-printing/pros.webp" alt="pros" class="w-[15vw]"/>
+             <img src="./assets/Images/screen-printing/cons.webp" alt="pros" class="w-[15vw] absolute top-[5vw] right-[0vw]"/>
+         </div>
+
+         <!-- right icons  -->
+         
+             <div class="flex flex-col gap-[1vw] justify-end">
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/not-scratch-resistance.webp" alt="cheaper-icon" class="w-[3vw]"/>
+                 <p class="font-semibold">Not scratch resistance</p>
+             </div>
+             <div class="flex items-center gap-[1vw]">
+                 <img src="./assets/Images/screen-printing/limited-color-options.webp" alt="lesser-lead-time" class="w-[3vw]"/>
+                 <p class="font-semibold">Limited color options</p>
+             </div>
+                
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/traditional-old-process.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Traditional old process</p>
+             </div>
+             <div class="flex items-center gap-[1vw]"> 
+                  <img src="./assets/Images/screen-printing/less-design-ability.webp" alt="min-moq" class="w-[3vw]"/>
+                 <p class="font-semibold">Less design ability</p>
+             </div>
+         
+         </div>
+      </div>
+    </div>
+      
+        
+      
+ </div>
+
+
+    <!-- ***************************************Slide 5 end******************************************************************* -->
+  
+    <!-- **************************************Slide 6 start******************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden flex items-center gap-[8vw]" style="font-family: 'Montserrat'; " id="CERTIFICATIONS">
+
+
+    <div class="w-[90vw] flex flex-col gap-[3vw]">
+      <h2 class="font-bold text-[#FF9600] text-center text-[2vw] ">WHAT ARE THE CERTIFICATIONS WE ARE HAVING</h2>
+      <div class="flex gap-[2vw] justify-end " style="margin-right: 6vw;">
+        <img src="./assets/Images/certification-page/certificate-1.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+         <img src="./assets/Images/certification-page/certificate-2.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+          <img src="./assets/Images/certification-page/certificate-3.webp" alt="certificate-1" class="w-[20vw] h-[27vw]"/>
+      </div>
+      <img src="./assets/Images/certification-page/women-img.webp" alt="women" class="absolute bottom-0 left-[0] w-[30vw]"/>
+      
+    </div>
+ </div>
+
+    <!-- ***************************************Slide 6 end******************************************************************* -->
+    <!-- **************************************Slide 7 start******************************************************************** -->
+
+    <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Our Sales Process">
+
+      <div class="w-[90vw] h-[full]" style="font-family: 'Montserrat';">
+        <h2 class="font-bold text-[#FF9600] text-[2vw]">Our Sales Process</h2>
+        <p class="font-semibold  text-[1.4vw]">Basic Etiquettes </p>
+
+        <div class="flex gap-[4vw] font-semibold text-[1.5vw] justify-center items-center text-center " style="margin-top: 2vw;">
+
+
+          <div class=" flex flex-col items-center gap-[2vw]">
+            
+            <img src="./assets/Images/our-sales-process/phone-icon.svg" alt="" class="w-[3vw] " >
+            <img src="./assets/Images/our-sales-process/step-1.webp" alt="" class="w-[15vw]" style="margin-left: 2vw;">
+            <p class="font-medium">Greeting </br> customer </br> on call</p>
+          </div>
+
+
+         <div class="flex flex-col items-center gap-[2vw]">
+           
+            <img src="./assets/Images/our-sales-process/light-bulb-icon.svg" alt="" class="w-[3.5vw]">
+            <img src="./assets/Images/our-sales-process/step-2.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
+            <p class="font-medium">Understanding </br> their  </br> requirement</p>
+         </div>
+
+         <div class="flex flex-col items-center gap-[2vw]">
+             
+             <img src="./assets/Images/our-sales-process/package-icon.svg" alt="" class="w-[3.2vw]">
+             <img src="./assets/Images/our-sales-process/step-3.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
+             <p class="font-medium">Analysis their </br> purchase quantity </br> and brand</p>
+         </div>
+
+         
+       
+        
+      </div>
+
+        <div class="flex flex-col  items-center absolute bottom-[-3vw] left-[50%] " style="margin-top: vw; transform: translate(-50%);">
+         <img src="./assets/Images/our-sales-process/flight-icon.svg" alt="flight-icon" class="w-[2vw]"/>
+          <div class="flex flex-col items-center  " style=" margin: 1vw 0;">
+                  <div class="relative w-[.1vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+        </div>
+     
+
+      </div>
+    </div>
+   
+       <!-- ***************************************Slide 7 end******************************************************************* -->
+
+
+          <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="">
+
+      <div class="w-[90vw] h-[full] " >
+      
+
+    
+
+        <div class="flex flex-col  items-center absolute bottom-[8vw] left-[50%] " style="margin-top: vw; transform: translate(-50%);">
+         <img src="./assets/Images/our-sales-process/flight-icon.svg" alt="flight-icon" class="w-[30vw]"/>
+          <div class="flex flex-col items-center absolute bottom-[-10vw] " >
+                  <div class="relative w-[.06vw] h-[15vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
+            </div>
+        </div>
+     
+
+      </div>
+    </div>
+   
+   
+   
+       <!-- **************************************Slide 8 start******************************************************************** -->
+
+  <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Our Sales Process">
+
+      <div class="w-[90vw] h-[full] flex gap-[5vw]" style="font-family: 'Montserrat';">
+        <div class="flex flex-col justify-center items-center leading-[3vw] w-[30vw]">
+           <h2 class="font-bold text-[#FF9600] text-[4vw]">IML</h2>
+           <p class="font-semibold  text-[2vw]">Process </p>         
+        </div>
+        <div class="flex gap-[2vw]">
+           <div class="flex flex-col gap-[2vw]">
+          <img src="./assets/Images/our-sales-process/step-1-circle.webp" alt="step-1" class="w-[8vw] absolute top-[5.3vw]">
+          <img src="./assets/Images/our-sales-process/step-2-circle.webp" alt="step-2" class="w-[8vw] absolute top-[14.3vw]">
+          <img src="./assets/Images/our-sales-process/step-3-circle.webp" alt="step-3" class="w-[8vw] absolute top-[23.5vw]">
+          <img src="./assets/Images/our-sales-process/step-4-circle.webp" alt="step-4" class="w-[8vw] absolute top-[32.3vw]">
+        </div>
+        <div class="absolute top-0 left-[50%] " style="transform: translate(-50%);">  
+             <div class=" w-[.1vw] h-[100vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>          
+        </div>
+
+
+      <div class="absolute top-[8vw] left-[50%] flex  items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[17vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[26vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[35vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+
+        <div class="font-medium flex flex-col gap-[8vw] text-[1vw]" style="font-family: 'Montserrat'; ">
+           <p class="absolute top-[7vw] left-[53vw]">ART WORK to be  Adapted in KLD (Key line diagram) from <br/> in CDR, AI File + PDF for our referral</p>
+            <p class="absolute top-[17vw] left-[53vw]">Send to our team for order processing</p>
+            <p class="absolute top-[24vw] left-[53vw]">Once our team send the final file from label maker for approval <br/> get it approved from customer and post in group with quantity <br/> for order confirmation</p>
+            
+              <div class=" absolute top-[32vw] left-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
+                   <!-- Left title -->
+                   <div class="font-semibold text-[1.2vw] leading-[2vw]">
+                     Lead time
+                   </div>
+                 <img src="./assets/Images/our-sales-process/Route-img.svg" alt="route-img" class="w-[4vw]"/>
+                   <!-- Connector and branches --> 
+                   <div class="flex flex-col gap-[3vw] relative absolute left-[-1.5vw]">
+                     <!-- Top branch -->
+                     <div class="flex items-center gap-[1vw] relative">
+                       <div class="bg-[#979797] text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         New
+                       </div>
+                       <span class="text-[1vw] font-medium">
+                         6 Weeks from date of artwork confirmation
+                       </span>
+                     </div>
+                   
+                     <!-- Bottom branch -->
+                     <div class="flex items-center gap-[1vw] relative">
+                       <div class="bg-[#979797] text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         Existing
+                       </div>
+                       <span class="text-[1vw] font-medium">
+                         5 Weeks from date of artwork confirmation
+                       </span>
+                     </div>
+                   </div>
+</div>
+        </div>
         </div>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    
-    <script>
-      // Product data with specifications
-      const productData = {
-        '120ml-round': {
-          title: '120ml',
-          subtitle: 'Round Container',
-          image: 'https://picsum.photos/300/300?random=1',
-          dimensions: { width: '112.8mm', height: '45mm', diameter: '85mm' },
-          specs: {
-            'Lid Weight': '2.3 GSM',
-            'Tub Weight': '4.3 GSM'
-          },
-          packInfo: 'No of pack in box - 2500 Nos'
-        },
-        '260ml-round': {
-          title: '260ml',
-          subtitle: 'Round Container',
-          image: 'https://picsum.photos/300/300?random=2',
-          dimensions: { width: '120mm', height: '52mm', diameter: '95mm' },
-          specs: {
-            'Lid Weight': '3.1 GSM',
-            'Tub Weight': '5.8 GSM'
-          },
-          packInfo: 'No of pack in box - 2000 Nos'
-        },
-        '250ml-glass': {
-          title: '250ml',
-          subtitle: 'Glass Round Container',
-          image: 'https://picsum.photos/300/300?random=3',
-          dimensions: { width: '118mm', height: '50mm', diameter: '93mm' },
-          specs: {
-            'Lid Weight': '2.9 GSM',
-            'Tub Weight': '5.5 GSM'
-          },
-          packInfo: 'No of pack in box - 2000 Nos'
-        },
-        '300ml-round': {
-          title: '300ml',
-          subtitle: 'Round Container',
-          image: 'https://picsum.photos/300/300?random=4',
-          dimensions: { width: '125mm', height: '55mm', diameter: '98mm' },
-          specs: {
-            'Lid Weight': '3.5 GSM',
-            'Tub Weight': '6.2 GSM'
-          },
-          packInfo: 'No of pack in box - 1800 Nos'
-        },
-        '450ml-square': {
-          title: '450ml',
-          subtitle: 'Square Bottom Container',
-          image: 'https://picsum.photos/300/300?random=5',
-          dimensions: { width: '130mm', height: '60mm', diameter: '105mm' },
-          specs: {
-            'Lid Weight': '4.2 GSM',
-            'Tub Weight': '7.8 GSM'
-          },
-          packInfo: 'No of pack in box - 1500 Nos'
-        },
-        '500ml-square': {
-          title: '500ml',
-          subtitle: 'Square Bottom Container',
-          image: 'https://picsum.photos/300/300?random=6',
-          dimensions: { width: '135mm', height: '65mm', diameter: '110mm' },
-          specs: {
-            'Lid Weight': '4.5 GSM',
-            'Tub Weight': '8.5 GSM'
-          },
-          packInfo: 'No of pack in box - 1400 Nos'
-        },
-        '500ml-rectangle': {
-          title: '500ml',
-          subtitle: 'Rectangle Container',
-          image: 'https://picsum.photos/300/300?random=7',
-          dimensions: { width: '140mm', height: '62mm', diameter: '108mm' },
-          specs: {
-            'Lid Weight': '4.3 GSM',
-            'Tub Weight': '8.2 GSM'
-          },
-          packInfo: 'No of pack in box - 1400 Nos'
-        },
-        'w-cut-bags': {
-          title: 'W Cut',
-          subtitle: 'Biodegradable Bags',
-          image: 'https://picsum.photos/300/300?random=8',
-          dimensions: { width: '300mm', height: '450mm' },
-          specs: {
-            'Material': '100% Biodegradable',
-            'Thickness': '25 microns',
-            'Type': 'W-Cut Handle'
-          },
-          packInfo: 'No of pack in box - 1000 Nos'
-        },
-        'd-cut-bags': {
-          title: 'D Cut',
-          subtitle: 'Biodegradable Bags',
-          image: 'https://picsum.photos/300/300?random=9',
-          dimensions: { width: '280mm', height: '420mm' },
-          specs: {
-            'Material': '100% Biodegradable',
-            'Thickness': '30 microns',
-            'Type': 'D-Cut Handle'
-          },
-          packInfo: 'No of pack in box - 1000 Nos'
-        },
-        'grocery-bags': {
-          title: 'Grocery',
-          subtitle: 'Biodegradable Bags',
-          image: 'https://picsum.photos/300/300?random=10',
-          dimensions: { width: '350mm', height: '500mm' },
-          specs: {
-            'Material': '100% Biodegradable',
-            'Thickness': '35 microns',
-            'Type': 'Loop Handle'
-          },
-          packInfo: 'No of pack in box - 800 Nos'
-        },
-        'prasadham-bags': {
-          title: 'Prasadham',
-          subtitle: 'Biodegradable Bags',
-          image: 'https://picsum.photos/300/300?random=11',
-          dimensions: { width: '200mm', height: '300mm' },
-          specs: {
-            'Material': '100% Biodegradable',
-            'Thickness': '20 microns',
-            'Type': 'Simple Pouch'
-          },
-          packInfo: 'No of pack in box - 1500 Nos'
-        },
-        'prasadham-pouches': {
-          title: 'Prasadham',
-          subtitle: 'Biodegradable Pouches',
-          image: 'https://picsum.photos/300/300?random=12',
-          dimensions: { width: '180mm', height: '250mm' },
-          specs: {
-            'Material': '100% Biodegradable',
-            'Thickness': '18 microns',
-            'Type': 'Seal Pouch'
-          },
-          packInfo: 'No of pack in box - 2000 Nos'
-        }
-      };
 
-      // Modal functionality
-      const modal = document.getElementById('productModal');
-      const modalContent = document.getElementById('modalContent');
-      const modalClose = document.getElementById('modalClose');
-      const productCards = document.querySelectorAll('.product-card');
+       <!-- ***************************************Slide 8 end******************************************************************* -->
+       <!-- **************************************Slide 9 start******************************************************************** -->
+   
+   
+     <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Our Sales Process">
 
-      // Open modal with product data
-      productCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const productId = this.getAttribute('data-product');
-          const product = productData[productId];
-          
-          if (product) {
-            openModal(product);
-          }
-        });
-      });
+      <div class="w-[90vw] h-[full] flex justify-end " style="font-family: 'Montserrat';">
+        
+        <div class="flex gap-[2vw]">
+           <div class="flex flex-col gap-[2vw]">
+          <img src="./assets/Images/our-sales-process/step-1-gray.webp" alt="step-1" class="w-[8vw] absolute top-[7vw] left-[53vw]">
+          <img src="./assets/Images/our-sales-process/step-2-gray.webp" alt="step-2" class="w-[8vw] absolute top-[19vw] left-[53vw]">
+          <img src="./assets/Images/our-sales-process/step-3-gray.webp" alt="step-3" class="w-[8vw] absolute top-[31vw] left-[53vw]">
+        </div>
+        <div class="absolute top-0 left-[50%] " style="transform: translate(-50%);">  
+             <div class=" w-[.1vw] h-[100vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>          
+        </div>
 
-      function openModal(product) {
-        modalContent.innerHTML = `
-          <div class="modal-image-section">
-            <div class="modal-image-wrapper">
-              <span class="modal-dimensions dimension-width">
-                ← ${product.dimensions.width} →
-              </span>
-              <img src="${product.image}" alt="${product.title}" class="modal-image" />
-              <span class="modal-dimensions dimension-height">
-                ↑ ${product.dimensions.height} ↓
-              </span>
-              ${product.dimensions.diameter ? `
-                <span class="modal-dimensions dimension-width-bottom">
-                  ← ${product.dimensions.diameter} →
-                </span>
-              ` : ''}
+
+      <div class="absolute top-[10vw] left-[50%] flex  items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[22vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       <div class="absolute top-[34vw] left-[50%] flex items-center bg-[white] justify-center w-[1.5vw] h-[1.4vw] rounded-full border-[.1vw] border-[#FF9600] shadow-md" style="transform: translate(-50%);">
+           <div class="w-[.5vw] h-[.5vw] bg-[#FF9600] rounded-full"></div>
+      </div>
+       
+
+        <div class="font-medium flex flex-col gap-[8vw] text-[1vw]" style="font-family: 'Montserrat'; ">
+           <p class="absolute top-[10vw] right-[53vw]">Artwork to be given in PDF only</p>
+             <ol class="absolute top-[20vw] text-right right-[53vw]">
+              <li>Coordinate with team for Artwork approval</li>
+              <li>Once Artwork approval received from team <br/>
+                             get it approved with customer</li>
+            </ol>
+            
+              <div class=" absolute top-[31vw] right-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
+                   <!-- Left title -->
+                  
+               
+                   <!-- Connector and branches --> 
+                   <div class="flex flex-col gap-[3vw] relative  absolute left-[1vw]">
+                     <!-- Top branch -->
+                     <div class="flex items-center justify-end gap-[1vw] relative">
+                      
+                       <span class="text-[1vw] font-medium">
+                         10-15 Days from date of approval
+                       </span>
+                        <div class="bg-[#979797] text-right text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         New
+                       </div>
+                     </div>
+                   
+                     <!-- Bottom branch -->
+                     <div class="flex items-center gap-[1vw] relative">
+                       
+                       <span class="text-[1vw] font-medium">
+                         10-15 Days from date of approval
+                       </span>
+                       <div class="bg-[#979797] text-white rounded-full px-[1vw] py-[0.2vw] text-[0.9vw]" style="padding: .4vw .5vw;">
+                         Existing
+                       </div>
+                     </div>
+                   </div>
+                     <img src="./assets/Images/our-sales-process/route-left-img.svg" alt="route-img" class="w-[4vw]"/>
+                    <div class="font-semibold text-[1.2vw] leading-[2vw]">
+                     Lead time
+                   </div>
+              </div>
+        </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center leading-[3vw] w-[30vw]"  >
+           <h2 class="font-bold text-[#FF9600] text-[3vw]">Screen Printing</h2>
+           <p class="font-semibold  text-[2vw]">Process </p>         
+        </div>
+
+      </div>
+    </div>
+       <!-- **************************************Slide 9 start******************************************************************** -->
+ 
+     <!-- ===================================== SLIDE 2 start=============================================-->
+
+
+    <div class="slide-item overflow-hidden relative w-full h-100vw flex flex-col" data-navigation="About" id="slide_2">
+
+      <!-- Main Heading -->
+      <h2 class="text-black font-bold text-center   "
+        style="font-size: 2vw; margin-bottom: 2vw; font-family: montserrat;">
+        WHAT ARE THE PRODUCTS WE ARE PRODUCING
+      </h2>
+
+      <div class=" w-full  flex flex-col justify-center ml-[2vw]"
+        style="gap: 3vw; margin-left: 10vw;  font-family: montserrat;  ;">
+
+        <div class="flex " style="gap: 2vw;">
+          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
+            style="font-size: 1.6vw; margin-top: 5vw; font-family: montserrat;">
+            FOOD<br />CONTAINERS
+          </h3>
+
+          <div class="grid grid-cols-7" style="gap: 1.5vw; margin-left: 5vw; ">
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '120ml <br/> Round Container',
+        './assets/Images/slide_2/120_ml_round.webp',
+        '2.3 GSM', 
+        '4.3 GSM', 
+        '2500 Nos'
+    )">
+              <img src="./assets/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.7vw; line-height: 1.1; font-weight: 600;">120ml Round</p>
+            </div>
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_ml_round.webp" alt="250ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml Round
+              </p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_ml_glass_round.webp" alt="250ml Glass Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">250ml
+                Glass<br />Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/300_ml_round.webp" alt="300ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">300ml Round</p>
+            </div>
+
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_round.webp" alt="450ml Square Bottom"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                500ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/750_ml_round.webp" alt="500ml Square Bottom"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">750ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/1000_ml_round.webp" alt="500ml Rectangle"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.76vw; line-height: 1.1; font-weight: 600;">
+                1000ml Round</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/450_ml_square.webp" alt="750ml Rectangle"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.72vw; line-height: 1.1; font-weight: 600;">
+                450ml <span class="text-[.5vw] font-medium " style="font-weight: 600;">(500 GSM)</span> Square Bottom
+              </p>
+            </div>
+
+            <!-- Row 3 -->
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_square.webp" alt="500ml Round" class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.75vw; line-height: 1.1; font-weight: 600;">500ml Square Bottom</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_ml_rectangle.webp" alt="750ml Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">500ml Rectangle</p>
+            </div>
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/750_ml_rectangle.webp" alt="250-gsm Sweet box"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                750ml Rectangle</p>
+            </div>
+
+            <div
+              class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/250_gms_sweetbox.webp" alt="500-gsm Sweet box"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                250-gsm<br />Sweet box</p>
+            </div>
+
+
+            <div
+              class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+              style="padding: 1vw; width: 8vw; height: 8vw;" onclick="openProductModal(
+        '250ml <br/> Round Container',
+        './assets/Images/slide_2/250_ml_round.webp',
+        '5.7 GSM', 
+        '5.8 GSM', 
+        '1000 Nos'
+    )">
+              <img src="./assets/Images/slide_2/500_gms_sweet_box.webp" alt="1000ml Round"
+                class="object-contain mb-[0.5vw]">
+              <p class="text-black text-center font-medium"
+                style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                500-gsm<br />Sweet box</p>
             </div>
           </div>
-          
-          <div class="modal-info-section">
-            <h2 class="modal-title">${product.title}</h2>
-            <h3 class="modal-subtitle">${product.subtitle}</h3>
-            
-            <div class="modal-specs">
-              ${Object.entries(product.specs).map(([key, value]) => `
-                <div class="modal-spec-item">
-                  <strong>${key}:</strong> ${value}
-                </div>
-              `).join('')}
+        </div>
+
+        <!-- Right Section: BIO-DEGRADABLE BAGS -->
+        <div class="flex" style="gap: 2.5vw;">
+          <h3 class="text-[#F5A623] font-bold text-center underline decoration-1"
+            style="font-size: 1.6vw; margin-bottom: 1vw; font-family: montserrat;">
+            BIO-DEGRADABLE<br />BAGS
+          </h3>
+
+          <div class="flex flex-col" style="gap: 1.6vw;">
+            <!-- Row 1 -->
+            <div class="flex" style="gap: 1.5vw;">
+              <div
+                class=" product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/w-cut-bags.webp" alt="W CUT BAGS" class="object-contain mb-[0.5vw]"
+                  style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">W CUT BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/d_cut_bags.webp" alt="D CUT BAGS" class="object-contain mb-[0.5vw]"
+                  style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">D CUT BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/grocessory_bags.webp" alt="GROCESSORY BAGS"
+                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium "
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: 1vw;">
+                  GROCESSORY<br />BAGS</p>
+              </div>
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/prasadham_bags.webp" alt="PRASADHAM BAGS"
+                  class="object-contain mb-[0.5vw]" style="width: 5vw; height: 5vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600;">
+                  PRASADHAM<br />BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: .5vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/Garbage_bag.webp" alt="PRASADHAM POUCHES"
+                  class="object-contain mb-[0.5vw]" style="width: 8vw; height: 8vw; margin-bottom: vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: vw;">
+                  GARBAGE<br />BAGS</p>
+              </div>
+
+              <div
+                class="product-card bg-white rounded-[1vw] border-[0.25vw] border-[#F5A623] flex flex-col items-center justify-center cursor-pointer hover:shadow-lg transition-shadow"
+                style="padding: 1vw; width: 8vw; height: 8vw;">
+                <img src="./assets/Images/slide_2/bio_hazard_bags.webp" alt="PRASADHAM POUCHES"
+                  class="object-contain mb-[0.5vw]" style="width: 6vw; height: 6vw;">
+                <p class="text-black text-center font-medium"
+                  style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; margin-top: .5vw; ">
+                  BIO HAZARD<br />BAGS</p>
+              </div>
             </div>
-            
-            <div class="modal-pack-info">
-              ${product.packInfo}
+
+            <!-- Row 2 -->
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- ===================================== SLIDE 2 end=============================================-->
+
+
+    <!-- ====================================SLIDE 9 start ============================================-->
+
+
+    <div class="sec-9 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_9">
+      <h3>AVAILABLE MARKET SIZE</h3>
+      <div class="sec-9-grid">
+        <div class="sec-9-grid-item">
+          <p class="sec-9-grid-item-title">Round Container</p>
+          <img src="assets/Images/slide_9/round_info.svg" alt="round container" class="sec-9-item">
+        </div>
+        <div class="sec-9-grid-item">
+          <p class="sec-9-grid-item-title">Rectangle Container</p>
+          <img src="assets/Images/slide_9/rectangle_info.svg" alt="rectangle container" class="sec-9-item">
+        </div>
+        <div class="sec-9-vertical-container">
+          <div class="sec-9-grid-item">
+            <p class="sec-9-grid-item-title">Rs Container</p>
+            <img src="assets/Images/slide_9/round_square_info.svg" alt="round square container" class="sec-9-item">
+          </div>
+          <div class="sec-9-grid-item">
+            <p class="sec-9-grid-item-title">Sweet Box</p>
+            <img src="assets/Images/slide_9/sweetbox_info.svg" alt="sweet box" class="sec-9-item">
+          </div>
+          <div class="sec-9-grid-item"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================SLIDE 9 end ============================================-->
+
+    <!-- ====================================SLIDE 10 start ============================================-->
+
+
+
+    <div class="sec-10 slide-item relative w-full h-[100vh] overflow-hidden" id="slide_10">
+      <h3>WHY USE THESE SIZE ONLY</h3>
+      <p>These sizes are the market standard sizes, fast-moving sizes, and most required sizes. That is why we are
+        manufacturing these sizes.</p>
+      <div class="sec-10-grid">
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/120_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">120ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_ml_glass_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250ml Glass Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/300_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">300ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/750_ml_round.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">750ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/1000_ml_round.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">1000ml Round</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/450_ml_square.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">450ml <span>(500 GSM)</span> Square Bottom</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_square.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Square Bottom</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_ml_rectangle.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500ml Rectangle</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/750_ml_rectangle.webp" alt="round container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">750ml Rectangle</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/250_gms_sweetbox.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">250-gsm Sweet box</p>
+          </div>
+        </div>
+        <div class="sec-10-grid-item">
+          <div class="grid-item-inner-flex">
+            <img src="assets/Images/slide_2/500_gms_sweet_box.webp" alt="rectangle container" class="sec-10-item">
+            <p class="sec-10-grid-item-title">500-gsm Sweet box</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- ====================================SLIDE 10 end ============================================-->
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- =====================================slide 3 popup code start================================== -->
+
+  <div id="product-modal"
+    class="fixed inset-0 bg-opacity-10 z-[100] hidden flex bg-gray-800/40 backdrop-blur-md  justify-center items-center p-[1vw]">
+    <div class="bg-white rounded-xl shadow-2xl border border-[#FDBF38] overflow-hidden w-[70vw] h-[32vw] p-0">
+      <div class="flex flex-col md:flex-row bg-[#F7F7F7] p-[2vw] relative">
+
+        <div class="flex-shrink-0 flex flex-col items-center justify-center p-[1vw] ">
+          <button id="close-modal-btn"
+            class="absolute border border-[#FDBF38] top-[1vw] right-[1vw] w-[3vw] h-[2vw]  flex items-center justify-center bg-white text-[#F5A623] rounded-[.5vw] text-[2vw] font-bold shadow-lg hover:bg-gray-100 transition duration-150"
+            style="padding: 1vw ; padding-bottom: 1.5vw;">
+            &times;
+          </button>
+          <img id="modal-product-image" src="" alt="Product" class="w-[30.5vw] object-contain mb-[1vw] "
+            style="padding:2vw">
+
+
+        </div>
+
+        <div class="p-[1vw] w-[20vw] flex  justify-between">
+          <!-- Full-height vertical line -->
+          <div class="w-[0.9vw] h-[25vw] bg-[#FEAE00] flex items-center my-auto border border-[#FEAE00] border-[3vw]"
+            style="margin-top: auto; margin-bottom: auto; margin-left: 1vw; border: solid  .2vw #FEAE00;"></div>
+
+          <div class="pl-[3vw]" style="padding: 4vw; font-family: 'Montserrat';">
+            <h3 id="modal-product-title" class="text-[3vw] font-bold text-black mb-[1.5vw] ">Product Title</h3>
+
+            <div class="bg-[rgba(253,191,56,0.3)] bg-opacity-70 rounded-lg p-[4vw] mb-[vw] flex flex-col gap-[.5vw] "
+              style="padding: 1vw 3vw; width: 30.5vw; text-align: center;">
+              <p id="modal-lid-weight" class="text-[1.5vw] font-bold text-gray-800 mb-[0.5vw]">Lid Weight: N/A</p>
+              <p id="modal-tub-weight" class="text-[1.5vw] font-bold text-gray-800">Tub Weight: N/A</p>
             </div>
           </div>
-        `;
-        
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        </div>
+      </div>
+
+      <div class="bg-[#FEAE00]  text-white text-center mb-[2vw] py-[2vw] px-[2vw] text-[1.5vw]">
+        <p id="modal-pack-quantity" class=" " style="padding: 1vw 0;">No of pack in box - N/A</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================slide 3 popup code end================================== -->
+
+
+  <!-- <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate when #slide_1 enters the viewport
+    gsap.from("#slide_1 h1", {
+      scrollTrigger: {
+        trigger: "#slide_1",
+        start: "top 80%",  // when the top of slide_1 hits 80% of viewport
+        toggleActions: "play none none reverse", // play on enter, reverse on leave
+      },
+      opacity: 0,
+      y: 80,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.from("#slide_1 .content", { // optional if you wrap text in .text-box
+      scrollTrigger: {
+        trigger: "#slide_1",
+        start: "top 80%",  // when the top of slide_1 hits 80% of viewport
+        toggleActions: "play none none reverse", // play on enter, reverse on leave
+      },
+      opacity: 0,
+      y: 80,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.from("#slide_1 .bottom-section", { // for icons or footer
+      scrollTrigger: {
+        trigger: "#slide_1",
+        start: "top 70%",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      delay: 0.5,
+      ease: "power2.out"
+    });
+  </script> -->
+
+  <!-- <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate the heading first (Kept from original)
+    gsap.from("#slide_2 h", {
+      scrollTrigger: {
+        trigger: "#slide_2",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      ease: "power3.out"
+    });
+
+    // Animate product cards (fade-in one by one) (Kept from original)
+    gsap.from("#slide_2 .product-car", {
+      scrollTrigger: {
+        trigger: "#slide_2",
+        start: "top 75%", // when top of slide_2 hits 75% of viewport
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: {
+        amount: 0.8, // Reduced amount for quicker stagger
+        from: "start"
       }
+    });
 
-      function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    // Optional: fade in subheadings like FOOD CONTAINERS and BIO-DEGRADABLE BAGS (Kept from original)
+    gsap.from("#slide_2 h", {
+      scrollTrigger: {
+        trigger: "#slide_2",
+        start: "top 85%",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      stagger: 0.3
+    });
+
+    // ------------------------------------------------------------------
+    // ⭐ FIX FOR SLIDE 3 ANIMATION ⭐
+    // ------------------------------------------------------------------
+    gsap.from("#slide_3 .product-card2", {
+      scrollTrigger: {
+        trigger: "#slide_3",
+        start: "top 70%", // Changed start position to trigger earlier as slide 3 enters
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0, // Fade-in effect
+      y: 50, // Move up from 50px below
+      duration: 0.6, // Shorter duration for punchier effect
+      ease: "power2.out",
+      stagger: {
+        amount: 1.0, // Reduced total stagger time for better flow
+        from: "start"
       }
+    });
 
-      // Close modal events
-      modalClose.addEventListener('click', closeModal);
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
+    // Bonus: Animate the main heading and description for Slide 3
+    gsap.from("#slide_, #slide_", {
+      scrollTrigger: {
+        trigger: "#slide_3",
+        start: "top 70%",
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+  </script> -->
 
-      // Close modal with Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-          closeModal();
-        }
-      });
+<script>
+    const slides = document.querySelectorAll('.carousel-slide');
 
-      // GSAP Scroll Navigation
-      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-      let mainScroller = document.querySelector('.viewport-container');
-      let allSlides = gsap.utils.toArray(".slide-item");
-      let currentPanelInput = document.querySelector('.current-panel-input');
-      let totalPanelCount = allSlides.length;
-      let panelCount = document.querySelector('.panel-count');
-      panelCount.innerHTML = totalPanelCount;
-
-      currentPanelInput.setAttribute('max', totalPanelCount);
-
-      let prevArrow = document.querySelector(".prev-arrow");
-      let nextArrow = document.querySelector(".next-arrow");
-
-      allSlides.forEach((slide, index) => {
-        slide.style.position = 'relative';
-        slide.style.zIndex = 100 - index;
-      });
-
-      allSlides.forEach((eachSlide, index) => {
-        let realIndex = (index + 1);
-
-        ScrollTrigger.create({
-          trigger: eachSlide,
-          scroller: ".viewport-container",
-          start: "top 80%",
-          end: "bottom 20%",
-          onEnter: () => updateSlideCounter(realIndex),
-          onEnterBack: () => updateSlideCounter(realIndex)
+    slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+            slides.forEach(s => s.classList.remove('active'));
+            slide.classList.add('active');
         });
-      });
+    });
 
-      function updateSlideCounter(slideNumber) {
-        currentPanelInput.value = slideNumber;
-        
-        let indexNext = slideNumber + 1;
-        let indexPrev = slideNumber - 1;
-        
-        nextArrow.setAttribute('data-down', indexNext);
-        prevArrow.setAttribute('data-up', indexPrev);
-        
-        updateControls(indexPrev, indexNext);
-      }
+    // Set first slide as active
+    slides[0].classList.add('active');
+</script>
 
-      function updateControls(keyIndexUp, keyIndexDown) {
-        if (keyIndexUp >= 1) {
-          prevArrow.classList.remove('disabled');
-        } else {
-          prevArrow.classList.add('disabled');
-        }
 
-        if (keyIndexDown <= totalPanelCount) {
-          nextArrow.classList.remove('disabled');
-        } else {
-          nextArrow.classList.add('disabled');
-        }
-      }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="./js/slide.js"></script>
+  <script src="./script.js"></script>
+</body>
 
-      nextArrow.addEventListener("click", function(e) {
-        e.preventDefault();
-        let nextSlide = parseInt(this.getAttribute('data-down'));
-        if (nextSlide <= totalPanelCount) {
-          scrollToSlide(nextSlide);
-        }
-      });
-
-      prevArrow.addEventListener("click", function(e) {
-        e.preventDefault();
-        let prevSlide = parseInt(this.getAttribute('data-up'));
-        if (prevSlide >= 1) {
-          scrollToSlide(prevSlide);
-        }
-      });
-
-      function scrollToSlide(targetSlide) {
-        gsap.to(mainScroller, {
-          ease: "power2.inOut",
-          duration: 0.8,
-          scrollTo: {
-            y: "#slide_" + targetSlide,
-            autoKill: false
-          }
-        });
-      }
-
-      updateSlideCounter(1);
-    </script>
-  </body>
 </html>
