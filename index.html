@@ -50,7 +50,7 @@
 
     <!-- image slide page style  -->
 <style>
-    * {
+  * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -60,15 +60,20 @@
         background-size: cover;
         background-position: center;
         transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        flex-grow: 0;
+      flex: 0 0 6vw;
         position: relative;
+        box-shadow: 1px 0 4px rgba(0, 0, 0, 0.12);
+        /* box-shadow: -4vw 0 16vw rgba(0, 0, 0, 0.25);  */
+        
     }
 
     .carousel-slide.active {
         flex-grow: 20;
         min-width: 30vw;
         z-index: 10;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important; */
+        /* box-shadow: -4vw 0 16vw rgba(0, 0, 0, 0.25); */
+        
     }
 
     .carousel-slide.active .slide-icon {
@@ -82,12 +87,25 @@
     }
 
     .slide-content {
-        transition: opacity 0.3s ease;
+        transition: opacity  ease;
     }
 
     .slide-icon {
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
+
+    /* New: Position icon inside triangle */
+    .slide-icon {
+        right: -1vw;
+        top: 25%;
+        transform: translateY(-50%);
+        z-index: 20;
+        /* box-shadow: 1px 0 4px rgba(0, 0, 0, 0.12); */
+    }
+    /* .triangle-shadow {
+    filter: drop-shadow(1px -1px 1px rgba(0, 0, 0, 0.1)) 
+            drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+} */
 </style>
 
 
@@ -251,7 +269,7 @@
             <div class="flex flex-col items-center  " style=" margin: 1vw 0;">
                   <div class="relative w-[.22vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
             </div>
-            <img src="./assets/Images/slide_7/img_1.webp" alt="" class="w-[10vw] h-[10vw] items-start">
+            <img src="./assets/Images/slide_7/img_1.webp" alt="" class="w-[10vw] h-[10vw] items-start transition-transform duration-500 ease-out hover:scale-110">
           </div>
 
 
@@ -260,7 +278,7 @@
            <div class="flex flex-col items-center " style=" margin: 1vw 0;">
               <div class="relative w-[.2vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
             </div>
-            <img src="./assets/Images/slide_7/img_2.webp" alt="" class="w-[10vw] h-[10vw]">
+            <img src="./assets/Images/slide_7/img_2.webp" alt="" class="w-[10vw] h-[10vw] transition-transform duration-500 ease-out hover:scale-110">
          </div>
 
          <div class="flex flex-col items-center">
@@ -268,7 +286,7 @@
              <div class="flex flex-col items-center" style=" margin: 1vw 0;">
               <div class="relative w-[.2vw] h-[10vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
              </div>
-              <img src="./assets/Images/slide_7/img_3.webp" alt="" class="w-[10vw] h-[10vw]">
+              <img src="./assets/Images/slide_7/img_3.webp" alt="" class="w-[10vw] h-[10vw] transition-transform duration-500 ease-out hover:scale-110">
          </div>
 
          <div class="flex flex-col items-center">
@@ -276,7 +294,7 @@
             <div class="flex flex-col items-center" style=" margin: 1vw 0;">
              <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
            </div>
-             <img src="./assets/Images/slide_7/img_4.webp" alt="" class="w-[10vw] h-[10vw]">
+             <img src="./assets/Images/slide_7/img_4.webp" alt="" class="w-[10vw] h-[10vw] transition-transform duration-500 ease-out hover:scale-110">
          </div>
        
         <div class="flex flex-col items-center">
@@ -285,7 +303,7 @@
                  <div class="relative w-[.2vw] h-[7.8vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
 
              </div>
-            <img src="./assets/Images/slide_7/img_5.webp" alt="" class="w-[10vw] h-[10vw]">
+            <img src="./assets/Images/slide_7/img_5.webp" alt="" class="w-[10vw] h-[10vw] transition-transform duration-500 ease-out hover:scale-110">
         </div>
 
         <div class="flex flex-col items-center">
@@ -293,7 +311,7 @@
              <div class="flex flex-col items-center" style=" margin: 1vw 0;">
                <div class="relative w-[.22vw] h-[5vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>
               </div>
-               <img src="./assets/Images/slide_7/img_6.webp" alt="" class="w-[10vw] h-[10vw]">
+               <img src="./assets/Images/slide_7/img_6.webp" alt="" class="w-[10vw] h-[10vw] transition-transform duration-500 ease-out hover:scale-110">
         </div>
       </div>
 
@@ -394,7 +412,7 @@
           <div class="grid grid-cols-8 w-[90vw] mx-auto" style="gap: 1.5vw;  ">
 
             <div
-              class=" product-card bg-white rounded-[1vw] border-[0.2vw] border-[#FBB24A] flex flex-col items-end justify-end cursor-pointer hover:shadow-lg transition-shadow"
+              class=" product-card bg-white rounded-[1vw] border-[0.2vw] border-[#FBB24A] flex flex-col items-end justify-end cursor-pointer hover:shadow-lg transition-shadow "
               style=" width: 8vw; height: 8vw;" onclick="openProductModal(
         '120ml  Round Container',
         './assets/Images/slide_2/120_ml_round.webp',
@@ -402,7 +420,7 @@
         '4.3 GSM', 
         '2500 Nos'
     )">
-              <img src="./assets/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw]">
+              <img src="./assets/Images/slide_2/120_ml_round.webp" alt="120ml Round" class="object-contain mb-[0.5vw] ">
               <p class="text-white uppercase bg-[#FBB24A] w-[100%] h-[2.5vw] rounded-b-[.5vw] text-center font-medium flex items-center justify-center"
                 style="font-size: 0.8vw; line-height: 1.1; font-weight: 600; padding: .5vw;">120ml Round</p>
             </div>
@@ -689,12 +707,13 @@
         <!-- Slide 1 -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FFFCF7;">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
                 border-l-[2vw] border-l-[#FFFCF7]"
              >
+             
         </div>
 
             <div class="slide-icon absolute flex flex-col items-center justify-center opacity-100 transition-opacity duration-300">
@@ -709,7 +728,7 @@
         <!-- Slide 2 -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FFEFD7; ">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
@@ -726,7 +745,7 @@
         <!-- Slide 3 -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FFE8C7; ">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
@@ -743,7 +762,7 @@
         <!-- Slide 4 -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FFE4B8;">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
@@ -759,12 +778,12 @@
 
         <!-- Slide 5 - Light Orange -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
-             style="background-color: #FFC971; ">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             style="background-color: #fdcf86; ">
+             <div class="absolute z-20 right-[-1.8vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
-                border-l-[2vw] border-l-[#FFC971]"
+                border-l-[2vw] border-l-[#fdcf86]"
              >
         </div>
             <div class="slide-icon absolute flex flex-col items-center justify-center opacity-100 transition-opacity duration-300">
@@ -777,7 +796,7 @@
         <!-- Slide 6 - Medium Orange -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FDC765; ">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class=" triangle-shadow absolute z-20 right-[-1.8vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
@@ -794,14 +813,14 @@
         <!-- Slide 7 - Dark Orange -->
         <div class="carousel-slide group cursor-pointer transition-all duration-500 flex-shrink-0 w-[6vw] h-[100vh] flex items-center justify-center relative" 
              style="background-color: #FBBE4E;">
-             <div class="absolute z-2 right-[-2vw] top-1/4 -translate-y-1/2
+             <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2
              w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
                 border-l-[2vw] border-l-[#FBBE4E] "
              >
         </div>
-            <div class="slide-icon absolute flex flex-col items-center justify-center opacity-100 transition-opacity duration-300">
+            <div class="slide-icon absolute flex flex-col  items-center justify-center opacity-100 transition-opacity duration-300">
                 <img src="./assets/Images/image-slide-page/scartch-icon.svg" alt="scartch-icon" class="w-[2vw]"/>
             </div>
             <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col gap-[2vw] items-center justify-center h-full px-[3vw] text-center pointer-events-none">
@@ -815,16 +834,17 @@
      style="background-color: #FBB24A; ">
 
     <!-- TRIANGLE SHAPE (added) -->
-    <div class="absolute right-[-2vw] top-1/4 -translate-y-1/2 
+    <div class="absolute z-20 right-[-1.9vw] top-1/4 -translate-y-1/2 
                 w-0 h-0 
                 border-t-[2vw] border-t-transparent
                 border-b-[2vw] border-b-transparent
                 border-l-[2vw] border-l-[#FBB24A]  ">
-    </div>
-
-    <div class="slide-icon absolute flex flex-col items-center justify-center opacity-100 transition-opacity duration-300">
+                 <div class="slide-icon absolute flex flex-col left-[-6vw] items-center justify-center opacity-100 transition-opacity duration-300">
         <img src="./assets/Images/image-slide-page/sparkle-icon.svg" alt="sparkle-icon" class="w-[2vw]"/>
     </div>
+    </div>
+
+   
 
     <div class="slide-content opacity-0 transition-opacity duration-300 flex flex-col gap-[2vw] items-center justify-center h-full px-[3vw] text-center pointer-events-none">
     </div>
@@ -982,7 +1002,7 @@
        <!-- ***************************************Slide 10 end******************************************************************* -->
 
 
-          <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="">
+          <!-- <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="">
 
       <div class="w-[90vw] h-[full] " >
       
@@ -999,7 +1019,7 @@
 
       </div>
     </div>
-   
+    -->
    
    
        <!-- **************************************Slide 11 start******************************************************************** -->
@@ -1041,7 +1061,7 @@
             <p class="absolute top-[17vw] left-[53vw]">Send to our team for order processing</p>
             <p class="absolute top-[24vw] left-[53vw]">Once our team send the final file from label maker for approval <br/> get it approved from customer and post in group with quantity <br/> for order confirmation</p>
             
-              <div class=" absolute top-[32vw] left-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
+              <div class="lead-time-11 absolute top-[32vw] left-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
                    <!-- Left title -->
                    <div class="font-semibold text-[1.2vw] leading-[2vw]">
                      Lead time
@@ -1114,7 +1134,7 @@
                              get it approved with customer</li>
             </ol>
             
-              <div class=" absolute top-[31vw] right-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
+              <div class=" lead-time-12 absolute top-[31vw] right-[53vw] flex items-center gap-[1vw] font-[Montserrat]">
                    <!-- Left title -->
                   
                
@@ -1183,7 +1203,7 @@
 
   <div id="product-modal"
     class="fixed inset-0 bg-opacity-10 z-[100] hidden flex bg-gray-800/40 backdrop-blur-md  justify-center items-center p-[1vw]">
-    <div class="bg-white rounded-xl shadow-2xl border border-[#FDBF38] overflow-hidden w-[70vw] h-[28vw] p-0">
+    <div class="bg-white rounded-xl shadow-2xl border border-[.25vw] border-[#FDBF38] overflow-hidden w-[70vw] h-[28vw] p-0" style="border-radius: 2vw;">
       <div class="flex flex-col md:flex-row bg-[#F7F7F7] p-[2vw] relative">
 
         <div class="flex-shrink-0 flex flex-col items-center justify-center p-[1vw] ">
@@ -1207,16 +1227,16 @@
             <h3 id="modal-product-title" class="text-[3vw] font-bold text-black mb-[1.5vw] ">Product Title</h3>
 
             <div class="bg-[rgba(253,191,56,0.3)] bg-opacity-70 rounded-lg p-[4vw] mb-[vw] flex flex-col gap-[.5vw] "
-              style="padding: 1vw 3vw; width: 30.5vw; text-align: center;">
-              <p id="modal-lid-weight" class="text-[1.5vw] font-bold text-gray-800 mb-[0.5vw]">Lid Weight: N/A</p>
-              <p id="modal-tub-weight" class="text-[1.5vw] font-bold text-gray-800">Tub Weight: N/A</p>
+              style="padding: 1vw 3vw; width: 30.5vw; text-align: center; border-radius: 1vw;">
+              <p id="modal-lid-weight" class="text-[1.5vw] font-semibold text-[#000000] mb-[0.5vw]">Lid Weight: N/A</p>
+              <p id="modal-tub-weight" class="text-[1.5vw] font-semibold text-[#000000]">Tub Weight: N/A</p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="bg-[#FEAE00]  text-white text-center mb-[2vw] py-[2vw] px-[2vw] text-[1.5vw]">
-        <p id="modal-pack-quantity" class=" " style="padding: 1vw 0;">No of pack in box - N/A</p>
+        <p id="modal-pack-quantity" class="text-semibold " style="padding: 1vw 0;">No of pack in box - N/A</p>
       </div>
     </div>
   </div>
@@ -1431,16 +1451,34 @@
                 `;
             }
         });
+        
     });
+
+    // Close slides when clicking outside
+ document.addEventListener("click", (e) => {
+    const isClickInsideSlide = e.target.closest(".carousel-slide");
+
+    if (!isClickInsideSlide) {
+        slides.forEach(slide => slide.classList.remove("active"));
+    }
+});
+
     
 </script>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script>
+
+    
+    </script>
+    <script src="./js/animation.js"></script>
   <script src="./js/slide.js"></script>
   <script src="./script.js"></script>
+
 </body>
 
 </html>
