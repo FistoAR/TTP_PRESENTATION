@@ -74,31 +74,46 @@ function createSlideAnimation(selector, animationProps) {
   });
 }
 
+
 // ==========================================
 // SLIDE 1: HOME/WELCOME
 // ==========================================
 function animateSlide1() {
+  let root = ".slide-item[data-navigation='Home']";
 
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: root,
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play reverse play reverse"
+    }
+  });
 
-  // Container images
-  createSlideAnimation(".slide-item:nth-child(1) .absolute.bottom-0", {
+  // Bottom circle - slide from right
+  tl.from(root + " img[alt='bottom-circle']", {
+    x: 300,
     opacity: 0,
-    x: -100,
     duration: 1,
-    delay: 0.4,
-    ease: "back.out(1.7)"
-  });
+    ease: "power3.out"
+  }, 0);
 
-  // Location and clock info
-  createSlideAnimation(".slide-item:nth-child(1) .flex.flex-col.gap", {
+  // Container image - slide from right
+  tl.from(root + " img[alt='500ml-container']", {
+    x: 250,
     opacity: 0,
-    y: 40,
-    duration: 0.8,
-    delay: 0.3,
-    stagger: 0.15
-  });
-}
+    duration: 1,
+    ease: "power3.out"
+  }, 0.1);
 
+  // Text content
+  tl.from(root + " .flex.flex-col.gap", {
+    y: 40,
+    opacity: 0,
+    duration: 0.7,
+    stagger: 0.1
+  }, 0.2);
+}
 // ==========================================
 // SLIDE 2: TYPES OF FOOD CONTAINERS
 // ==========================================
@@ -119,24 +134,66 @@ function animateSlide2() {
     ease: "power3.out"
   });
 
-  // Rolling reveal for container items
-  gsap.from("[id*='TYPES OF FOOD CONTAINERS'] .flex.flex-col.items-center", {
-    scrollTrigger: {
-      trigger: "[id*='TYPES OF FOOD CONTAINERS']",
-      scroller: ANIMATION_CONFIG.scroller,
-      start: "top 85%",
-      end: "bottom 15%",
-      toggleActions: "play reverse play reverse"
-    },
-    opacity: 0,
-    y: -80,          // move from top
-    rotateX: 90,     // rolling down effect
-    transformOrigin: "top center",
-    duration: 0.8,
-    delay: 0.15,
-    stagger: 0.12,
-    ease: "back.out(1.7)"
-  });
+
+// CREATE TRIGGERS FOR EACH CARD
+gsap.utils.toArray("[id*='TYPES OF FOOD CONTAINERS'] .flex.flex-col.items-center").forEach(card => {
+    
+    const line = card.querySelector(".dotted-line");
+    const image = card.querySelector(".dotted-image");
+
+    ScrollTrigger.create({
+        trigger: card,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 80%",
+        
+        onEnter: () => revealSequence(line, image),
+        onEnterBack: () => revealSequence(line, image),
+    });
+});
+
+// REVEAL FUNCTION: line → image
+function revealSequence(line, image) {
+
+    // Step 1 — reset both
+    gsap.set([line, image], { clipPath: "inset(0 0 100% 0)" });
+
+    // Step 2 — timeline animation
+    let tl = gsap.timeline();
+
+    tl.to(line, {
+        clipPath: "inset(0 0 0% 0)",
+        duration: 1,
+        ease: "power3.out"
+    })
+    .to(image, {
+        clipPath: "inset(0 0 0% 0)",
+        duration: 1,
+        ease: "power3.out"
+    }, "-=0.3"); 
+    // image starts slightly before line finishes
+}
+
+
+
+  // // Rolling reveal for container items
+  // gsap.from("[id*='TYPES OF FOOD CONTAINERS'] .flex.flex-col.items-center", {
+  //   scrollTrigger: {
+  //     trigger: "[id*='TYPES OF FOOD CONTAINERS']",
+  //     scroller: ANIMATION_CONFIG.scroller,
+  //     start: "top 85%",
+  //     end: "bottom 15%",
+  //     toggleActions: "play reverse play reverse"
+  //   },
+  //   opacity: 0,
+  //   y: -80,          // move from top
+  //   rotateX: 90,     // rolling down effect
+  //   transformOrigin: "top center",
+  //   duration: 0.8,
+  //   delay: 0.15,
+  //   stagger: 0.12,
+  //   ease: "back.out(1.7)"
+  // });
+
 
 }
 
@@ -538,8 +595,8 @@ function animateSlide9() {
     y: 80,
     rotationX: -45,
     duration: 0.8,
-    delay: 0.2,
-    stagger: 0.15,
+    delay: 0.5,
+    stagger: 0.25,
     ease: "back.out(1.5)"
   });
 
@@ -699,7 +756,56 @@ function animateSlide11() {
     ease: "power2.out"
   });
 
+  // Lead time (Slide 11)
+gsap.from(slide.querySelector(".lead-time-11 .lead-time-11-1, .lead-time-11-2 "), {
+  scrollTrigger: {
+    trigger: slide,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 85%",
+     end: "bottom 15%",
+    toggleActions: "play reverse play reverse"
+  },
+   opacity: 0,
+    x: 50,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
+  ease: "power3.out"
+});
 
+
+  // Lead time (Slide 11)
+gsap.from(slide.querySelector(" .lead-time-11-2 "), {
+  scrollTrigger: {
+    trigger: slide,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 85%",
+     end: "bottom 15%",
+    toggleActions: "play reverse play reverse"
+  },
+   opacity: 0,
+    x: 50,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
+  ease: "power3.out"
+});
+  // Lead time (Slide 11)
+gsap.from(slide.querySelector(" .lead-time-11-3 "), {
+  scrollTrigger: {
+    trigger: slide,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 85%",
+     end: "bottom 15%",
+    toggleActions: "play reverse play reverse"
+  },
+   opacity: 0,
+    x: 50,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
+  ease: "power3.out"
+});
 
 }
 
@@ -745,7 +851,7 @@ function animateSlide12() {
   });
 
   // Process text
-  gsap.from(slide.querySelectorAll(".font-medium p"), {
+  gsap.from(slide.querySelectorAll(".font-medium p,  .font-medium ol li"), {
     scrollTrigger: {
       trigger: slide,
       scroller: ANIMATION_CONFIG.scroller,
@@ -761,19 +867,53 @@ function animateSlide12() {
     ease: "power2.out"
   });
   // Lead time (Slide 12)
-gsap.from(slide.querySelector(".lead-time-12"), {
+gsap.from(slide.querySelector(".lead-time-12 .lead-time-12-1 "), {
   scrollTrigger: {
     trigger: slide,
     scroller: ANIMATION_CONFIG.scroller,
     start: "top 85%",
+     end: "bottom 15%",
     toggleActions: "play reverse play reverse"
   },
   opacity: 0,
-  y: 40,
-  duration: 0.8,
+    x: -80,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
   ease: "power3.out"
 });
 
+
+gsap.from(slide.querySelector(".lead-time-12-2"), {
+  scrollTrigger: {
+    trigger: slide,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 85%",
+     end: "bottom 15%",
+    toggleActions: "play reverse play reverse"
+  },
+  opacity: 0,
+    x: -80,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
+  ease: "power3.out"
+});
+gsap.from(slide.querySelector(".lead-time-12-3"), {
+  scrollTrigger: {
+    trigger: slide,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 85%",
+     end: "bottom 15%",
+    toggleActions: "play reverse play reverse"
+  },
+  opacity: 0,
+    x: -80,
+    duration: 0.6,
+    delay: 0.4,
+    stagger: 0.1,
+  ease: "power3.out"
+});
 }
 
 // ==========================================
@@ -840,3 +980,17 @@ if (document.readyState === 'loading') {
 } else {
   initializeAllAnimations();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// popup animation 
+

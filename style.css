@@ -245,3 +245,134 @@ background-color: white;
     flex-direction: column;
     gap: 1.25rem;
 }
+
+
+
+.letters-slide-infinite {
+  display: inline-block;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+/* every letter styled */
+.letters-slide-infinite .letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterSlideDown 6s ease-out infinite;
+}
+
+/* MAIN ANIMATION */
+@keyframes letterSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1em);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0.6em);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1.2em);
+  }
+}
+
+/* STAGGER — delay each letter */
+.letters-slide-infinite .letter:nth-child(1) { animation-delay: 0.0s; }
+.letters-slide-infinite .letter:nth-child(2) { animation-delay: 0.05s; }
+.letters-slide-infinite .letter:nth-child(3) { animation-delay: 0.10s; }
+.letters-slide-infinite .letter:nth-child(4) { animation-delay: 0.15s; }
+.letters-slide-infinite .letter:nth-child(5) { animation-delay: 0.20s; }
+.letters-slide-infinite .letter:nth-child(6) { animation-delay: 0.25s; }
+.letters-slide-infinite .letter:nth-child(7) { animation-delay: 0.30s; }
+.letters-slide-infinite .letter:nth-child(8) { animation-delay: 0.35s; }
+.letters-slide-infinite .letter:nth-child(9) { animation-delay: 0.40s; }
+.letters-slide-infinite .letter:nth-child(10) { animation-delay: 0.45s; }
+.letters-slide-infinite .letter:nth-child(11) { animation-delay: 0.50s; }
+.letters-slide-infinite .letter:nth-child(12) { animation-delay: 0.55s; }
+.letters-slide-infinite .letter:nth-child(13) { animation-delay: 0.60s; }
+.letters-slide-infinite .letter:nth-child(14) { animation-delay: 0.65s; }
+.letters-slide-infinite .letter:nth-child(15) { animation-delay: 0.70s; }
+.letters-slide-infinite .letter:nth-child(16) { animation-delay: 0.75s; }
+.letters-slide-infinite .letter:nth-child(17) { animation-delay: 0.80s; }
+.letters-slide-infinite .letter:nth-child(18) { animation-delay: 0.85s; }
+.letters-slide-infinite .letter:nth-child(19) { animation-delay: 0.90s; }
+.letters-slide-infinite .letter:nth-child(20) { animation-delay: 0.95s; }
+.letters-slide-infinite .letter:nth-child(21) { animation-delay: 1.00s; }
+.letters-slide-infinite .letter:nth-child(22) { animation-delay: 1.05s; }
+.letters-slide-infinite .letter:nth-child(23) { animation-delay: 1.10s; }
+.letters-slide-infinite .letter:nth-child(24) { animation-delay: 1.15s; }
+.letters-slide-infinite .letter:nth-child(25) { animation-delay: 1.20s; }
+
+
+
+/* floating icons animation  */
+
+
+
+.floating-icon {
+  animation: smoothFloat 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes smoothFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-0.5vw); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.float-swing {
+  animation: floatSwing 5s ease-in-out infinite;
+}
+
+@keyframes floatSwing {
+  0% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -0.6vw) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, 0) rotate(-1deg);
+  }
+  75% {
+    transform: translate(-50%, -0.6vw) rotate(1deg);
+  }
+  100% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+
+
+
+.dotted-image {
+  clip-path: inset(0 0 100% 0); 
+}
+@keyframes dottedGrow {
+  0% {
+    clip-path: inset(0 0 100% 0);   /* hide bottom → start at top */
+  }
+  100% {
+    clip-path: inset(0 0 0 0);      /* fully visible */
+  }
+}
+
+.dotted-line {
+  animation: dottedGrow 2s linear infinite;
+}
+
+
+.branding-shift {
+    transform: translateX(-12vw);
+}
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 0.1vw #FF9600; /* outline thickness + color */
+}

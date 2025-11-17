@@ -652,3 +652,18 @@ section {
     object-fit: cover;
 }
 
+@keyframes dottedReveal {
+  0% {
+    mask-size: 100% 0%;
+  }
+  100% {
+    mask-size: 100% 100%;
+  }
+}
+
+.dotted-reveal {
+  mask-image: linear-gradient(to bottom, black 0%, black 100%);
+  mask-size: 100% 0%;
+  mask-repeat: no-repeat;
+  animation: dottedReveal 2s ease-out forwards;
+}

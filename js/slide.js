@@ -1179,7 +1179,14 @@ refreshSlideCounter(1);
 function displayProductModal(productTitle, productImage, lidGrams, tubGrams, boxQuantity) {
   const productDialog = document.getElementById('product-modal');
   
-  document.getElementById('modal-product-title').textContent = productTitle;
+ // Split product title into two parts based on two spaces: "120ml  Round Container"
+let [bigTitle, smallTitle] = productTitle.split("  ");
+
+document.getElementById('modal-product-title').innerHTML = `
+  <span class="block text-[3vw] font-bold leading-tight">${bigTitle}</span>
+  <span class="block text-[1.6vw] font-semibold leading-tight">${smallTitle}</span>
+`;
+
   document.getElementById('modal-product-image').src = productImage;
   document.getElementById('modal-lid-weight').textContent = `Lid Weight - ${lidGrams}`;
   document.getElementById('modal-tub-weight').textContent = `Tub Weight - ${tubGrams}`;
@@ -1214,3 +1221,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+

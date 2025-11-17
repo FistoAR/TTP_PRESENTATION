@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Quiz Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, label, button {
+            font-family: 'Poppins', sans-serif;
+        }
+        .float-swing {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+        }
+        body {
+            background: linear-gradient(135deg, #f5f1e8 0%, #fef9f3 100%);
+        }
+    </style>
+</head>
+<body class="w-full h-full">
+
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="w-screen h-screen flex items-center justify-center relative overflow-hidden">
+        <img src="./assets/Images/final-page/lets-go-for-the-final-session.webp" alt="welcome" class="float-swing absolute w-[25vw] top-[10vw]" style="left: 50%; transform: translateX(-50%);">
+        
+        <div class="absolute top-1/2 left-1/2 w-[60vw] h-[auto] backdrop-blur-md rounded-[2vw] shadow-lg p-[3vw] fade-in" style="transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.95);">
+            <button class="absolute top-[1.5vw] right-[1.5vw] text-[2vw] text-gray-400 hover:text-gray-600 transition" onclick="closeWelcome()" style="background: none; border: none; cursor: pointer;">×</button>
+            
+            <h2 class="text-[1.5vw] font-medium text-black mb-[2vw]">Enter your Details</h2>
+            
+            <form id="welcomeForm" class="flex flex-col gap-[2vw]">
+                <div class="flex justify-between gap-[2vw]">
+                    <div class="w-[50%]">
+                        <label class="text-[0.8vw] font-semibold text-black block mb-[0.8vw]">Employee Name</label>
+                        <input type="text" id="employeeName" placeholder="Enter your name" class="w-full border-[0.1vw] border-[#FBB24A] rounded-[0.6vw] text-[0.8vw] focus:outline-none focus:border-[#FF9600] transition" style="background-color: #FFFCF7; padding: 0.8vw 1.2vw; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    </div>
+                    <div class="w-[50%]">
+                        <label class="text-[0.8vw] font-semibold text-black block mb-[0.8vw]">Designation</label>
+                        <input type="text" id="designation" placeholder="Enter your Designation" class="w-full border-[0.1vw] border-[#FBB24A] rounded-[0.6vw] text-[0.8vw] focus:outline-none focus:border-[#FF9600] transition" style="background-color: #FFFCF7; padding: 0.8vw 1.2vw; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    </div>
+                </div>
+                <button type="submit" class="w-[20vw] mx-auto font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95" style="padding: 0.8vw 1vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3);">Let's Go</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="w-screen h-screen hidden flex overflow-hidden" style="background: linear-gradient(135deg, #f5f1e8 0%, #fef9f3 100%);">
+        <!-- Left Side - Questions -->
+        <div class="w-[70%] h-full overflow-y-auto p-[2vw]" style="background: rgba(255, 255, 255, 0.5);">
+            <div class="mb-[2vw]">
+                <h1 class="text-[1.5vw] font-bold text-black mb-[0.5vw]">Answer the following Questions</h1>
+                <div id="userInfo" class="text-[0.9vw] text-gray-600"></div>
+            </div>
+            
+            <form id="quizForm" class="space-y-[2vw]">
+                <div id="questionsContainer"></div>
+                <button type="submit" class="w-[15vw] font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95" style="padding: 1vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3); margin-top: 2vw;">Submit</button>
+            </form>
+        </div>
+
+        <!-- Right Side - Stats -->
+        <div class="w-[30%] h-full flex flex-col items-center justify-center gap-[2vw] p-[2vw]">
+            <div class="text-center">
+                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Total Questions</h3>
+                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#FBB24A 0deg 360deg); padding: 0.3vw;">
+                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
+                        <span class="text-[3vw] font-bold text-[#FBB24A]" id="totalQuestionsCount">30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Answered</h3>
+                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#22C55E 0deg 360deg); padding: 0.3vw;">
+                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
+                        <span class="text-[3vw] font-bold text-[#22C55E]" id="answeredCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Pending</h3>
+                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#EF4444 0deg 360deg); padding: 0.3vw;">
+                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
+                        <span class="text-[3vw] font-bold text-[#EF4444]" id="pendingCount">30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-[0.8vw] text-gray-600 mt-[2vw] text-center">
+                <p>Complete in <span id="timer" class="font-bold">00:00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="w-screen h-screen hidden flex items-center justify-center relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 w-[60vw] h-[auto] backdrop-blur-md rounded-[2vw] shadow-lg p-[3vw] fade-in text-center" style="transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.95);">
+            <div class="mb-[2vw]">
+                <div class="text-[5vw]">😊</div>
+                <h1 class="text-[2vw] font-bold text-black mt-[1vw]">Good Job</h1>
+                <p class="text-[1.2vw] font-semibold text-gray-600 mt-[0.5vw]">You Are Amazing</p>
+            </div>
+
+            <div class="mb-[2vw]">
+                <p class="text-[1vw] text-gray-700">Your Score</p>
+                <p class="text-[3vw] font-bold" style="color: #FBB24A;"><span id="scorePercent">0</span>%</p>
+            </div>
+
+            <h2 class="text-[2.5vw] font-bold text-black mb-[1vw]">Congratulations</h2>
+            <p class="text-[1.2vw] text-gray-600" id="resultName"></p>
+
+            <div class="mt-[2vw] flex justify-around">
+                <div class="text-center">
+                    <p class="text-[0.9vw] text-gray-600 mb-[0.5vw]">Total Answered</p>
+                    <p class="text-[1.5vw] font-bold text-[#22C55E]" id="resultAnswered">0</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-[0.9vw] text-gray-600 mb-[0.5vw]">Correct Answers</p>
+                    <p class="text-[1.5vw] font-bold text-[#FBB24A]" id="resultCorrect">0</p>
+                </div>
+            </div>
+
+            <button onclick="location.reload()" class="w-[15vw] mt-[2vw] mx-auto font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 block" style="padding: 0.8vw 1vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3);">Restart</button>
+        </div>
+    </div>
+
+    <script>
+        let sessionId = null;
+        let employeeName = '';
+        let questions = [];
+        let selectedAnswers = {};
+        let startTime = null;
+        let timerInterval = null;
+
+        // Welcome Form Submission
+        document.getElementById('welcomeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            employeeName = document.getElementById('employeeName').value;
+            const designation = document.getElementById('designation').value;
+
+            if (!employeeName || !designation) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            try {
+                // Start Session
+                const sessionResponse = await fetch('https://terratechpacks.com/Presentation/start_session.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ employee_name: employeeName, designation: designation })
+                });
+                
+                const sessionData = await sessionResponse.json();
+                if (sessionData.status === 'success') {
+                    sessionId = sessionData.session_id;
+                    
+                    // Fetch Random Questions
+                    const questionsResponse = await fetch('https://terratechpacks.com/Presentation/get_random_questions.php');
+                    questions = await questionsResponse.json();
+
+                    // Load Quiz
+                    loadQuiz(employeeName, designation);
+                    document.getElementById('welcomeScreen').classList.add('hidden');
+                    document.getElementById('quizScreen').classList.remove('hidden');
+                    startTimer();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error starting session');
+            }
+        });
+
+        // Load Quiz Questions
+        function loadQuiz(name, designation) {
+            document.getElementById('userInfo').innerHTML = `
+                <p class="font-semibold">${name}</p>
+                <p class="text-gray-500">${designation}</p>
+            `;
+
+            const container = document.getElementById('questionsContainer');
+            container.innerHTML = '';
+
+            questions.forEach((q, index) => {
+                const options = [q.option_a, q.option_b, q.option_c, q.option_d];
+                const labels = ['A', 'B', 'C', 'D'];
+                
+                const questionHTML = `
+                    <div class="bg-white rounded-[1vw] p-[1.5vw] shadow-md">
+                        <div class="flex gap-[1vw] mb-[1vw]">
+                            <div class="w-[2.5vw] h-[2.5vw] rounded-full flex items-center justify-center text-white font-bold" style="background-color: #FBB24A; flex-shrink: 0;">
+                                ${index + 1}
+                            </div>
+                            <p class="text-[0.95vw] font-medium text-black flex-1">${q.question}</p>
+                        </div>
+                        <div class="space-y-[0.8vw] ml-[3.5vw]">
+                            ${options.map((option, i) => `
+                                <label class="flex items-center gap-[0.8vw] cursor-pointer">
+                                    <input type="radio" name="question_${q.id}" value="${labels[i]}" class="w-[1vw] h-[1vw]" onchange="updateStats()">
+                                    <span class="text-[0.85vw] text-gray-700">${option}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += questionHTML;
+            });
+        }
+
+        // Update Stats
+        function updateStats() {
+            const form = document.getElementById('quizForm');
+            const answered = Array.from(form.elements).filter(el => el.type === 'radio' && el.checked).length;
+            const pending = questions.length - answered;
+            
+            document.getElementById('answeredCount').textContent = answered;
+            document.getElementById('pendingCount').textContent = pending;
+        }
+
+        // Start Timer
+        function startTimer() {
+            startTime = Date.now();
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                const minutes = Math.floor(elapsed / 60);
+                const seconds = elapsed % 60;
+                document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        // Submit Quiz
+        document.getElementById('quizForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            clearInterval(timerInterval);
+
+            const form = e.target;
+            const answers = [];
+
+            questions.forEach(q => {
+                const selected = form.querySelector(`input[name="question_${q.id}"]:checked`);
+                if (selected) {
+                    answers.push({ question_id: q.id, chosen_answer: selected.value });
+                }
+            });
+
+            try {
+                // Submit Answers
+                const submitResponse = await fetch('https://terratechpacks.com/Presentation/submit_answers.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: sessionId, answers: answers })
+                });
+
+                if (submitResponse.ok) {
+                    // Fetch Results
+                    const resultResponse = await fetch(`https://terratechpacks.com/Presentation/get_result.php?session_id=${sessionId}`);
+                    const result = await resultResponse.json();
+
+                    // Display Results
+                    const percentage = Math.round((result.correct_answers / result.total_answered) * 100);
+                    document.getElementById('scorePercent').textContent = percentage;
+                    document.getElementById('resultName').textContent = result.employee_name;
+                    document.getElementById('resultAnswered').textContent = result.total_answered;
+                    document.getElementById('resultCorrect').textContent = result.correct_answers;
+
+                    document.getElementById('quizScreen').classList.add('hidden');
+                    document.getElementById('resultsScreen').classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting answers');
+            }
+        });
+
+        function closeWelcome() {
+            document.getElementById('employeeName').value = '';
+            document.getElementById('designation').value = '';
+        }
+    </script>
+</body>
+</html>
