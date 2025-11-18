@@ -113,7 +113,7 @@
 </head>
 
 <body>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper z-99">
  <a class="prev-arrow disabled text-gray-400 hover:text-black " data-up="0">
   <i class="fa-solid fa-arrow-up fa-utility "></i>
 </a>
@@ -122,7 +122,7 @@
 </a>
   </div>
 
-  <span class="counter-display text-[1vw]" style="font-size: 1vw;">
+  <span class="counter-display text-[1vw] z-99" style="font-size: 1vw;">
     <input type="number" class="current-panel-input" style="font-family: 'Montserrat';" min="1" max="8" value="1" />
     /
     <span class="panel-count text-[1vw]">4</span>
@@ -135,7 +135,7 @@
     class="absolute top-0 left-0 w-full h-full object-cover fixed" />
 
   <!-- Header: Logo + Table of Contents + Social Icons -->
-  <header class="absolute top-[2vw] left-0 w-full flex justify-between items-center px-[4vw] z-99999 fixed ">
+  <header class="absolute top-[2vw] left-0 w-full flex justify-between items-center px-[4vw] z-999 fixed ">
     <!-- Social Media Icons -->
     <div class="flex gap-[2.5vw]">
       <div class="flex gap-[1vw] ">
@@ -183,12 +183,9 @@
 
 
 
-    <!-- =============================================slide 13 want to replace====================================================== -->
+    <!-- =============================================slide 4 want to replace====================================================== -->
 
 
-
-
- 
 
 
 
@@ -382,16 +379,20 @@
     <!-- **************************************Slide 4 start******************************************************************** -->
 
 
-    <div class="slide-item  w-full h-[100vh] overflow-hidden" id="MARKING and ENGRAVING">
+
+   <div class="slide-item  w-full h-[100vh] overflow-hidden" id="MARKING and ENGRAVING">
 
       <div class="flex flex-col gap-[3vw]" style="font-family: 'Montserrat';">
         <h2 class="font-bold text-[#FF9600] text-center text-[2vw] letters-slide-infinite" id="marketTitle">MARKING AND ENGRAVING</h2>
         <div class="relative "  >
         <img src="./assets/Images/marking-and-engraving-page/yellow-background.webp" alt="yellow-background" class="w-[80vw] relative"/>
-        <img src="./assets/Images/marking-and-engraving-page/food-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] left-[3.5vw] floating-icon">
-        <img src="./assets/Images/marking-and-engraving-page/pp-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] left-[25.5vw] floating-icon">
-        <img src="./assets/Images/marking-and-engraving-page/microwave-oven-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute bottom-[3.8vw] right-[25.7vw] floating-icon">
-        <img src="./assets/Images/marking-and-engraving-page/freezer-safe-icon.webp" alt="food-safe-icon" class="w-[7vw] absolute top-[3.5vw] right-[3.7vw] floating-icon">
+        <img src="./assets/Images/ttp_icons/food safe.gif" alt="food-safe-icon" class="w-[6vw] absolute bottom-[5.5vw] left-[3.8vw] ">
+           <p class=" text-[1vw] text-black font-semibold absolute bottom-[3.3vw] left-[4.7vw] ">Food safe</p>
+        <img src="./assets/Images/ttp_icons/pp.gif" alt="food-safe-icon" class="w-[6vw] absolute top-[3vw] left-[26vw] ">
+        <p class=" text-[1vw] text-black font-semibold absolute  top-[9.5vw] left-[28.5vw]  ">PP</p>
+        <img src="./assets/Images/ttp_icons/microwave.gif" alt="food-safe-icon" class="w-[6vw] absolute bottom-[4vw] right-[26vw] ">
+        <img src="./assets/Images/ttp_icons/winter.gif" alt="food-safe-icon" class="w-[6vw] absolute top-[3vw] right-[4vw] ">
+        <p class=" text-[1vw] text-black font-semibold absolute  top-[9.5vw] right-[4vw]  ">Freezer safe</p>
           
             <p class="absolute text-[.8vw] top-[2vw] left-[-3vw] w-[24vw] font-medium text-center leading-[1.9vw]" style="font-family: 'Montserrat';">
               <span class="border border-none rounded-full bg-[#000000] text-white " style="padding: .5vw .9vw; margin-right: 1vw;">1</span>
@@ -947,7 +948,7 @@
 
          <!-- right icons  -->
          
-             <div class="flex flex-col gap-[1vw] justify-end">
+             <div class="flex flex-col gap-[1vw] justify-end" style="padding-left: 6vw;">
              <div class="flex items-center gap-[1vw] transition-transform duration-500 ease-out hover:!scale-110">
                  <img src="./assets/Images/screen-printing/not-scratch-resistance.webp" alt="cheaper-icon" class="w-[3vw]"/>
                  <p class="font-semibold">Not scratch resistance</p>
@@ -1008,7 +1009,7 @@
 
           <div class=" flex flex-col items-center gap-[2vw]">
             
-            <img src="./assets/Images/our-sales-process/phone-icon.svg" alt="" class="w-[3vw] " >
+            <img src="./assets/Images/ttp_icons/call-setting.gif" alt="" class="w-[5vw] " >
             <img src="./assets/Images/our-sales-process/step-1.webp" alt="" class="w-[15vw]" style="margin-left: 2vw;">
             <p class="font-medium">Greeting </br> customer </br> on call</p>
           </div>
@@ -1016,14 +1017,14 @@
 
          <div class="flex flex-col items-center gap-[2vw]">
            
-            <img src="./assets/Images/our-sales-process/light-bulb-icon.svg" alt="" class="w-[3.5vw]">
+            <img src="./assets/Images/ttp_icons/idea.gif" alt="" class="w-[5vw]">
             <img src="./assets/Images/our-sales-process/step-2.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
             <p class="font-medium">Understanding </br> their  </br> requirement</p>
          </div>
 
          <div class="flex flex-col items-center gap-[2vw]">
              
-             <img src="./assets/Images/our-sales-process/package-icon.svg" alt="" class="w-[3.2vw]">
+             <img src="./assets/Images/ttp_icons/discount.gif" alt="" class="w-[5vw]">
              <img src="./assets/Images/our-sales-process/step-3.webp" alt="" class="w-[15vw] " style="margin-left: 2vw;">
              <p class="font-medium">Analysis their </br> purchase quantity </br> and brand</p>
          </div>
@@ -1227,181 +1228,349 @@
 
 
 
+
+<!-- Add this line before the slide-item -->
+
+
+<div id="backdrop"></div>
   <div class="slide-item relative w-full h-[100vh] overflow-hidden" id="Question">
-
-      <div class="w-[90vw] h-[full] flex gap-[5vw]" style="font-family: 'Montserrat';">
-       
         
+        <div class="w-[90vw] h-[full] flex gap-[5vw]" style="font-family: 'Montserrat';">
+            
+            <!-- Decorative Top Line -->
+            <div class="absolute top-0 left-[50%] float-swing" style="transform: translate(-50%);">  
+                <div class="w-[.1vw] h-[4vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>          
+            </div>
 
-  <div class="absolute top-0 left-[50%] float-swing" style="transform: translate(-50%);">  
-             <div class=" w-[.1vw] h-[4vw] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full  before:h-full before:bg-[repeating-linear-gradient(to_bottom,black_0,black_.4vw,transparent_.4vw,transparent_.8vw)]"></div>          
-        </div>
-     <img src="./assets/Images/final-page/lets-go-for-the-final-session.webp" alt="lets-go-for-the-final-session" class=" float-swing w-[30vw] absolute  top-[3vw] left-[49.5%] " style="transform: translate(-50%);"/>
+            <!-- Title Image -->
+            <img src="./assets/Images/final-page/lets-go-for-the-final-session.webp" alt="lets-go-for-the-final-session" class="float-swing w-[30vw] absolute top-[3vw] left-[49.5%]" style="transform: translate(-50%);"/>
 
-        
- <div class="absolute top-[%] left-[50%] w-[60vw] h-[15vw] details-form-container" 
-         style="transform: translate(-50%, -50%); ">
-      
-      <div class=" backdrop-blur-md rounded-[2vw]    shadow-lg" style="padding: 3vw;"
-          >
-        
-        <!-- Close Button -->
-        <!-- <button class="absolute top-[1.5vw] right-[1.5vw] text-[2vw] text-gray-400 hover:text-gray-600 transition close-details-btn"
-                onclick="closeDetailsForm()"
-                style="background: none; border: none; cursor: pointer; padding: 0; width: 2.5vw; height: 2.5vw; display: flex; align-items: center; justify-content: center;">
-          ×
-        </button> -->
+            <!-- FORM CONTAINER -->
+            <div id="formContainer" class="absolute w-[60vw]">
+                
+                <div id="formBox">
+                    
+                    <!-- Heading -->
+                    <h2 class="text-[1.5vw] font-medium text-black mb-[2vw]" style="font-family: 'poppins';">
+                        Enter your Details
+                    </h2>
 
-        <!-- Heading -->
-        <h2 class="text-[1.5vw] font-medium text-black " style="font-family: 'poppins';">
-          Enter your Details
-        </h2>
+                    <!-- Form -->
+                    <form id="detailsForm" class="flex flex-col gap-[2vw]">
+                        
+                        <div class="flex justify-between gap-[2vw]" style="padding: 1vw 0;">
 
-        <!-- Form -->
-        <form  id="detailsForm" class="flex flex-col gap-[10vw]">
-          <div class="flex justify-between " style="padding: 1vw 2vw;">
+                            <!-- Employee Name -->
+                            <div class="w-[20vw] flex flex-col gap-[1vw]">
+                                <label class="text-[.9vw] font-semibold text-black" style="font-family: 'poppins';">
+                                    Employee Name
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="employeeName"
+                                    placeholder="Enter your name"
+                                    class="w-full border-[.1vw] border-[#FBB24A] rounded-[0.6vw] text-[.85vw] placeholder-gray-400 focus:outline-none focus:border-[#FF9600] "
+                                    style="font-family: 'Montserrat'; background-color: #FFFCF7; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: .7vw 1.5vw;"
+                                    required
+                                >
+                                <div class="error" id="nameError"></div>
+                            </div>
 
-            <!-- Employee Name -->
-          <div class="w-[20vw] flex flex-col gap-[1vw]"  >
-            <label class="text-[.8vw] font-semibold text-black" style="font-family: 'poppins';">
-              Employee Name
-            </label>
-            <input 
-              type="text" 
-              id="employeeName"
-              placeholder="Enter your name"
-              class="w-full  border-[.1vw] border-[#FBB24A] rounded-[0.6vw] text-[.8vw] placeholder-gray-400 focus:outline-none focus:border-[#FF9600] transition"
-              style="font-family: 'Montserrat'; background-color: #FFFCF7; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: .5vw 2vw;"style=""
-             
-            >
-          </div>
+                            <!-- Designation -->
+                            <div class="w-[20vw] flex flex-col gap-[1vw]">
+                                <label class="text-[.9vw] font-semibold text-black" style="font-family: 'poppins';">
+                                    Designation
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="designation"
+                                    placeholder="Enter your Designation"
+                                    class="w-full border-[.1vw] border-[#FBB24A] rounded-[0.6vw] text-[.85vw] placeholder-gray-400 focus:outline-none focus:border-[#FF9600] "
+                                    style="font-family: 'Montserrat'; background-color: #FFFCF7; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: .7vw 1.5vw;"
+                                    required
+                                >
+                                <div class="error" id="designationError"></div>
+                            </div>
 
-          <!-- Designation -->
-          <div class="w-[20vw] flex flex-col gap-[1vw]">
-            <label class="text-[.8vw] font-semibold text-black " style="font-family: 'poppins';">
-              Designation
-            </label>
-            <input 
-              type="text" 
-              id="designation"
-              placeholder="Enter your Designation"
-              class="w-full px-[1.2vw] py-[1vw] border-[.1vw] border-[#FBB24A] rounded-[0.6vw] text-[.8vw] placeholder-gray-400 focus:outline-none focus:border-[#FF9600] transition"
-              style="font-family: 'Montserrat'; background-color: #FFFCF7; box-shadow: 0 2px 8px rgba(0,0,0,0.05);  padding: .5vw 2vw;"
-             
-            >
-          </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit"
+                            id="submitBtn"
+                            class="mt-[1vw] w-[20vw] font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full "
+                            style="font-family: 'poppins'; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3); margin: 0 auto; padding: .9vw 1.5vw; cursor: pointer;"
+                        >
+                            Let's Go
+                        </button>
 
+                        <div class="error" id="formError"></div>
+                    </form>
 
-          </div>
-          
-          <!-- Button -->
-          <button 
-            type="submit"
-            class="mt-[1.5vw] w-[20vw]  font-medium  bg-[#FBB24A] hover:bg-[#FF9600] text-white  text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95"
-            style="font-family: 'poppins'; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3); margin: 0 auto; padding: .8vw 1vw;"
-          >
-            Let's Go
-          </button>
-
-        </form>
-
-      </div>
-    </div>
-
+                </div>
+            </div>
 
         </div>
-   
     </div>
+ 
 
-   <!-- Quiz Screen -->
-    <div id="quizScreen" class="w-screen h-screen hidden flex overflow-hidden" style="background: linear-gradient(135deg, #f5f1e8 0%, #fef9f3 100%);">
+
+
+
+
+
+
+
+ 
+    <!-- QUIZ SCREEN -->
+    <div class="full-screen " id="quizScreen" style="background: url(./assets/Images/Home_Slide/Background_img.png);">
         <!-- Left Side - Questions -->
-        <div class="w-[70%] h-full overflow-y-auto p-[2vw]" style="background: rgba(255, 255, 255, 0.5);">
-            <div class="mb-[2vw]">
-                <h1 class="text-[1.5vw] font-bold text-black mb-[0.5vw]">Answer the following Questions</h1>
-                <div id="userInfo" class="text-[0.9vw] text-gray-600"></div>
+        <div class="w-[70%] rounded-lg overflow-y-auto p-[2vw] shadow-[0_-6px_10px_rgba(0,0,0,0.15),-6px_0_10px_rgba(0,0,0,0.12),6px_0_10px_rgba(0,0,0,0.12)]" style="background: rgba(255, 255, 255, 0.7); margin: 5vw 0 3vw; margin-bottom: 5vw;">
+            <div class="mb-[2vw] absolute top-0 left-0 w-[100vw] flex justify-between items-center bg-[#fef4e7] shadow-[0_4px_10px_rgba(0,0,0,0.1)]"  style="padding: 1.5vw 4vw;"> 
+                  <div id="userInfo" class="text-[2vw] text-black font-semibold"></div>
+                  <img src="./assets/TTP_Logo.png" alt="Logo" class="w-[6vw] h-[2vw]"/>
+                   <!-- Timer -->
+            <div class="text-[0.85vw] flex flex-col items-center justify-center text-gray-600 text-center mt-[1vw]">
+                <p>Completed in: <br/> <span id="timer" class="font-regular text-[1.5vw] text-black" style="font-family: 'Montserrat';">00:00</span></p>
             </div>
             
-            <form id="quizForm" class="space-y-[2vw]">
+            </div>
+            <div class="" style="padding: 3vw; ">
+               <h1 class="text-[1.5vw] font-semibold text-black mb-[0.5vw] " style="font-family: 'Montserrat';">Answer the following Questions</h1>
+            <form id="quizForm" class="space-y-[1.5vw]">
                 <div id="questionsContainer"></div>
-                <button type="submit" class="w-[15vw] font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95" style="padding: 1vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3); margin-top: 2vw;">Submit</button>
+              
+                 <button 
+                    type="submit" 
+                    class="w-[15vw] font-semibold bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 mt-[2vw]" 
+                    style="padding: .5vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3);"
+                >
+                    Submit
+                </button>
             </form>
+            </div>
+           
         </div>
 
         <!-- Right Side - Stats -->
-        <div class="w-[30%] h-full flex flex-col items-center justify-center gap-[2vw] p-[2vw]">
-            <div class="text-center">
-                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Total Questions</h3>
-                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#FBB24A 0deg 360deg); padding: 0.3vw;">
-                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
-                        <span class="text-[3vw] font-bold text-[#FBB24A]" id="totalQuestionsCount">30</span>
-                    </div>
-                </div>
-            </div>
+        <div class="w-[30%] h-full flex flex-col items-center justify-center gap-[2.5vw] p-[2vw] " style="margin-top: 1vw;">
+            <!-- Total Questions -->
+           <!-- Total Questions -->
+<div class="text-center flex flex-col items-center">
+    <h3 class="text-[0.9vw] font-medum text-black mb-[1vw]" style="font-family: 'Montserrat';">Total Questions</h3>
 
-            <div class="text-center">
-                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Answered</h3>
-                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#22C55E 0deg 360deg); padding: 0.3vw;">
-                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
-                        <span class="text-[3vw] font-bold text-[#22C55E]" id="answeredCount">0</span>
-                    </div>
-                </div>
-            </div>
+    <div class="relative w-[6vw] h-[6vw] flex items-center justify-center">
 
-            <div class="text-center">
-                <h3 class="text-[0.9vw] font-semibold text-gray-700 mb-[1vw]">Pending</h3>
-                <div class="w-[12vw] h-[12vw] rounded-full flex items-center justify-center" style="background: conic-gradient(#EF4444 0deg 360deg); padding: 0.3vw;">
-                    <div class="w-full h-full rounded-full flex items-center justify-center bg-white">
-                        <span class="text-[3vw] font-bold text-[#EF4444]" id="pendingCount">30</span>
-                    </div>
-                </div>
-            </div>
+        <svg id="totalProgressSvg" class="w-full h-full" viewBox="0 0 36 36">
 
-            <div class="text-[0.8vw] text-gray-600 mt-[2vw] text-center">
-                <p>Complete in <span id="timer" class="font-bold">00:00</span></p>
-            </div>
+            <!-- Background -->
+            <circle
+                cx="18" cy="18" r="15.915"
+                fill="none"
+                stroke="#dcdcdc"
+                stroke-width="3.5"
+            ></circle>
+
+            <!-- Progress -->
+            <circle
+                id="totalProgressCircle"
+                cx="18" cy="18" r="15.915"
+                fill="none"
+                stroke="#FF9600"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                transform="rotate(-90 18 18)"
+            ></circle>
+        </svg>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-[3vw] font-bold text-[#FBB24A]" id="totalQuestionsCount">0</span>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Answered -->
+<div class="text-center flex flex-col items-center">
+    <h3 class="text-[0.9vw] font-medium text-black mb-[1vw]" style="font-family: 'Montserrat';">Answered Question</h3>
+
+    <div class="relative w-[6vw] h-[6vw] flex items-center justify-center">
+
+        <svg class="w-full h-full" viewBox="0 0 36 36">
+            
+            <!-- Background Circle -->
+            <circle
+                cx="18" cy="18" r="15.915"
+                fill="none"
+                stroke="#dcdcdc"
+                stroke-width="3.5"
+            ></circle>
+
+            <!-- Dynamic Progress (GREEN) -->
+            <circle
+                id="answeredProgressCircle"
+                cx="18" cy="18" r="15.915"
+                fill="none"
+                stroke="#00AC42"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                transform="rotate(-90 18 18)"
+            ></circle>
+        </svg>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-[3vw] font-bold text-[#22C55E]" id="answeredCount">0</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Pending -->
+<!-- Pending -->
+<div class="text-center flex flex-col items-center">
+    <h3 class="text-[0.9vw] font-medium text-black mb-[1vw]" style="font-family: 'Montserrat';">Pending</h3>
+
+    <div class="relative w-[6vw] h-[6vw] flex items-center justify-center">
+
+        <svg id="pendingProgressSvg" class="w-full h-full" viewBox="0 0 36 36">
+            <!-- Background Circle -->
+            <circle
+                cx="18"
+                cy="18"
+                r="15.915"
+                fill="none"
+                stroke="#dcdcdc"
+                stroke-width="3.5"
+            ></circle>
+
+            <!-- Dynamic Progress -->
+            <circle
+                id="pendingProgressCircle"
+                cx="18"
+                cy="18"
+                r="15.915"
+                fill="none"
+                stroke="#FF0000"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                transform="rotate(-90 18 18)"
+            ></circle>
+        </svg>
+
+        <!-- Center Number -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-[2.5vw] font-bold text-[#EF4444]" id="pendingCount">0</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+           
         </div>
     </div>
+<!-- RESULTS SCREEN -->
+<div class="full-screen" id="resultsScreen" >
+    <div class="relative rounded-[2vw] shadow-2xl p-[4vw] w-[65vw] h-[30vw] text-center " style="border: 0.2vw solid #FBB24A; background: url('./assets/Images/final-page/popup-image-bg.webp'); background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     ">
+  
+  <div class="flex justify-center text-left" style="margin-top: 4vw;">
 
-    <!-- Results Screen -->
-    <div id="resultsScreen" class="w-screen h-screen hidden flex items-center justify-center relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 w-[60vw] h-[auto] backdrop-blur-md rounded-[2vw] shadow-lg p-[3vw] fade-in text-center" style="transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.95);">
-            <div class="mb-[2vw]">
-                <div class="text-[5vw]">😊</div>
-                <h1 class="text-[2vw] font-bold text-black mt-[1vw]">Good Job</h1>
-                <p class="text-[1.2vw] font-semibold text-gray-600 mt-[0.5vw]">You Are Amazing</p>
-            </div>
+     <button
+    id="closeResultsBtn"
+    type="button"
+    class="absolute top-[1vw] right-[1vw] w-[2vw] h-[2vw] rounded-full bg-white/90 text-black text-[1.2vw] font-bold flex items-center justify-center shadow-md hover:bg-[#FBB24A] hover:text-white transition cursor-pointer"
+    aria-label="Close results"
+  >
+    ×
+  </button>
+ <!-- Dynamic Emoji & Title -->
+  <div class="relative w-[12vw] h-[12vw] flex items-center justify-center" style="margin-right: 2vw;">
+                <svg class="w-full h-full" viewBox="0 0 120 120" style="transform: rotate(-90deg);">
+                    <!-- Background Circle -->
+                    <circle
+                        cx="60" cy="60" r="50"
+                        fill="none"
+                        stroke="#e5e7eb"
+                        stroke-width="12"
+                    ></circle>
+                    <!-- Progress Circle (Dynamic) -->
+                    <circle
+                        id="scoreCircle"
+                        cx="60" cy="60" r="50"
+                        fill="none"
+                        stroke="#00AC42"
+                        stroke-width="12"
+                        stroke-linecap="round"
+                        stroke-dasharray="0 314"
+                        style="transition: stroke-dasharray 1s ease-out, stroke 0.5s ease;"
+                    ></circle>
+                </svg>
+                <!-- Center Content -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <img id="resultEmoji" class="w-[6vw] h-[6vw]" alt="Result Emoji" />
 
-            <div class="mb-[2vw]">
-                <p class="text-[1vw] text-gray-700">Your Score</p>
-                <p class="text-[3vw] font-bold" style="color: #FBB24A;"><span id="scorePercent">0</span>%</p>
-            </div>
-
-            <h2 class="text-[2.5vw] font-bold text-black mb-[1vw]">Congratulations</h2>
-            <p class="text-[1.2vw] text-gray-600" id="resultName"></p>
-
-            <div class="mt-[2vw] flex justify-around">
-                <div class="text-center">
-                    <p class="text-[0.9vw] text-gray-600 mb-[0.5vw]">Total Answered</p>
-                    <p class="text-[1.5vw] font-bold text-[#22C55E]" id="resultAnswered">0</p>
                 </div>
-                <div class="text-center">
-                    <p class="text-[0.9vw] text-gray-600 mb-[0.5vw]">Correct Answers</p>
-                    <p class="text-[1.5vw] font-bold text-[#FBB24A]" id="resultCorrect">0</p>
-                </div>
             </div>
+        <!-- 3D Gradient Vertical Line -->
+<div class="w-[1vw] h-[10vw] bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400/30 rounded-full shadow-[2px_0px_6px_rgba(0,0,0,0.2)]">
+</div>
+        <div class="flex flex-col gap-3vw  " style="padding-left: 2vw;" >
+          <div class="flex flex-col ">
+             <h1 class="text-[2.5vw] font-medium text-black mb-[0.5vw]" id="resultTitle">Good Job!</h1>
+        <p class="text-[1.3vw] font-medium text-black mb-[2vw]" id="resultSubtitle">You Are Amazing</p>
+          </div>
+       
 
-            <button onclick="location.reload()" class="w-[15vw] mt-[2vw] mx-auto font-medium bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 block" style="padding: 0.8vw 1vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3);">Restart</button>
+        <!-- Score -->
+        <div class="mb-[2.5vw] flex ">
+            <p class="text-[2vw] font-medium text-black mb-[0.5vw]" style="font-family: 'Montserrat'; margin: auto 0; margin-right: 1vw;">Your Score</p>
+            <p class="text-[4vw] font-bold" style="color: #FF9600;"><span id="scorePercent"></span>%</p>
         </div>
+        </div>
+        
+  </div>
+     
+<div style="margin-top: 5vw;">
+  <!-- Congratulations -->
+        <h2 class="text-[3vw] font-semibold text-black mb-[0.8vw]" style="font-family: 'Montserrat';">Congratulations</h2>
+        <p class="text-[1.2vw] font-bold uppercase text-[#FF9600] mb-[2vw] font-medium  " style="font-family: 'Montserrat';" id="resultName"></p>
+</div>
+      
+
+        <!-- Stats Grid -->
+        <div class="grid  grid-cols-2 gap-[3vw] mb-[2vw] bg-[#FFFCF7] rounded-[1vw] p-[2vw]" style="display: none;">
+            <div class="text-center">
+                <p class="text-[0.9vw] text-gray-600 mb-[0.7vw]">Total Answered</p>
+                <p class="text-[2vw] font-bold text-[#22C55E]" id="resultAnswered">0</p>
+            </div>
+            <div class="text-center">
+                <p class="text-[0.9vw] text-gray-600 mb-[0.7vw]">Correct Answers</p>
+                <p class="text-[2vw] font-bold text-[#FBB24A]" id="resultCorrect">0</p>
+            </div>
+        </div>
+
+        <!-- Restart Button -->
+        <!-- <button 
+            onclick="location.reload()" 
+            class="w-[20vw] font-semibold bg-[#FBB24A] hover:bg-[#FF9600] text-white text-[1vw] rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95" 
+            style="padding: 1.2vw; box-shadow: 0 4px 15px rgba(251, 178, 74, 0.3); margin: 0 auto; display: block;"
+        >
+            Restart Quiz
+        </button> -->
     </div>
+</div>
+ 
+
+  
        <!-- **************************************Slide 13 end******************************************************************** -->
-
-
-
-
-
-
-
 
   </div>
 
@@ -1414,7 +1583,7 @@
   <!-- =====================================slide 3 popup code start================================== -->
 
   <div id="product-modal"
-    class="fixed inset-0 bg-opacity-10 z-[100] hidden flex bg-gray-800/40 backdrop-blur-md  justify-center items-center p-[1vw]">
+    class="fixed inset-0 bg-opacity-10 z-[1000] hidden flex bg-gray-800/40 backdrop-blur-md  justify-center items-center p-[1vw]">
     <div class="bg-white rounded-xl shadow-2xl border border-[.25vw] border-[#FDBF38] overflow-hidden w-[70vw] h-[32vw] p-0" style="border-radius: 2vw;">
       <div class="flex flex-col md:flex-row bg-[#F7F7F7] p-[2vw] relative">
 
@@ -1463,161 +1632,351 @@
 
 
 
-   <script>
+ <script>
         let sessionId = null;
         let employeeName = '';
+        let designation = '';
         let questions = [];
-        let selectedAnswers = {};
         let startTime = null;
         let timerInterval = null;
 
-        // Welcome Form Submission
+        // ====== FORM FUNCTIONS ======
+        function openFormPopup() {
+            console.log('🔓 Opening form popup...');
+           document.getElementById('formContainer').classList.add('active');
+            document.getElementById('backdrop').classList.add('active');
+        }
+
+        function closeFormPopup() {
+            console.log('🔒 Closing form popup...');
+            document.getElementById('formContainer').classList.remove('active');
+            document.getElementById('backdrop').classList.remove('active');
+            document.getElementById('detailsForm').reset();
+        }
+
+        // Close backdrop on click
+        document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('backdrop').addEventListener('click', closeFormPopup);
+
+        // ====== FORM SUBMISSION ======
         document.getElementById('detailsForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            employeeName = document.getElementById('employeeName').value;
-            const designation = document.getElementById('designation').value;
+            console.log('📝 Form submitted');
 
+            employeeName = document.getElementById('employeeName').value.trim();
+            designation = document.getElementById('designation').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            const formError = document.getElementById('formError');
+
+            // Validation
             if (!employeeName || !designation) {
-                alert('Please fill all fields');
+                formError.textContent = '❌ Please fill all fields';
                 return;
             }
 
+            formError.textContent = '';
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<div class="loading"></div>';
+
             try {
-                // Start Session
+                console.log('🔄 Starting session with:', employeeName, designation);
+
+                // 1. Start Session
                 const sessionResponse = await fetch('https://terratechpacks.com/Presentation/start_session.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ employee_name: employeeName, designation: designation })
+                    body: JSON.stringify({ 
+                        employee_name: employeeName, 
+                        designation: designation 
+                    })
                 });
-                
+
                 const sessionData = await sessionResponse.json();
+                console.log('✅ Session response:', sessionData);
+
                 if (sessionData.status === 'success') {
                     sessionId = sessionData.session_id;
-                    
-                    // Fetch Random Questions
+                    console.log('🆔 Session ID:', sessionId);
+
+                    // 2. Fetch Random Questions
+                    console.log('🔄 Fetching questions...');
                     const questionsResponse = await fetch('https://terratechpacks.com/Presentation/get_random_questions.php');
-                    questions = await questionsResponse.json();
-                  // Ensure questions is an array
+                    const questionsData = await questionsResponse.json();
+                    console.log('✅ Questions response:', questionsData);
 
-                    // Load Quiz
-                    loadQuiz(employeeName, designation);
-                  document.getElementById('Question').classList.add('hidden'); // instead of welcomeScreen
+                    questions = Array.isArray(questionsData) ? questionsData : (questionsData.questions || []);
+                    console.log('📚 Total questions:', questions.length);
 
-                    document.getElementById('quizScreen').classList.remove('hidden');
-                    startTimer();
+                    if (questions.length > 0) {
+                        closeFormPopup();
+                        loadQuiz();
+                        document.getElementById('quizScreen').classList.add('active');
+                        startTimer();
+                           document.querySelector('header').style.display = 'none';
+                           document.querySelector('.nav-wrapper').style.display = 'none';
+                           document.querySelector('.counter-display').style.display = 'none';
+                           document.querySelector('img.fixed').style.display = 'none'; 
+                    } else {
+                        throw new Error('No questions available');
+                    }
+                } else {
+                    throw new Error(sessionData.message || 'Failed to start session');
                 }
             } catch (error) {
-                console.error('Error:', error);
-                alert('Error starting session');
+                console.error('❌ Error:', error);
+                formError.textContent = '❌ Error: ' + error.message;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "Let's Go";
             }
         });
+      
+        // ====== LOAD QUIZ ======
+    function loadQuiz() {
+    console.log('📋 Loading quiz...');
+    
+    document.getElementById('userInfo').innerHTML = `
+        <p class="font-semibold">${employeeName}</p>
+        <p class="text-gray-500 text-[0.85vw]">Designation : ${designation}</p>
+    `;
 
-        // Load Quiz Questions
-        function loadQuiz(name, designation) {
-            document.getElementById('userInfo').innerHTML = `
-                <p class="font-semibold">${name}</p>
-                <p class="text-gray-500">${designation}</p>
-            `;
+    document.getElementById('totalQuestionsCount').textContent = questions.length;
+    document.getElementById('pendingCount').textContent = questions.length;
 
-            const container = document.getElementById('questionsContainer');
-            container.innerHTML = '';
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
 
-            questions.forEach((q, index) => {
-                const options = [q.option_a, q.option_b, q.option_c, q.option_d];
-                const labels = ['A', 'B', 'C', 'D'];
-                
-                const questionHTML = `
-                    <div class="bg-white rounded-[1vw] p-[1.5vw] shadow-md">
-                        <div class="flex gap-[1vw] mb-[1vw]">
-                            <div class="w-[2.5vw] h-[2.5vw] rounded-full flex items-center justify-center text-white font-bold" style="background-color: #FBB24A; flex-shrink: 0;">
-                                ${index + 1}
-                            </div>
-                            <p class="text-[0.95vw] font-medium text-black flex-1">${q.question}</p>
-                        </div>
-                        <div class="space-y-[0.8vw] ml-[3.5vw]">
-                            ${options.map((option, i) => `
-                                <label class="flex items-center gap-[0.8vw] cursor-pointer">
-                                    <input type="radio" name="question_${q.id}" value="${labels[i]}" class="w-[1vw] h-[1vw]" onchange="updateStats()">
-                                    <span class="text-[0.85vw] text-gray-700">${option}</span>
-                                </label>
-                            `).join('')}
-                        </div>
+    questions.forEach((q, index) => {
+      console.log(q);
+        const options = [q.option_a, q.option_b, q.option_c, q.option_d];
+        const labels = ['A', 'B', 'C', 'D'];
+
+        const questionHTML = `
+            <div class="bg-white rounded-[1.2vw] p-[1.5vw]   " style="padding: 1.5vw 0">
+                <div class="flex gap-[1vw] mb-[1.2vw]">
+                    <div class="w-[2.5vw] h-[2.5vw] rounded-full flex items-center justify-center text-white font-bold text-[1vw] flex-shrink-0" style="background-color: #FBB24A;">
+                        ${index + 1}
                     </div>
-                `;
-                container.innerHTML += questionHTML;
-            });
-        }
+                    <p class="text-[0.95vw] font-regular  text-black flex-1" style="font-family: 'Montserrat';">${q.question_text}</p>
+                </div>
+              <div class="grid grid-cols-2 gap-x-[2vw] gap-y-[0.8vw] ml-[3.5vw]" style="margin-left:3.5vw">
+    ${options
+        .map(
+            (option, i) => `
+        <label class="flex items-center gap-[0.8vw] font-regular cursor-pointer hover:bg-[#FFFCF7] 
+                       p-[0.5vw] rounded-[0.5vw] transition"
+               style="font-family: 'Montserrat';">
+            <input type="radio" 
+                name="q_${index}_option" 
+                value="${labels[i]}" 
+                class="w-[1.1vw] h-[1.1vw] cursor-pointer custom-radio" 
+                onchange="updateStats()">
 
-        // Update Stats
-        function updateStats() {
-            const form = document.getElementById('quizForm');
-            const answered = Array.from(form.elements).filter(el => el.type === 'radio' && el.checked).length;
-            const pending = questions.length - answered;
-            
-            document.getElementById('answeredCount').textContent = answered;
-            document.getElementById('pendingCount').textContent = pending;
-        }
+            <span class="text-[0.9vw] text-gray-700 font-medium">${option}</span>
+        </label>
+    `
+        )
+        .join("")}
+</div>
 
-        // Start Timer
+            </div>
+        `;
+        container.innerHTML += questionHTML;
+    });
+
+    console.log('✅ Quiz loaded with', questions.length, 'questions');
+}
+        // ====== UPDATE STATS ======
+   // ❌ OLD - Won't work
+// ✅ CORRECT - Updated for new radio button names
+
+        // ====== TIMER ======
         function startTimer() {
+            console.log('⏱️ Timer started');
             startTime = Date.now();
             timerInterval = setInterval(() => {
                 const elapsed = Math.floor((Date.now() - startTime) / 1000);
                 const minutes = Math.floor(elapsed / 60);
                 const seconds = elapsed % 60;
-                document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                document.getElementById('timer').textContent = 
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             }, 1000);
         }
 
-        // Submit Quiz
-        document.getElementById('quizForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            clearInterval(timerInterval);
+        // ====== SUBMIT QUIZ ======
+// ====== SUBMIT QUIZ ======
+// document.getElementById('quizForm').addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     clearInterval(timerInterval);
+//     console.log('📤 Submitting quiz...');
 
-            const form = e.target;
-            const answers = [];
+//     const form = e.target;
+//     const answers = [];
 
-            questions.forEach(q => {
-                const selected = form.querySelector(`input[name="question_${q.id}"]:checked`);
-                if (selected) {
-                    answers.push({ question_id: q.id, chosen_answer: selected.value });
-                }
-            });
+//     // Collect all answers with index-based names
+//     questions.forEach((q, index) => {
+//         const selected = form.querySelector(`input[name="q_${index}_option"]:checked`);
+//         if (selected) {
+//             answers.push({ 
+//                 question_id: q.id, 
+//                 chosen_answer: selected.value 
+//             });
+//         }
+//     });
 
-            try {
-                // Submit Answers
-                const submitResponse = await fetch('https://terratechpacks.com/Presentation/submit_answers.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ session_id: sessionId, answers: answers })
-                });
+//     console.log('📝 Answers to submit:', answers.length);
+//     console.log('📝 Full answers array:', answers);
 
-                if (submitResponse.ok) {
-                    // Fetch Results
-                    const resultResponse = await fetch(`https://terratechpacks.com/Presentation/get_result.php?session_id=${sessionId}`);
-                    const result = await resultResponse.json();
+//     if (answers.length === 0) {
+//         alert('❌ Please answer at least one question');
+//         return;
+//     }
 
-                    // Display Results
-                    const percentage = Math.round((result.correct_answers / result.total_answered) * 100);
-                    document.getElementById('scorePercent').textContent = percentage;
-                    document.getElementById('resultName').textContent = result.employee_name;
-                    document.getElementById('resultAnswered').textContent = result.total_answered;
-                    document.getElementById('resultCorrect').textContent = result.correct_answers;
+//     try {
+//         // Submit Answers
+//         console.log('🔄 Posting answers...');
+//         const submitResponse = await fetch('https://terratechpacks.com/Presentation/submit_answers.php', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({ 
+//                 session_id: sessionId, 
+//                 answers: answers 
+//             })
+//         });
 
-                    document.getElementById('quizScreen').classList.add('hidden');
-                    document.getElementById('resultsScreen').classList.remove('hidden');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error submitting answers');
-            }
+//         const submitData = await submitResponse.json();
+//         console.log('✅ Submit response:', submitData);
+
+//         if (submitData.status === 'success') {
+//             // Fetch Results
+//             console.log('🔄 Fetching results...');
+//             const resultResponse = await fetch(
+//                 `https://terratechpacks.com/Presentation/get_result.php?session_id=${sessionId}`
+//             );
+//             const result = await resultResponse.json();
+//             console.log('✅ Result response:', result);
+
+//             // Display Results - FIX HERE
+//             const totalAnswered = parseInt(result.total_answered) || answers.length;
+//             const correctAnswers = parseInt(result.correct_answers) || 0;
+//             const percentage = totalAnswered > 0 ? Math.round((correctAnswers / totalAnswered) * 100) : 0;
+
+//             console.log(`🎯 Score Calculation: ${correctAnswers}/${totalAnswered} = ${percentage}%`);
+
+//             document.getElementById('scorePercent').textContent = percentage;
+//             document.getElementById('resultName').textContent = `${result.employee_name} from ${result.designation}`;
+//             document.getElementById('resultAnswered').textContent = totalAnswered;
+//             document.getElementById('resultCorrect').textContent = correctAnswers;
+
+//             console.log('🎉 Showing results...');
+//             document.getElementById('quizScreen').classList.remove('active');
+//             document.getElementById('resultsScreen').classList.add('active');
+//         } else {
+//             throw new Error(submitData.message || 'Failed to submit answers');
+//         }
+//     } catch (error) {
+//         console.error('❌ Error:', error);
+//         alert('❌ Error: ' + error.message);
+//     }
+// });
+// ====== SUBMIT QUIZ (CORRECTED VERSION) ======
+  document.getElementById('quizForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearInterval(timerInterval);
+      console.log('📤 Submitting quiz...');
+
+      const form = e.target;
+      const answers = [];
+      let correctAnswersCount = 0; // <-- NEW: Initialize a counter for correct answers.
+
+      // Collect all answers AND calculate the score locally.
+      questions.forEach((q, index) => {
+          const selected = form.querySelector(`input[name="q_${index}_option"]:checked`);
+          if (selected) {
+              // Add the user's answer to the array for the server
+              answers.push({ 
+                  question_id: q.question_id, // Using question_id to match your API object
+                  chosen_answer: selected.value 
+              });
+
+              // <-- NEW: Check if the selected answer is the correct one.
+              if (selected.value === q.correct_answer) {
+                  correctAnswersCount++; // If it's correct, increment our counter.
+              }
+          }
+      });
+
+      console.log('📝 Answers to submit:', answers.length);
+      console.log('🎯 Locally calculated correct answers:', correctAnswersCount); // <-- NEW: Log our count.
+
+      // We still check if at least one question was answered.
+      if (answers.length === 0) {
+          alert('❌ Please answer at least one question');
+          return;
+      }
+
+      try {
+          // We will still submit the answers to your server for logging purposes.
+          console.log('🔄 Posting answers to server...');
+          const submitResponse = await fetch('https://terratechpacks.com/Presentation/submit_answers.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ 
+                  session_id: sessionId, 
+                  answers: answers 
+              })
+          });
+
+          const submitData = await submitResponse.json();
+          console.log('✅ Server submit response:', submitData);
+
+          if (submitData.status === 'success') {
+              // We successfully submitted. Now, display the results using OUR local calculation.
+              const resultResponse = await fetch(`https://terratechpacks.com/Presentation/get_result.php?session_id=${sessionId}`);
+              const result = await resultResponse.json();
+              console.log('✅ Server result response (for user info):', result);
+              
+              // --- THIS IS THE KEY FIX ---
+              // We use our own calculated values, not the ones from the server's response.
+              const totalAnswered = answers.length;
+              const correctAnswers = correctAnswersCount; // <-- USE OUR OWN COUNT
+            const percentage = questions.length > 0 ? Math.round((correctAnswers / questions.length) * 100) : 0;
+
+              console.log(`🎯 Final Score Calculation: ${correctAnswers}/${totalAnswered} = ${percentage}%`);
+
+              // Update the results screen with the correct data
+              document.getElementById('scorePercent').textContent = percentage;
+              document.getElementById('resultName').textContent = `${result.employee_name} `;
+              document.getElementById('resultAnswered').textContent = totalAnswered;
+              document.getElementById('resultCorrect').textContent = correctAnswers; // <-- USE OUR OWN COUNT
+    window.updateResultsScreen(percentage, totalAnswered, correctAnswers, result.employee_name, result.designation || '');
+
+            
+          console.log('🎉 Showing results screen...');
+const quizScreen = document.getElementById('quizScreen');
+const resultsScreen = document.getElementById('resultsScreen');
+
+// Blur the quiz in the background
+quizScreen.classList.add('blurred');
+
+// Show the popup overlay
+resultsScreen.classList.add('active');
+resultsScreen.style.display = 'flex';
+
+          } else {
+              throw new Error(submitData.message || 'Failed to submit answers');
+          }
+      } catch (error) {
+          console.error('❌ Error during submission or result display:', error);
+          alert('❌ Error: ' + error.message);
+      }
+  });
         });
 
-        function closeWelcome() {
-            document.getElementById('employeeName').value = '';
-            document.getElementById('designation').value = '';
-        }
-    </script>
+
+          // Export function to trigger form from slide
+          window.openQuizForm = openFormPopup;
+      </script>
 
 
 
@@ -1880,7 +2239,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+function updateStats() {
+    const form = document.getElementById('quizForm');
+    
+    // Count all radio buttons
+    const allRadios = form.querySelectorAll('input[type="radio"]');
+    const checkedRadios = form.querySelectorAll('input[type="radio"]:checked');
 
+    const total = questions.length;  
+    const answered = checkedRadios.length;
+    const pending = total - answered;
+
+    // Update Text Numbers
+    document.getElementById("totalQuestionsCount").textContent = total;
+    document.getElementById("answeredCount").textContent = answered;
+    document.getElementById("pendingCount").textContent = pending;
+
+    // Calculate pending percentage
+    let percent = (pending / total) * 100;
+
+    // Update the progress stroke
+    const progressCircle = document.getElementById("pendingProgressCircle");
+    progressCircle.setAttribute("stroke-dasharray", `${percent} 100`);
+  updateAnsweredProgress(total, answered);
+
+    console.log(`📊 Stats → Total=${total}, Answered=${answered}, Pending=${pending}, Percent=${percent}`);
+}
+
+
+function updateAnsweredProgress(total, answered) {
+    const percent = (answered / total) * 100;
+
+    document.getElementById("answeredCount").textContent = answered;
+
+    const answeredCircle = document.getElementById("answeredProgressCircle");
+    answeredCircle.setAttribute("stroke-dasharray", `${percent} 100`);
+}
 
   </script>
 
@@ -1946,6 +2340,181 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script> -->
 
+
+
+
+<script>
+// Score ranges and configurations with SVG image paths
+function getScoreConfig(percentage) {
+    if (percentage >= 81) {
+        return {
+            imagePath: './assets/Images/result-emoji/excellent.svg', // 81-100%
+            title: 'Excellent!',
+            subtitle: 'Outstanding Performance',
+            color: '#FFD700'
+        };
+    } else if (percentage >= 61) {
+        return {
+            imagePath: './assets/Images/result-emoji/super.svg', // 61-80%
+            title: 'Super!',
+            subtitle: 'Great Job',
+            color: '#FBB24A'
+        };
+    } else if (percentage >= 41) {
+        return {
+            imagePath: './assets/Images/result-emoji/mass.svg', // 41-60%
+            title: 'Good Effort!',
+            subtitle: 'Keep It Up',
+            color: '#FBB24A'
+        };
+    } else if (percentage >= 21) {
+        return {
+            imagePath: './assets/Images/result-emoji/smile.svg', // 21-40%
+            title: 'Nice Try!',
+            subtitle: 'Practice Makes Perfect',
+            color: '#FF9600'
+        };
+    } else {
+        return {
+            imagePath: './assets/Images/result-emoji/sad.svg', // 0-20%
+            title: 'Keep Learning!',
+            subtitle: 'Study & Try Again',
+            color: '#EF4444'
+        };
+    }
+}
+
+function animateDonutChart(percentage) {
+    console.log('🎨 Animating donut chart to:', percentage + '%');
+    const circle = document.getElementById('scoreCircle');
+    const radius = 50; // as per your SVG circle r attribute
+    const circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = circumference; // hidden initially
+
+    setTimeout(() => {
+        // Calculate offset based on percentage
+        const offset = circumference - (percentage / 100) * circumference;
+        circle.style.transition = 'stroke-dashoffset 1s ease-out';
+        circle.style.strokeDashoffset = offset;
+        console.log('✅ Donut chart animated with offset:', offset);
+    }, 100);
+}
+
+// Main function to update results screen
+function updateResultsScreen(percentage, totalAnswered, correctAnswers, employeeName, designation) {
+    const config = getScoreConfig(percentage);
+    console.log(getScoreConfig(percentage));
+
+    // Fix emoji display
+    const emojiElement = document.getElementById('resultEmoji');
+    emojiElement.src = config.imagePath;
+    emojiElement.alt = config.title;
+    emojiElement.style.display = 'block'; // Ensure it's visible
+
+    document.getElementById('resultTitle').textContent = config.title;
+    document.getElementById('resultSubtitle').textContent = config.subtitle;
+    document.getElementById('resultName').textContent = employeeName;
+    document.getElementById('resultAnswered').textContent = totalAnswered;
+    document.getElementById('resultCorrect').textContent = correctAnswers;
+
+    // Update percentage
+    document.getElementById('scorePercent').textContent = percentage;
+
+    // Update donut chart color and animate
+    const circle = document.getElementById('scoreCircle');
+    circle.setAttribute('stroke', config.color);
+
+    animateDonutChart(percentage);
+    console.log( animateDonutChart(percentage));
+}
+
+
+// Export function to be called from main quiz code
+window.updateResultsScreen = updateResultsScreen;
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.getElementById("closeResultsBtn");
+  const resultsScreen = document.getElementById("resultsScreen");
+  const quizScreen = document.getElementById("quizScreen"); // if you want to hide it too
+  const homeSlide = document.querySelector(".slide-item[data-navigation='Home']") 
+                 || document.getElementById("slide_1");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      // Hide results screen
+      if (resultsScreen) {
+        resultsScreen.style.display = "none";
+        resultsScreen.classList.remove("active");
+      }
+
+      // Optionally hide quiz screen if it stays visible
+      if (quizScreen) {
+        quizScreen.style.display = "none";
+        quizScreen.classList.remove("active");
+      }
+
+      // Scroll to home slide (inside viewport container if you use one)
+      if (homeSlide) {
+        homeSlide.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  }
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const closeBtn = document.getElementById('closeResultsBtn');
+  const resultsScreen = document.getElementById('resultsScreen');
+  const quizScreen = document.getElementById('quizScreen');
+  const homeSlide =
+    document.querySelector(".slide-item[data-navigation='Home']") ||
+    document.getElementById("slide_1");
+                            
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      // Hide popup
+      resultsScreen.classList.remove('active');
+      resultsScreen.style.display = 'none';
+
+      // Remove blur from quiz
+      quizScreen.classList.remove('blurred');
+
+      // Scroll back to home slide if needed
+      if (homeSlide) {
+      const headerEl = document.querySelector('header');
+  const navEl = document.querySelector('.nav-wrapper');
+  const counterEl = document.querySelector('.counter-display');
+  const fixedImg = document.querySelector('img.fixed');
+
+  if (headerEl) headerEl.style.display = '';
+  if (navEl) navEl.style.display = '';
+  if (counterEl) counterEl.style.display = '';
+  if (fixedImg) fixedImg.style.display = '';
+
+        homeSlide.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  }
+});
+
+</script>
     <script src="./js/animation.js"></script>
   <script src="./js/slide.js"></script>
   <script src="./script.js"></script>

@@ -376,3 +376,186 @@ background-color: white;
   color: transparent;
   -webkit-text-stroke: 0.1vw #FF9600; /* outline thickness + color */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ CORRECT */
+#formContainer {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+  
+    transition: all 0.4s ease;
+    width: 60vw;
+}
+
+
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+#backdrop.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#formBox {
+    background: white;
+    border-radius: 2vw;
+    padding: 3vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 0.2vw solid #FBB24A;
+}
+
+        /* Quiz & Results Screen */
+        .full-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            display: none;
+            padding: 5vw;
+            padding-bottom: 0;
+        }
+
+        .full-screen.active {
+            display: flex !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.8vw;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FBB24A;
+            border-radius: 0.5vw;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF9600;
+        }
+
+        input[type="radio"] {
+            accent-color: #FBB24A;
+        }
+
+        /* REMOVE the browser default radio look */
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.1vw;
+    height: 1.1vw;
+    border: 0.18vw solid #FBB24A;  /* Orange border */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* SELECTED (FILLED ORANGE DOT INSIDE) */
+.custom-radio:checked::before {
+    content: "";
+    width: 0.55vw;
+    height: 0.55vw;
+    background: #FBB24A;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+        .loading {
+            display: inline-block;
+            width: 2vw;
+            height: 2vw;
+            border: 0.3vw solid #f3f3f3;
+            border-top: 0.3vw solid #FBB24A;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            color: #ef4444;
+            font-size: 0.9vw;
+            margin-top: 0.5vw;
+        }
+
+
+
+
+
+
+        /* Base full-screen utility (both quizScreen and resultsScreen can use it) */
+.full-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Results overlay: dark transparent layer + center content */
+#resultsScreen {
+  display: none;                    /* hidden by default */
+  z-index: 50000000;                      /* above quiz screen */
+
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);  /* dim background */
+  backdrop-filter: blur(6px);       /* blur quiz behind */
+}
+
+/* When active, we show the overlay as flex */
+#resultsScreen.active {
+  display: flex ;
+}
+
+/* Blur + disable click on quiz while popup is open */
+#quizScreen.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}

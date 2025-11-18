@@ -243,7 +243,7 @@ a {
   position: fixed;
   bottom: 2vw;
   right: 2vw;
-  z-index: 9999;
+  z-index: 999;
   font-size: 2vw;
   font-family: courier, mono;
   display: flex;
@@ -287,7 +287,7 @@ span.counter-display {
   position: fixed;
   bottom: 2vw;
   right: 10vw;
-  z-index: 9999;
+  z-index: 999;
   font-size: 2vw;
   font-weight: 600;
   font-family: courier, mono;

@@ -456,8 +456,27 @@ function animateSlide7() {
       ease: "power2.out"
     });
   }
-}
 
+  // Right content - description
+  const rightContent1 = slide.querySelectorAll(".w-\\[50vw\\]:last-child h1");
+  if (rightContent1.length > 0) {
+    gsap.from(rightContent1, {
+      scrollTrigger: {
+        trigger: slide,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play reverse play reverse"
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      delay: 0.5,
+      stagger: 0.12,
+      ease: "power2.out"
+    });
+  }
+}
 // ==========================================
 // SLIDE 8: SCREEN PRINTING
 // ==========================================
@@ -644,20 +663,20 @@ function animateSlide10() {
   // ============================
   // 2️⃣ Floating top icons
   // ============================
-  gsap.to(slide.querySelectorAll(".flex.flex-col.items-center img:first-child"), {
-    scrollTrigger: {
-      trigger: slide,
-      scroller: ANIMATION_CONFIG.scroller,
-      start: "top 90%",
-      end: "bottom 10%",
-      toggleActions: "play reverse play reverse"
-    },
-    y: -15,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "easeInOut"
-  });
+  // gsap.to(slide.querySelectorAll(".flex.flex-col.items-center img:first-child"), {
+  //   scrollTrigger: {
+  //     trigger: slide,
+  //     scroller: ANIMATION_CONFIG.scroller,
+  //     start: "top 90%",
+  //     end: "bottom 10%",
+  //     toggleActions: "play reverse play reverse"
+  //   },
+  //   y: -15,
+  //   duration: 1.5,
+  //   repeat: -1,
+  //   yoyo: true,
+  //   ease: "easeInOut"
+  // });
 
   // ============================
   // 3️⃣ Step images: Slide-in (Left → Right)
@@ -916,6 +935,97 @@ gsap.from(slide.querySelector(".lead-time-12-3"), {
 });
 }
 
+
+// ==========================================
+// SLIDE 13: QUESTION / FORM
+// ==========================================
+function animateSlide13() {
+  const slide = document.querySelector("#Question");
+  if (!slide) {
+    console.warn("Question slide (#Question) not found");
+    return;
+  }
+
+  // 1) Decorative top line
+  const topLine = slide.querySelector(".float-swing .w-\\[\\.1vw\\]");
+  if (topLine) {
+    gsap.from(topLine, {
+      scrollTrigger: {
+        trigger: slide,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play reverse play reverse"
+      },
+      opacity: 0,
+      y: -40,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+  }
+
+  // 2) Title image (“let’s go for the final session”)
+  const titleImg = slide.querySelector("img[alt='lets-go-for-the-final-session']");
+  if (titleImg) {
+    gsap.from(titleImg, {
+      scrollTrigger: {
+        trigger: slide,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play reverse play reverse"
+      },
+      opacity: 0,
+      y: -60,
+      scale: 0.9,
+      duration: 0.9,
+      delay: 0.1,
+      ease: "back.out(1.6)"
+    });
+  }
+
+  // 3) Form box (heading + fields + button)
+  const formBox = slide.querySelector("#formBox");
+  if (formBox) {
+    gsap.from(formBox, {
+      scrollTrigger: {
+        trigger: slide,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play reverse play reverse"
+      },
+      opacity: 0,
+      y: 80,
+      duration: 1,
+      delay: 0.2,
+      ease: "power3.out"
+    });
+  }
+
+  // 4) Individual form fields + button stagger
+  const formElements = slide.querySelectorAll(
+    "#formBox label, #formBox input, #formBox button"
+  );
+  if (formElements.length) {
+    gsap.from(formElements, {
+      scrollTrigger: {
+        trigger: slide,
+        scroller: ANIMATION_CONFIG.scroller,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play reverse play reverse"
+      },
+      opacity: 0,
+      y: 25,
+      duration: 0.5,
+      delay: 0.3,
+      stagger: 0.08,
+      ease: "power2.out"
+    });
+  }
+}
+
 // ==========================================
 // INITIALIZE ALL ANIMATIONS
 // ==========================================
@@ -966,6 +1076,9 @@ function initializeAllAnimations() {
     animateSlide12();
     console.log('✅ Slide 12 animated');
 
+    animateSlide13();
+console.log('✅ Slide 13 animated');
+
     console.log('✅ All animations initialized successfully!');
   } catch (error) {
     console.error('❌ Error initializing animations:', error);
@@ -986,11 +1099,58 @@ if (document.readyState === 'loading') {
 
 
 
+// ==========================================
+// SLIDE 13: QUESTION / FORM - ON ACTIVATE
+// ==========================================
+function revealQuestionSlide() {
+  const slide = document.getElementById("Question");
+  if (!slide) return;
 
+  const titleImg = slide.querySelector("img[alt='lets-go-for-the-final-session']");
+  const formBox  = slide.querySelector("#formBox");
 
+  // Optional: prevent re-running if already revealed
+  if (slide.dataset.revealed === "true") return;
+  slide.dataset.revealed = "true";
 
+  const tl = gsap.timeline();
 
+  // Whole slide fade-in (if it's hidden before)
+  tl.from(slide, {
+    opacity: 0,
+    duration: 0.4,
+    ease: "power1.out"
+  });
 
+  // Title image
+  if (titleImg) {
+    tl.from(titleImg, {
+      y: -40,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out"
+    }, "-=0.1");
+  }
 
-// popup animation 
+  // Form container
+  if (formBox) {
+    tl.from(formBox, {
+      y: 50,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out"
+    }, "-=0.2");
 
+    // Labels, inputs and button stagger
+    const fields = formBox.querySelectorAll("label, input, button");
+    if (fields.length) {
+      tl.from(fields, {
+        y: 20,
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.08,
+        ease: "power2.out"
+      }, "-=0.3");
+    }
+  }
+}
