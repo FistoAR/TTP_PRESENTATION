@@ -81,14 +81,18 @@ function createSlideAnimation(selector, animationProps) {
 function animateSlide1() {
   let root = ".slide-item[data-navigation='Home']";
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: root,
-      start: "top 80%",
-      end: "bottom 20%",
-      toggleActions: "play reverse play reverse"
-    }
-  });
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: root,
+    scroller: ANIMATION_CONFIG.scroller,
+    start: "top 80%",
+    end: "bottom 20%",
+    // onEnter, onLeave, onEnterBack, onLeaveBack
+    toggleActions: "restart reverse restart reverse"
+    // markers: true // for debugging
+  }
+});
+
 
   // Bottom circle - slide from right
   tl.from(root + " img[alt='bottom-circle']", {
@@ -96,15 +100,22 @@ function animateSlide1() {
     opacity: 0,
     duration: 1,
     ease: "power3.out"
-  }, 0);
+  }, .5);
 
   // Container image - slide from right
+  tl.from(".header-txt-1", {
+    x: -250,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, .5);
+  
   tl.from(root + " img[alt='500ml-container']", {
     x: 250,
     opacity: 0,
     duration: 1,
     ease: "power3.out"
-  }, 0.1);
+  }, 0.3);
 
   // Text content
   tl.from(root + " .flex.flex-col.gap", {
